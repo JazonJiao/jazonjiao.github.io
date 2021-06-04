@@ -1,27 +1,108 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Jazon Jiao</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Jaon Jiao!</h1>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:jiaojazon@gmail.com">email</a></li>
-        		<li><a href="https://github.com/JazonJiao">github.com/JazonJiao</a></li>
+<!-- tutorial: https://youtu.be/9cKsq14Kfsw -->
+<!-- cheat sheeet: http://www.newthinktank.com/2015/11/learn-bootstrap-one-video/ -->
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+	<title>Jazon Jiao</title>
+
+	<!-- Bootstrap and popper -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+				integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+				crossorigin="anonymous" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+					integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+					crossorigin="anonymous"></script>
+	<!-- jQuery -->
+	<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"></script>
+	<!-- font, used for social file icons -->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<!-- Custom styles for this website -->
+	<link href="style/index.css" rel="stylesheet">
+
+	<!-- include icon -->
+	<link rel="icon" href="file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<!-- md stands for Small device; when size reaches sm, then expand -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+	<div class="container-fluid">
+		<!-- FIXME: img doesn't work -->
+		<a class="navbar-brand" href="/">Jazon Jiao</a>
+		<!--		<a class="navbar-brand" href="index.html"><img src="file/tmp2.png"</a>-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_responsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbar_responsive">
+			<!-- ms-auto: margin-start (margin-right in Bootstrap 4), align elements to the right -->
+			<ul class="navbar-nav ms-auto">
+				<!-- items in the navigation bar -->
+				<li class="nav-item"> <a class="nav-link" href="/about">About</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="/blog">Blog</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="/experience">Experience</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="/proj">Project</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="/d5">Diary</a> </li>
 			</ul>
+		</div>
+	</div>
+</nav>
+
+<main>
+	<div class="p-5 mb-4 bg-light rounded-3">
+		<div class="container-fluid py-5">
+			<h1 class="display-5 fw-bold">I'm Jazon Jiao (焦灿文)</h1>
+			<p class="col-md-8 fs-4">
+				I am a masters student studying Computer Science at Stanford University.
+				I am a Software Engineering intern at TuSimple in Summer 2021.
+			</p>
+			<button class="btn btn-primary btn-lg" type="button">Resume</button>
+			<button class="btn btn-primary btn-lg" type="button">简历</button>
+		</div>
+	</div>
+
+	<div class="container py-4">
+		<header class="pb-3 mb-4 border-bottom">
+
+			<a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-laptop" viewBox="0 0 118 94">
+					<path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+				</svg>
+				<!--				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>-->
+				<span class="fs-4">Jumbotron example</span>
+			</a>
+		</header>
+
+		<div class="row align-items-md-stretch">
+			<div class="col-md-6">
+				<div class="h-100 p-5 text-white bg-dark rounded-3">
+					<h2>Change the background</h2>
+					<p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+					<button class="btn btn-outline-light" type="button">Example button</button>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="h-100 p-5 bg-light border rounded-3">
+					<h2>Add borders</h2>
+					<p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+					<button class="btn btn-outline-secondary" type="button">Example button</button>
+				</div>
+			</div>
+		</div>
+
+		<footer class="pt-3 mt-4 text-muted border-top">
+			&copy; 2021
 		</footer>
-	</body>
+</body>
+</div>
+</main>
+
+</body>
 </html>
