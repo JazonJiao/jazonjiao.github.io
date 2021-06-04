@@ -172,7 +172,7 @@ const Graph02 = function(s) {
   };
   let tnr;
   s.preload = function() {
-    tnr = s.loadFont('../manimjs/times.ttf');
+    tnr = s.loadFont('../../file/font/times.ttf');
   };
   s.setup = function () {
     setup2D(s);

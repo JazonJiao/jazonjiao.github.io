@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../styles/blog.css" />
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>
+    人在斯坦福，刚上cs224n
+  </title>
+  <link rel="icon" type="image/png" href="https://codimd.xixiaoyao.cn/favicon.png">
+  <link rel="apple-touch-icon" href="https://codimd.xixiaoyao.cn/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css"
+        integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.3/css/fork-awesome.min.css"
+        integrity="sha256-ZhApazu+kejqTYhMF+1DzNKjIzP7KXu6AzyXcC1gMus=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+        integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css"
+        integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css"
+        integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css"
+        integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+          integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"
+          integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"
+          integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+<!-- md stands for Small device; when size reaches sm, then expand -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <!-- FIXME: img doesn't work -->
+    <a class="navbar-brand" href="../">Jazon Jiao</a>
+    <!--		<a class="navbar-brand" href="index.html"><img manimjs="file/tmp2.png"</a>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_responsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar_responsive">
+      <!-- ms-auto: margin-start (margin-right in Bootstrap 4), align elements to the right -->
+      <ul class="navbar-nav ms-auto">
+        <!-- items in the navigation bar -->
+        <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="../experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="../project">Project</a></li>
+        <li class="nav-item"><a class="nav-link" href="../d5">Diary</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div id="doc" class="markdown-body container-fluid"><h1 id="人在斯坦福，刚上cs224n"><a class="anchor hidden-xs"
+                                                                               href="#人在斯坦福，刚上cs224n"
+                                                                               title="人在斯坦福，刚上cs224n"><i
+    class="fa fa-link"></i></a>我在Stanford上CS 224n（上）</h1>
+  <blockquote>没错，我来到了梦开始的地方</blockquote>
+  <p>（本文首发于微信公众号《夕小瑶的卖萌屋》，标题为<a href="https://mp.weixin.qq.com/s/_8lJFcw6VU-mPDk-CgMdPA" target="_blank" rel="noopener">《人在斯坦福，刚上cs224n》</a>）</p>
+  <p><img src="https://codimd.xixiaoyao.cn/uploads/upload_a48c73a0bdfb6eb3177289f8329f083f.png" alt="题图"
+          class="md-image md-image"></p>
+  <p>文 | Jazon</p>
+  <p>大家好，我是Jazon，现在是<strong>Stanford计算机硕士项目</strong>的一只学生，非常荣幸加入小夕的大家庭！请各路大神多多指教呀。</p>
+  <p>2021年1月12日，又一季<strong>Stanford CS224n——自然语言处理</strong>开课了，我和很多MSCS同学一起加入了这门课。由于疫情，今年的课程是以线上Zoom的方式进行，由<em><strong>Prof.
+    Manning</strong></em>在他的书房远程授课。第一节课的Zoom有400多位同学参加，足见这门课有多么火爆。如果是线下授课的话，肯定能把教室挤爆。</p>
+  <p>
+    彼时的Stanford微信和Slack群里十分热闹，大家都在各种找课友、队友。上这门课的主力军是硕士生，当然也有本科生和博士生。<strong>能在Stanford亲身体验这门传说中的神课，有一种朝圣的感觉，感觉特别幸运！</strong>
+  </p>
+  <h1 id="课程新设置"><a class="anchor hidden-xs" href="#课程新设置" title="课程新设置"><i class="fa fa-link"></i></a>课程新设置</h1>
+  <p>今年的课程设置，和2019年版的公开课相比，有不少小变化，这也反映了NLP领域发展之快。具体不同的地方，我会在下文里穿插着介绍~所有的课件都在课程网站（<a href="http://cs224n.stanford.edu"
+                                                                                    target="_blank" rel="noopener">cs224n.stanford.edu</a>)上，而<strong>今年Lecture的录播视频在几个月后也会在YouTube上公开，到时候大家就可以看到全新的Lectures啦！</strong>
+  </p>
+  <p>前半学期的课程由10次Lecture和5个作业组成，覆盖NLP和神经网络的核心概念，如词向量、RNN、梯度下降等。第8节课是Final Projects的建议。</p>
+  <p>后半学期的第11 ~ 18次Lectures则主要是“嘉宾讲座”（<em><strong>Guest Lectures</strong></em>），如<strong>T5的提出者<em>Colin Raffel</em>来讲了T5</strong>，又或者是一些选学的话题，如<em><strong>Coreference
+    Resolution</strong></em>。不强制上课，没有什么作业，这样可以让我们专心做Project。</p>
+  <p>特别值得提及的是今年的第9、10节课，<strong><em>Transformers</em>和预训练模型首次进入了核心概念的部分，而不是像以前那样属于选听的嘉宾讲座</strong>。授课人是今年224n的Head
+    TA（总助教）——John Hewitt。John是Stanford NLP组的博三学生，讲得真的非常棒！以前我看paper看不懂的<em><strong>Transformer</strong></em>和<em><strong>BERT</strong></em>，他讲得真的是深入浅出，我很快就明白了。
+  </p>
+  <p><img src="https://codimd.xixiaoyao.cn/uploads/upload_0e2f67ae54146273378842df95384023.png" alt="BERT Lecture"
+          class="md-image md-image"></p>
+  <h1 id="重磅新作业"><a class="anchor hidden-xs" href="#重磅新作业" title="重磅新作业"><i class="fa fa-link"></i></a>重磅新作业</h1>
+  <p>
+    和前10次讲座相辅相成的是这门课的5次作业。作业1里大家简单探索了词向量的性质；作业2里我们推导了训练词向量的公式（这是这节课最calculus-intensive的作业）；作业3算是唯一一个涉及比较传统的语言学概念与算法的作业，是关于<em><strong>Dependency
+    Parsing</strong></em>（依存句法分析）的。</p>
+  <p>
+    前3次作业都和去年的一致，作业4和5则是今年新出的。在这里要感谢出作业的TA们！作业4仍然是要搭建一个机器翻译模型，只是目标语言变成了Cherokee（美国原住民的语言之一）。这次作业的编程部分，让我们熟悉了PyTorch模型里的各种Tensor操作。</p>
+  <p>作业5是今年紧跟NLP大趋势，“重磅”新推出的：<strong>在数学部分，我们探索了<em>Multi-head Attention</em>的性质；在编程部分，我们需要复现一些预训练数据处理的代码（<em>span
+    corruption</em>），以及实现<em>Attention</em>的一个变种。</strong></p>
+  <p>这次作业出乎大家意料地难，我和不少同学们都至少花了25小时才做完。由于是今年首次发布，作业里还有很多说得不清楚的地方，本来Instruction已经9页纸了，TA们又写了一篇很长的Clarification。</p>
+  <p>那一周我们还需要提交Project Proposal，所以大家都很爆炸。<strong>2月20号早上，作业已经截止了一天，Office Hours却排起了可怕的50人长队</strong>。这门课的学生总数是475，可想而知有多大比例的同学没能按时写完，不得不用late
+    days。</p>
+  <p>作业5的主要作者正是我们的John，据说他本来还想让我们<em><strong>Encoder-Decoder</strong></em>也自己写，被其他TA制止了。显然，他严重高估了同学们的实力，对这次失控的局面，他的心里也十分愧疚，一直守在论坛、Office
+    Hours上回答同学们的问题。<strong>这也许印证了，特别优秀的人，对别人也会有意无意地设定很高的标准吧！</strong></p>
+  <p>当然，做完作业5也让我收获很多，作业里我们需要分别训练一个“vanilla”模型和预训练模型、比较结果，于是我对预训练的效果、性质有了更直观的了解。</p>
+  <p><img src="https://codimd.xixiaoyao.cn/uploads/upload_9d949297ca5337146e6abfb05f9a9e4d.png" alt="狂肝作业5的时刻"
+          class="md-image md-image"></p>
+  <h1 id="224n是怎么来的？"><a class="anchor hidden-xs" href="#224n是怎么来的？" title="224n是怎么来的？"><i class="fa fa-link"></i></a>224n是怎么来的？
+  </h1>
+  <p><strong>话说斯坦福一年有4个学期，这么火的课为什么只有冬季学期开呢</strong>？这里我想偏个题，讲讲我校NLP组的特点。Chris
+    Manning教这门课已经20多年了，他算是NLP领域开山鼻祖级别的人物，224n课程材料里有讲到他自己发明的技术（比如<em><strong>GloVe</strong></em>），这是件很神奇的事！</p>
+  <p>但显然，他是位大忙人，手下有十几位PhD学生，没有精力每学期都教NLP。Stanford
+    NLP组另外3位主要的教授可能也没有时间来教224n：Dan要教CS124（低阶NLP课），Percy要教CS221（人工智能），Potts要教CS224U（自然语言理解）。</p>
+  <p><strong>Stanford NLP组只有4 ~ 7位教授</strong>，相比之下，<strong>CMU的LTI</strong>（Language Technologies Institute）有<strong>30位教授</strong>，其中不少大方向都是做NLP的科研，人手要多得多。因此CMU在NLP方面的课程多样得多，除了NLP以外，机器翻译、问答系统、搜索引擎等等，都有专门的课（羡慕脸）。
+  </p>
+  <h1 id="NLP很大，可惜时间太少"><a class="anchor hidden-xs" href="#NLP很大，可惜时间太少" title="NLP很大，可惜时间太少"><i class="fa fa-link"></i></a>NLP很大，可惜时间太少
+  </h1>
+  <p>
+    好了，回到224n。像我们Quarter制（4学期制）的学校，一学期是11周，今年由于疫情，学期强行缩减到10周，时间更加紧张。这么短的时间里要塞进整个NLP的内容，显然不可能，所以NLP里很多任务，如信息抽取、对话系统，课程里都没有涉及到（当然124、224U有补充一些概念）。也许224n可以像Data
+    Mining一样，概念部分是一节课（CS 246），Project专门另外一节课来做（CS 341），可能就不用这么赶时间了。</p>
+  <p>同时，<strong>由于时间限制、科技趋势，课程里偏语言学的概念也越来越少</strong>。前面有提到，核心课程里唯一比较硬核Linguistics的内容是Dependency
+    Parsing。19年的公开课里Manning花了一节讲Constituency Parsing，今年这节课已被其他内容取代，以后可能也不会再讲这个概念了，有些令人唏嘘。</p>
+  <p>
+    我第一次接触NLP，应该是读吴军老师的《数学之美》，当初花了不少功夫理解信息论、隐马尔可夫、TF-IDF、分词等等概念，但是224n完全没有涉及它们。这本书是2014年写的，也许其中一些概念在这个BERT的时代已经变得不太相关了吧，真是让人感叹技术迭代的速度之快啊。</p>
+  <p>完成了前半学期的学习，大家也准备好肝Final Project啦！<strong>224n的重头戏还在后半学期，下篇文章会更精彩哦！</strong></p></div>
+<div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+  <div class="pull-right dropdown">
+    <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button"
+       aria-haspopup="true" aria-expanded="false" title="Table of content">
+      <i class="fa fa-bars"></i>
+    </a>
+    <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+      <div class="toc">
+        <ul class="nav">
+          <li class=""><a href="#人在斯坦福，刚上cs224n" title="人在斯坦福，刚上cs224n">人在斯坦福，刚上cs224n</a></li>
+          <li><a href="#课程新设置" title="课程新设置">课程新设置</a></li>
+          <li><a href="#重磅新作业" title="重磅新作业">重磅新作业</a></li>
+          <li><a href="#224n是怎么来的？" title="224n是怎么来的？">224n是怎么来的？</a></li>
+          <li><a href="#NLP很大，可惜时间太少" title="NLP很大，可惜时间太少">NLP很大，可惜时间太少</a></li>
+        </ul>
+      </div>
+      <div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </ul>
+  </div>
+</div>
+<div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix"
+     style="top:17px;display:none;">
+  <div class="toc">
+    <ul class="nav">
+      <li class=""><a href="#人在斯坦福，刚上cs224n" title="人在斯坦福，刚上cs224n">人在斯坦福，刚上cs224n</a></li>
+      <li><a href="#课程新设置" title="课程新设置">课程新设置</a></li>
+      <li><a href="#重磅新作业" title="重磅新作业">重磅新作业</a></li>
+      <li><a href="#224n是怎么来的？" title="224n是怎么来的？">224n是怎么来的？</a></li>
+      <li><a href="#NLP很大，可惜时间太少" title="NLP很大，可惜时间太少">NLP很大，可惜时间太少</a></li>
+    </ul>
+  </div>
+  <div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/js/bootstrap.min.js"
+        integrity="sha256-kJrlY+s09+QoWjpkOrXXwhxeaoDz9FW5SaxF8I0DibQ=" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js"
+        integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+<script>
+  var markdown = $(".markdown-body");
+
+  //smooth all hash trigger scrolling
+  function smoothHashScroll() {
+    var hashElements = $("a[href^='#']").toArray();
+    for (var i = 0; i < hashElements.length; i++) {
+      var element = hashElements[i];
+      var $element = $(element);
+      var hash = element.hash;
+      if (hash) {
+        $element.on('click', function (e) {
+          // store hash
+          var hash = this.hash;
+          if ($(hash).length <= 0) return;
+          // prevent default anchor click behavior
+          e.preventDefault();
+          // animate
+          $('body, html').stop(true, true).animate({
+            scrollTop: $(hash).offset().top
+          }, 100, "linear", function () {
+            // when done, add hash to url
+            // (default click behaviour)
+            window.location.hash = hash;
+          });
+        });
+      }
+    }
+  }
+
+  smoothHashScroll();
+  var toc = $('.ui-toc');
+  var tocAffix = $('.ui-affix-toc');
+  var tocDropdown = $('.ui-toc-dropdown');
+  //toc
+  tocDropdown.click(function (e) {
+    e.stopPropagation();
+  });
+
+  var enoughForAffixToc = true;
+
+  function generateScrollspy() {
+    $(document.body).scrollspy({
+      target: ''
+    });
+    $(document.body).scrollspy('refresh');
+    if (enoughForAffixToc) {
+      toc.hide();
+      tocAffix.show();
+    } else {
+      tocAffix.hide();
+      toc.show();
+    }
+    $(document.body).scroll();
+  }
+
+  function windowResize() {
+    //toc right
+    var paddingRight = parseFloat(markdown.css('padding-right'));
+    var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+    toc.css('right', right + 'px');
+    //affix toc left
+    var newbool;
+    var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+    //for ipad or wider device
+    if (rightMargin >= 133) {
+      newbool = true;
+      var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+      var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+      tocAffix.css('left', left + 'px');
+    } else {
+      newbool = false;
+    }
+    if (newbool != enoughForAffixToc) {
+      enoughForAffixToc = newbool;
+      generateScrollspy();
+    }
+  }
+
+  $(window).resize(function () {
+    windowResize();
+  });
+  $(document).ready(function () {
+    windowResize();
+    generateScrollspy();
+  });
+
+  //remove hash
+  function removeHash() {
+    window.location.hash = '';
+  }
+
+  var backtotop = $('.back-to-top');
+  var gotobottom = $('.go-to-bottom');
+
+  backtotop.click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (scrollToTop)
+      scrollToTop();
+    removeHash();
+  });
+  gotobottom.click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (scrollToBottom)
+      scrollToBottom();
+    removeHash();
+  });
+
+  var toggle = $('.expand-toggle');
+  var tocExpand = false;
+
+  checkExpandToggle();
+  toggle.click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    tocExpand = !tocExpand;
+    checkExpandToggle();
+  })
+
+  function checkExpandToggle() {
+    var toc = $('.ui-toc-dropdown .toc');
+    var toggle = $('.expand-toggle');
+    if (!tocExpand) {
+      toc.removeClass('expand');
+      toggle.text('Expand all');
+    } else {
+      toc.addClass('expand');
+      toggle.text('Collapse all');
+    }
+  }
+
+  function scrollToTop() {
+    $('body, html').stop(true, true).animate({
+      scrollTop: 0
+    }, 100, "linear");
+  }
+
+  function scrollToBottom() {
+    $('body, html').stop(true, true).animate({
+      scrollTop: $(document.body)[0].scrollHeight
+    }, 100, "linear");
+  }
+</script>
+</body>
+
+</html>

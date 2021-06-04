@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <link rel="stylesheet" href="../styles/blog.css" />
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>
+    谢撩，人在斯坦福打SoTA
+  </title>
+  <link rel="icon" type="image/png" href="https://codimd.xixiaoyao.cn/favicon.png">
+  <link rel="apple-touch-icon" href="https://codimd.xixiaoyao.cn/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css"
+        integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.3/css/fork-awesome.min.css"
+        integrity="sha256-ZhApazu+kejqTYhMF+1DzNKjIzP7KXu6AzyXcC1gMus=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+        integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css"
+        integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css"
+        integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css"
+        integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+          integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"
+          integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"
+          integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<!-- Navigation -->
+<!-- md stands for Small device; when size reaches sm, then expand -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <!-- FIXME: img doesn't work -->
+    <a class="navbar-brand" href="../">Jazon Jiao</a>
+    <!--		<a class="navbar-brand" href="index.html"><img manimjs="file/tmp2.png"</a>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_responsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar_responsive">
+      <!-- ms-auto: margin-start (margin-right in Bootstrap 4), align elements to the right -->
+      <ul class="navbar-nav ms-auto">
+        <!-- items in the navigation bar -->
+        <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="../experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="../project">Project</a></li>
+        <li class="nav-item"><a class="nav-link" href="../d5">Diary</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="doc" class="markdown-body container-fluid"><h1 id="谢撩，人在斯坦福打SoTA"><a class="anchor hidden-xs"
+                                                                              href="#谢撩，人在斯坦福打SoTA"
+                                                                              title="谢撩，人在斯坦福打SoTA"><i
+    class="fa fa-link"></i></a>我在Stanford上CS 224n（下）</h1>
+  <blockquote>我在课上打DOTA，斯坦福大佬在课上刷SoTA……</blockquote>
+    <p>（本文首发于微信公众号《夕小瑶的卖萌屋》，标题为<a href="https://mp.weixin.qq.com/s/wyonBpi-3lpb157RJMvM6w" target="_blank" rel="noopener">《谢撩，人在斯坦福打SoTA》</a>）</p>
+  <p><img src="https://codimd.xixiaoyao.cn/uploads/upload_5ca6521b91d311041b8defe5f7cb38ae.png" alt=""
+          class="md-image md-image"></p>
+  <hr>
+  <blockquote>
+    <p>文 | Jazon<br>
+      编 | 小戏</p>
+  </blockquote>
+  <blockquote>
+    <p>小编注：不知道大家还记不记得卖萌屋之前<a href="https://mp.weixin.qq.com/s/_8lJFcw6VU-mPDk-CgMdPA" target="_blank" rel="noopener">人在斯坦福，刚上CS224n</a>的Jazon小哥发来的关于斯坦福神课CS224n上半学期的报道？今天，Jazon又在斯坦福前线发来了关于他在CS224n下半学期的经历，那么现在让我们把画面交给Jazon，看看大佬的课程作业是怎么完成的吧！
+    </p>
+  </blockquote>
+  <p>上篇文章提到我在 <strong>Stanford</strong> 上 <strong>NLP “神课” CS224n</strong>，课程的前半学期以上课、写作业为主，而后半学期则基本都是 <strong>Guest
+    Lectures</strong> ，没有作业，让我们专心做 <strong>Project</strong> 。</p>
+  <p>往年，时不时都有 <strong>224n</strong> 的 <strong>Project</strong> 转化为<strong>顶会 Paper</strong> ，<strong>224n</strong>
+    学期结束的海报展览也是 <strong>Stanford</strong> 校园里的“<strong>学术盛典</strong>”之一。今年可惜展览取消了，不过大家的 <strong>Reports</strong>
+    仍然都会放在官网上。能让我的 <strong>Report</strong> 发表在 <strong>Stanford</strong> 课程的官网上，这是一种很大的荣幸呀！<strong>所以我积攒了足够的动力，一定想尽力做好这次
+      Project</strong> 。</p>
+  <h1 id="1-Project-规则"><a class="anchor hidden-xs" href="#1-Project-规则" title="1-Project-规则"><i class="fa fa-link"></i></a>1.
+    Project 规则</h1>
+  <p>自从 2016 年斯坦福创造的问答数据集 <strong>SQuAD</strong> 横空出世，几年来 <strong>224n</strong> 的 <strong>Project</strong> 都是分为
+    “<strong>Default</strong>” （默认）、“<strong>Custom</strong>”（自定义）两种选项，其中 <strong>default</strong> 就是搞
+    <strong>SQuAD</strong> ，<strong>Custom</strong> 则没什么选题的限制。</p>
+  <p>2021 年的 <strong>default Project</strong> ，分成了 2 个 <strong>Track</strong> ：一个叫 <strong>IID</strong>（就是单纯地做 <strong>SQuAD</strong>
+    ）；还有一个叫 <strong>RobustQA</strong> ，<strong>这个更有意思一些，需要学生搭建的 <strong>SQuAD</strong> 模型有“鲁棒性”</strong>，比如给定另一个数据集
+    <strong>NewsQA</strong> 极少量的训练数据，能够在 <strong>NewsQA</strong> 上也取得好的结果。</p>
+  <p><strong>IID</strong> 不可以用任何基于 <strong>BERT</strong> 的模型，<strong>RobustQA</strong> 也只能用 <strong>DistillBERT</strong>
+    ，两者都不能使用给定训练集以外的数据。这很容易理解，不这样的话，<strong>Project</strong> 很容易变得没有挑战性。<strong>但这些限制也让我感觉，两个 Default Project
+      不够刺激，于是，我就选择了做 Custom Project。</strong></p>
+  <p><strong>Project</strong> 可以一个人做，也可以组成 2 ~ 3 人的小队。今年课上的 477 个学生一共分成了 275 个小组（不少人都是 Solo 做），每个组有一定的 <strong>Azure 云计算
+    Credits</strong> 。我的队友 <strong>Nina</strong> 是一位（很稀有的）来自中国的 <strong>Stanford</strong> 本科生，现在读大四。</p>
+  <h1 id="2-选题"><a class="anchor hidden-xs" href="#2-选题" title="2-选题"><i class="fa fa-link"></i></a>2. 选题</h1>
+  <p>确定做 <strong>Custom Project</strong>
+    以后，选题并不是件容易的事。<strong>从宏观上说，需要知道哪些事情需要做、可以做；要了解之前的人做过什么、没做过什么。这些都需要投入不少精力</strong>。</p>
+  <p>对于 <strong>Custom Project</strong> ，除了自己选题以外，还有一个列表，表上列出了 34 个课题的 <strong>Proposal</strong> ，分别由近 20 位 <strong>Stanford</strong>
+    在读 <strong>PhD</strong> 提出，做列表上的课题就由对应的 <strong>PhD</strong> 指导。这些 <strong>Projects</strong> 最诱惑人的地方在于，有些导师是明确希望把
+    <strong>Project</strong> 转化为长期合作的项目与顶会 <strong>Paper</strong> 的。</p>
+  <p>列表里第 20 个课题叫“ <strong>Can Transformers Do Math</strong> ”，我觉得有些意思，就联系了那位 <strong>PhD</strong>
+    ，问他现在还接不接受指导新的组。但后来觉得这个题目不够 NLP ，而且感觉这位 <strong>PhD</strong> 同时指导很多组会很忙，所以就放弃了。</p>
+  <p>我们最终决定做的 <strong>Project</strong> 还是来自小轶的提议。1 月底，我问小轶对 <strong>224n Project</strong> 有何建议，她推荐了 2 个方向，其中一个是<strong>多人对话
+    QA</strong> ，比如有个数据集叫 <strong>FriendsQA</strong> [1]，是一个基于老友记台词构建的 <strong>QA</strong> 数据集。我觉得这个
+    <strong>Topic</strong> 非常有意思，和队友讨论之后，就决定做它啦（PS：2 月 8 号下午，我们在 <strong>Manning</strong> 的 <strong>Office Hour</strong>
+    上问他这个方向如何，不过他并没有探索过这个领域，就没有给出什么实质性的建议）。</p>
+  <p>决定做 <strong>FriendsQA</strong> ，我知道这其中的风险：<strong>Manning 在课上讲过，有时没有选好题的 Custom Project
+    会做得比较“Lame”</strong>。确实，<strong>FriendsQA</strong> 是一个很新的数据集，整个这个小领域也很少有人进行研究，这让我对于 <strong>Project</strong>
+    能做成什么样完全没有把握。<strong>但正是因为没啥人做过，做起来才刺激嘛</strong>！我在日记里写到：</p>
+  <blockquote>
+    <p>“见证、体验了太多搞科研受到各种条件的限制后，现在我在 224n 的平台上，能自由地探索世界上还没有人能很好解决的难题，就像 Google Brain、MSR、FAIR
+      的那些大牛一样享受真正的学术自由，这是难得的浪漫和奢侈。”</p>
+  </blockquote>
+  <h1 id="3-开启-Project"><a class="anchor hidden-xs" href="#3-开启-Project" title="3-开启-Project"><i class="fa fa-link"></i></a>3.
+    开启 Project</h1>
+  <p>2 月 15 号提交了 <strong>Proposal</strong>，之后搞完前文提到的让全班爆炸的作业 5，休息了几天，2 月底正式开干！</p>
+  <p>一开始，我们是完全按照 <strong>SQuAD</strong> 的思路来做的，把 <strong>FriendsQA</strong> 转化成和 <strong>SQuAD</strong> 一样的格式以后，跑各种用在
+    <strong>SQuAD</strong> 上的模型。<strong>但奇怪的是，每次一开始训练，在 FriendsQA 上的 F1 分数就断崖式下跌</strong>。那段时间，看模型胡说八道的
+    <strong>Output</strong> 一度成为我和队友的欢乐源泉。</p>
+  <p><img src="https://codimd.xixiaoyao.cn/uploads/upload_33b9e2bcad18728d51cbc362e09bb663.jpg" alt=""
+          class="md-image md-image"></p>
+  <p>小轶的判断是代码出了 <strong>Bug</strong> ，到了 3 月 6 号我才发现确实如此，<strong>是我在把 FriendsQA 格式转化成 SQuAD 时，标准答案的 Start_index
+    算错了</strong>！我以为是按 <strong>Word</strong> 的位置算，原来是按 <strong>Char</strong> 的位置算。<strong>这个 Bug 并不好找，因为跑 Evaluation
+    时计算准确率并没有问题（算准确率只看词是否匹配，不看词的位置）。</strong></p>
+  <h1 id="4-寻找方向"><a class="anchor hidden-xs" href="#4-寻找方向" title="4-寻找方向"><i class="fa fa-link"></i></a>4. 寻找方向</h1>
+  <p>解决掉 <strong>Bug</strong> 以后，我们的模型取得了不错的 <strong>F1</strong> 分数。但显然，只跑 <strong>BERT</strong> 对于满足 <strong>Final
+    Project</strong> 的要求是远远不够的，我们得做一些技术含量更高的改进。</p>
+  <p><strong>Project Handout</strong> 里面的建议是：<strong>仔细钻研一个方法好于粗浅地尝试很多方法</strong>。可是怎么找到要钻研的那个方向，又是个令人头大的问题。</p>
+  <p>一开始，我和 <strong>Nina</strong> 主要研究了怎么改 <strong>BERT</strong> 的结构（<strong>具体来说，在 BERT 里加入 Utterance-Level
+    Embedding，ULE</strong>），但最后得出的结论是，我们不太可能发明什么其他的模型结构或者训练方法，可以做得好过那篇研究 <strong>FriendsQA</strong> 的 ACL
+    paper，《<strong>Transformers to Learn Hierarchical Contexts in Multiparty Dialogue for Span-based Question
+      Answering</strong> 》[2]了。</p>
+  <p>改 <strong>BERT</strong> 行不通，那该怎么办？我想了很多，可以做的思路实在太多：<strong>用 BERT 以外的模型？从数据入手？研究更好的评估指标？一时间，我和队友都有些迷茫焦虑。</strong>
+  </p>
+  <p>我在需要动力的时候，会去油管上看 <strong>Carykh</strong> 的视频：他分别把他在 <strong>Stanford</strong> 两门 AI 课上做 <strong>Project</strong>
+    的经历做成了视频。其中在 <strong>CS230</strong>（深度学习）课上，他的小组几经周折，直到 <strong>Project</strong> 的最后一周才确定了选题 [3]。</p>
+  <p>pyq 里也经常能看到一起搞 <strong>224n</strong> 的同学吐槽“<strong>机器拒绝学习</strong>”，还有一次一起出去买东西，开车的同学在等一个红灯时想着他的
+    <strong>Project</strong> ，突然灵光一闪，就恍然大悟地拍了一下方向盘，然后在手机上匆忙记了点笔记。<strong>现在想想，真是好有趣</strong>。</p>
+  <h1 id="5-确定方向"><a class="anchor hidden-xs" href="#5-确定方向" title="5-确定方向"><i class="fa fa-link"></i></a>5. 确定方向</h1>
+  <p>话说我们的任务和 <strong>Default</strong> 选项的 <strong>RobustQA Track</strong> 十分相似，都需要根据较少的训练数据，搭建 <strong>Robust</strong>
+    的 <strong>QA</strong> 系统。于是，我们开始从 <strong>RobustQA</strong> 的 <strong>Handout</strong> 上寻找灵感。里面提供了一些可探索的方向，<strong>如“
+      Mixture-of-Experts ”、“ Domain Adversarial Training ”、“ Meta Learning ”</strong>。</p>
+  <p>当时我有搞 <strong>RobustQA</strong> 的同学，已经试过了这些方法，但很多都使效果不增反降，只有 <strong>Data Augmentation</strong>
+    （数据增强）看上去有前途。于是3月7号，我和 <strong>Nina</strong> 开了个会，终于决定了我们的最终计划：接下来一周专攻数据增强，如果搞好了，最后一周可以冲刺用 <strong>Ensemble</strong>
+    刷分。</p>
+  <p><strong>此时，离 Report 截止还有不到12天，我便开启了猛肝 Project 的模式。</strong></p>
+  <h1 id="6-创新的快感"><a class="anchor hidden-xs" href="#6-创新的快感" title="6-创新的快感"><i class="fa fa-link"></i></a>6. 创新的快感
+  </h1>
+  <p>按照我俩的分工，我主攻的数据增强方法是 <strong>Back-Translation</strong> （反向翻译）。<strong>它的原理很简单，就是一段英语句子，翻译成比如说汉语，再回翻成英语，就得到了一段意思一致、表述不同的新句子</strong>。
+  </p>
+  <p>对于像 <strong>SQuAD</strong> 、 <strong>FriendsQA</strong> 这样的 <strong>QA</strong> 数据集来说，每道问题的标准答案，都是从给定的某段上下文里截取的一个
+    <strong>Span</strong> 。问题来了，现在上下文的用词变了，这个 <strong>Span</strong> 怎么重新找呢？</p>
+  <p>这个问题似乎探索过的人不多，在 <strong>QANet</strong> 那篇 <strong>Paper</strong> 《 <strong>QANet: Combining Local Convolution with
+    Global Self-Attention for Reading Comprehension</strong> 》[4]里用的方法是比较“ <strong>Character-Level 2-Gram Score</strong>
+    ”，虽然效果不错，但显然它只是个 <strong>Heuristics</strong> ——只看字母的匹配，而没有考虑含义是否匹配。有没有更好的办法呢？</p>
+  <p>3 月 10 号，我一直想着这个问题，突然有了个 idea ：<strong>为啥不把所有词向量相加起来，做比较和匹配呢</strong>？这样不仅考虑进了（词组/句子）的意义，也考虑了 <strong>Span</strong>
+    的长度。这个简单的新方法似乎并没有人用过，于是我初步跑了一些实验，实验效果还不错。这让我十分高兴，这是我首次体验到创新的快感(下图就是我们最后提交的 <strong>Summary Diagram</strong>
+    ，是这个新方法的示意图)！</p>
+  <p><img src="https://codimd.xixiaoyao.cn/uploads/upload_fe0528fd446cd48cf05fb881876eddfd.jpg" alt=""
+          class="md-image md-image"></p>
+  <h1 id="7-击败SoTA"><a class="anchor hidden-xs" href="#7-击败SoTA" title="7-击败SoTA"><i class="fa fa-link"></i></a>7.
+    击败SoTA</h1>
+  <p>生成了几个增强数据集、验证新方法的可行性之后，最后一周，按照计划，我们用上 <strong>BERT-Large</strong> 和 <strong>Ensemble</strong> ，冲刺
+    <strong>FriendsQA</strong> 的 <strong>SoTA</strong> 。</p>
+  <p><strong>那时我就像炒股一样，天天盯着 Loss 和 F1 ，看是涨了还是跌了… Project做到这里，已经快做吐了，不过看着离SoTA越来越近，还是很激动。</strong></p>
+  <p><img src="https://codimd.xixiaoyao.cn/uploads/upload_dea2d71e78a9ad51de302e20b340c23c.jpg" alt=""
+          class="md-image md-image"></p>
+  <p>最终，我们的 <strong>F1</strong> 分数达到了 72.1 ，比原 <strong>SoTA</strong> 提高了 2.5 个百分点。诚然，我们用了比原 <strong>SoTA</strong>
+    模型多好几倍的参数，才达到这些成绩；<strong>但对于一次 Final Project 来说，时间、资源如此有限，我觉得已经很不容易啦。</strong></p>
+  <p>3 月 19 号凌晨，我和 <strong>Nina</strong> 肝完了 <strong>Report</strong>，一共 5000 多词写满了 8 页纸。这里我特别想提的是，几乎所有的顶会
+    <strong>Paper</strong>，都会因为篇幅限制，省略超级多的细节，这可能会使得复现比较麻烦。</p>
+  <p>而在课程的 <strong>Project Report</strong> 里，我们可以补全这些细节，事无巨细地描述实验是怎么做的：比如，计算词向量时，如果出现 <strong>OOV</strong>
+    词汇怎么处理？<strong>Ensemble</strong> 具体如何综合不同模型的 <strong>Predictions</strong> ？ <strong>Train</strong>
+    、<strong>Dev</strong> 、 <strong>Test</strong> 三个 <strong>Set</strong> 具体怎么用？等等。</p>
+  <p>总之，我在这次 <strong>NLP Project</strong> 上前后一共投入了大约 140 小时的精力，2021 年 3 月算是我两年多以来最忙碌的一段日子，<strong>每天最多能在 Project 上投入 15
+    小时</strong>，当时还有其他课要上、有 <strong>Lab</strong> 的工作要做。但做完以后真的成就感满满！</p>
+  <p>这段经历，可以说第一次让我全方位地体验了科研的乐趣。这里也感谢小轶提供的指点，我觉得比我们课程分配的 <strong>Mentor</strong> 有用多啦（当然这不怪我们 <strong>Mentor</strong>，毕竟他得一个人指导十几个
+    <strong>Team</strong>…）</p>
+  <h1 id="8-评奖出炉"><a class="anchor hidden-xs" href="#8-评奖出炉" title="8-评奖出炉"><i class="fa fa-link"></i></a>8. 评奖出炉</h1>
+  <p><strong>224n</strong> 结课一个月之后，4 月 17 号，TA 们整理好了所有的 <strong>Report</strong>、选出了获奖的 <strong>Report</strong>，都公开在了
+    <strong>224n</strong> 的官网上。我们届 <strong>MSCS</strong> 有两位女生做的医学图像转文本的 <strong>Custom Project</strong> ，拿到了最佳报告奖，非常厉害！
+  </p>
+  <p>我们组的 <strong>Report</strong>[5] 可以在这里找到：</p>
+  <blockquote>
+    <p><strong>报告题目：</strong><br>
+      <em><strong>Data Augmentation and Ensembling for FriendsQA</strong></em><br>
+      <strong>报告链接：</strong><br>
+      <em><a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/reports/final_reports/report072.pdf"
+             target="_blank" rel="noopener">https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/reports/final_reports/report072.pdf</a></em>
+    </p>
+  </blockquote>
+  <p><strong>224n</strong> 之后的春学期有一门 <strong>224u（NLU）</strong>，算是 <strong>224n</strong>
+    这门课的延续，不过我因为排课的原因并没有上，比较可惜。<strong>不管怎样，我在 224 的体验非常棒，希望以后可以给大家带来更多在 Stanford 计算机系上课的见闻！</strong></p>
+  <h1 id="参考文献"><a class="anchor hidden-xs" href="#参考文献" title="参考文献"><i class="fa fa-link"></i></a>参考文献</h1>
+  <p>[1] FriendsQA: Open-Domain Question Answering on TV Show Transcripts. <a
+      href="https://www.aclweb.org/anthology/W19-5923.pdf" target="_blank" rel="noopener">https://www.aclweb.org/anthology/W19-5923.pdf</a>
+  </p>
+  <p>[2] Transformers to Learn Hierarchical Contexts in Multiparty Dialogue<br>
+    for Span-based Question Answering<br>
+    <a href="https://arxiv.org/pdf/2004.03561.pdf" target="_blank"
+       rel="noopener">https://arxiv.org/pdf/2004.03561.pdf</a></p>
+  <p>[3] AI Lip Reading<br>
+    <a href="https://youtu.be/28U6EwfKois" target="_blank" rel="noopener">https://youtu.be/28U6EwfKois</a></p>
+  <p>[4] QANet: Combining Local Convolution with Global Self-Attention for Reading Comprehension：<a
+      href="https://arxiv.org/abs/1804.09541" target="_blank" rel="noopener">https://arxiv.org/abs/1804.09541</a></p>
+  <p>[5] Data Augmentation and Ensembling for FriendsQA： <a
+      href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/reports/final_reports/report072.pdf"
+      target="_blank" rel="noopener">https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/reports/final_reports/report072.pdf</a>
+  </p></div>
+<div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+  <div class="pull-right dropdown">
+    <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button"
+       aria-haspopup="true" aria-expanded="false" title="Table of content">
+      <i class="fa fa-bars"></i>
+    </a>
+    <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+      <div class="toc">
+        <ul class="nav">
+          <li class=""><a href="#谢撩，人在斯坦福打SoTA" title="谢撩，人在斯坦福打SoTA">谢撩，人在斯坦福打SoTA</a></li>
+          <li class=""><a href="#1-Project-规则" title="1. Project 规则">1. Project 规则</a></li>
+          <li class=""><a href="#2-选题" title="2. 选题">2. 选题</a></li>
+          <li class=""><a href="#3-开启-Project" title="3. 开启 Project">3. 开启 Project</a></li>
+          <li class=""><a href="#4-寻找方向" title="4. 寻找方向">4. 寻找方向</a></li>
+          <li class=""><a href="#5-确定方向" title="5. 确定方向">5. 确定方向</a></li>
+          <li class=""><a href="#6-创新的快感" title="6. 创新的快感">6. 创新的快感</a></li>
+          <li class=""><a href="#7-击败SoTA" title="7. 击败SoTA">7. 击败SoTA</a></li>
+          <li class=""><a href="#8-评奖出炉" title="8. 评奖出炉">8. 评奖出炉</a></li>
+          <li class=""><a href="#参考文献" title="参考文献">参考文献</a></li>
+        </ul>
+      </div>
+      <div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </ul>
+  </div>
+</div>
+<div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix"
+     style="top:17px;display:none;">
+  <div class="toc">
+    <ul class="nav">
+      <li class=""><a href="#谢撩，人在斯坦福打SoTA" title="谢撩，人在斯坦福打SoTA">谢撩，人在斯坦福打SoTA</a></li>
+      <li class=""><a href="#1-Project-规则" title="1. Project 规则">1. Project 规则</a></li>
+      <li class=""><a href="#2-选题" title="2. 选题">2. 选题</a></li>
+      <li class=""><a href="#3-开启-Project" title="3. 开启 Project">3. 开启 Project</a></li>
+      <li class=""><a href="#4-寻找方向" title="4. 寻找方向">4. 寻找方向</a></li>
+      <li class=""><a href="#5-确定方向" title="5. 确定方向">5. 确定方向</a></li>
+      <li class=""><a href="#6-创新的快感" title="6. 创新的快感">6. 创新的快感</a></li>
+      <li class=""><a href="#7-击败SoTA" title="7. 击败SoTA">7. 击败SoTA</a></li>
+      <li class=""><a href="#8-评奖出炉" title="8. 评奖出炉">8. 评奖出炉</a></li>
+      <li class=""><a href="#参考文献" title="参考文献">参考文献</a></li>
+    </ul>
+  </div>
+  <div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/js/bootstrap.min.js"
+        integrity="sha256-kJrlY+s09+QoWjpkOrXXwhxeaoDz9FW5SaxF8I0DibQ=" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js"
+        integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+<script>
+  var markdown = $(".markdown-body");
+
+  //smooth all hash trigger scrolling
+  function smoothHashScroll() {
+    var hashElements = $("a[href^='#']").toArray();
+    for (var i = 0; i < hashElements.length; i++) {
+      var element = hashElements[i];
+      var $element = $(element);
+      var hash = element.hash;
+      if (hash) {
+        $element.on('click', function (e) {
+          // store hash
+          var hash = this.hash;
+          if ($(hash).length <= 0) return;
+          // prevent default anchor click behavior
+          e.preventDefault();
+          // animate
+          $('body, html').stop(true, true).animate({
+            scrollTop: $(hash).offset().top
+          }, 100, "linear", function () {
+            // when done, add hash to url
+            // (default click behaviour)
+            window.location.hash = hash;
+          });
+        });
+      }
+    }
+  }
+
+  smoothHashScroll();
+  var toc = $('.ui-toc');
+  var tocAffix = $('.ui-affix-toc');
+  var tocDropdown = $('.ui-toc-dropdown');
+  //toc
+  tocDropdown.click(function (e) {
+    e.stopPropagation();
+  });
+
+  var enoughForAffixToc = true;
+
+  function generateScrollspy() {
+    $(document.body).scrollspy({
+      target: ''
+    });
+    $(document.body).scrollspy('refresh');
+    if (enoughForAffixToc) {
+      toc.hide();
+      tocAffix.show();
+    } else {
+      tocAffix.hide();
+      toc.show();
+    }
+    $(document.body).scroll();
+  }
+
+  function windowResize() {
+    //toc right
+    var paddingRight = parseFloat(markdown.css('padding-right'));
+    var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+    toc.css('right', right + 'px');
+    //affix toc left
+    var newbool;
+    var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+    //for ipad or wider device
+    if (rightMargin >= 133) {
+      newbool = true;
+      var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+      var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+      tocAffix.css('left', left + 'px');
+    } else {
+      newbool = false;
+    }
+    if (newbool != enoughForAffixToc) {
+      enoughForAffixToc = newbool;
+      generateScrollspy();
+    }
+  }
+
+  $(window).resize(function () {
+    windowResize();
+  });
+  $(document).ready(function () {
+    windowResize();
+    generateScrollspy();
+  });
+
+  //remove hash
+  function removeHash() {
+    window.location.hash = '';
+  }
+
+  var backtotop = $('.back-to-top');
+  var gotobottom = $('.go-to-bottom');
+
+  backtotop.click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (scrollToTop)
+      scrollToTop();
+    removeHash();
+  });
+  gotobottom.click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (scrollToBottom)
+      scrollToBottom();
+    removeHash();
+  });
+
+  var toggle = $('.expand-toggle');
+  var tocExpand = false;
+
+  checkExpandToggle();
+  toggle.click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    tocExpand = !tocExpand;
+    checkExpandToggle();
+  })
+
+  function checkExpandToggle() {
+    var toc = $('.ui-toc-dropdown .toc');
+    var toggle = $('.expand-toggle');
+    if (!tocExpand) {
+      toc.removeClass('expand');
+      toggle.text('Expand all');
+    } else {
+      toc.addClass('expand');
+      toggle.text('Collapse all');
+    }
+  }
+
+  function scrollToTop() {
+    $('body, html').stop(true, true).animate({
+      scrollTop: 0
+    }, 100, "linear");
+  }
+
+  function scrollToBottom() {
+    $('body, html').stop(true, true).animate({
+      scrollTop: $(document.body)[0].scrollHeight
+    }, 100, "linear");
+  }
+</script>
+</body>
+
+</html>
