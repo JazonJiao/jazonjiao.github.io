@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
+/* --- margin of navbar --- */
+.navbar {
+  margin-bottom: 67px;
+}
 
-
+/* ========================================================== */
 /* --- extra styles for navigation bar transition effects --- */
 /* Adapted from: https://codepen.io/maheshambure21/pen/QwXaRw */
 
@@ -28,9 +31,60 @@
 }
 
 .nav-link:hover:after {
-  width: 29px;
+  width: 37px;
 }
 
-/*.navbar {*/
-/*  margin-bottom: 20px;*/
-/*}*/
+/* ================================ */
+/* --- styles for personal card --- */
+
+#jazon-box {
+  background: #F4F4F4;
+  box-shadow: 4px 4px 9px -3px #4f4f4f;
+  border-radius: 12px;  /* rounded corners */
+  margin: 9px;
+  padding: 9px;
+}
+
+#jazon-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 17px;
+  max-width: 179px;
+}
+
+.jazon-name {
+  font-size: 47px;
+  font-family: 'Dancing Script', 'Zhi Mang Xing', cursive;
+  text-align: center;
+}
+
+#jazon-social {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+#jazon-social li {
+  font-size: 24px;
+  width: 39px;
+  height: 39px;
+  margin: 4px;
+}
+
+a:hover {
+  color: #4DD0E1; !important;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+  margin: 6px;
+  background-color: #555;
+}
+
+
+
+
+

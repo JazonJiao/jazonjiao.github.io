@@ -24,15 +24,22 @@
 
 	<!-- include icon -->
 	<link rel="icon" href="file/icon/brainy.ico" type="image/x-icon"/>
+
+	<!-- fonts used for displaying my name -->
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Noto+Sans+KR:wght@100&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Zhi+Mang+Xing&display=swap');
+	</style>
 </head>
 <body>
 
-<!-- Navigation: expand at MD. Should use container-fluid instead of container so that it fills all of the top -->
-<nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Third navbar example">
-	<div class="container-fluid">
+<!-- Navigation: expand at SM. Should use container-fluid instead of container so that it fills all of the top -->
+<!-- navbar sticks to the top; should not use fixed-top here -->
+<nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light" aria-label="Third navbar example">
+	<div class="container-fluid mt-1 mx-2">  <!-- set top and side margins -->
 		<!-- include logo -->
-		<a class="navbar-brand" href="index.html">
-			<img src="file/icon/jazon-logo.png" alt="logo" style="max-width:37%;"/>
+		<a href="index.html">
+			<img src="file/icon/jazon-logo.png" alt="logo" style="max-width: 159px;"/>
 		</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
 						aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,12 +48,11 @@
 
 		<div class="collapse navbar-collapse" id="navbarsExample03">
 			<!-- ms-auto: margin-start (margin-right in Bootstrap 4), align elements to the right -->
-			<ul class="navbar-nav ms-auto">
+			<ul class="navbar-nav ms-auto fs-5">
 				<!-- items in the navigation bar -->
 				<!-- NOTE: the href cannot be `/xxx` since that would break when running locally -->
 				<li class="nav-item"> <a class="nav-link" href="about/">About</a> </li>
 				<li class="nav-item"> <a class="nav-link" href="blog/">Blog</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="experience/">Experience</a> </li>
 				<li class="nav-item"> <a class="nav-link" href="proj/">Projects</a> </li>
 				<li class="nav-item"> <a class="nav-link" href="d5/">Diary</a> </li>
 			</ul>
@@ -54,18 +60,42 @@
 	</div>
 </nav>
 
+<main class="container">
+	<div class="row" id="jazon-box">
+		<div class="col-sm-5 col-md-4 col-lg-4">
+			<img src="file/icon/jazon-pic.png" class="img-thumbnail" id="jazon-pic" alt="Jazon Picture">
+		</div>
+		<div class="col-sm-7 col-md-8 col-lg-8">
+			<h1 class="jazon-name" style="margin-top: 17px">Jazon (Canwen) Jiao</h1>
+			<h1 class="jazon-name">焦灿文</h1>
+			<ul id="jazon-social">
+				<!-- `_blank` is a reserved name which targets a new, unnamed window. -->
+				<li><a href="https://facebook.com/jazon.jiao.3" target="_blank"><i class="fab fa-facebook" style="color: #1877f2"></i></a></li>
+				<li><a href="https://instagram.com/jiaojazon" target="_blank"><i class="fab fa-instagram" style="color: #c32aa3"></i></a></li>
+				<li><a href="https://linkedin.com/in/canwen-jiao" target="_blank"><i class="fab fa-linkedin" style="color: #0a66c2"></i></a></li>
+				<li><a href="https://youtube.com/channel/UC8bvGUlaTahF0lHhMsZFhfw" target="_blank"><i class="fab fa-youtube" style="color: #ff0000"></i></a></li>
+				<li><a href="https://github.com/JazonJiao" target="_blank"><i class="fab fa-github" style="color: #111111"></i></a></li>
+			</ul>
+
+<!--			<div id="social-icons">-->
+<!--				<div class="social-icon rounded-circle"></div>-->
+<!--			</div>-->
+		</div>
+	</div>
+</main>
+
 <main>
-	<div class="p-5 mb-4 bg-light rounded-3">
-		<div class="container">
-			<h1 class="display-5 fw-bold">Jazon (Canwen) Jiao (焦灿文)</h1>
+	<div class="container">
+		<div class="row">
+			<h1 class="display-5 fw-bold">Jazon (Canwen) Jiao ()</h1>
 			<p class="col-md-8 fs-4">
 				Hello and welcome!
 				I am a masters student studying Computer Science at Stanford University.
 				I am a Software Engineering intern at TuSimple in Summer 2021.
 			</p>
-			<button class="btn btn-primary btn-lg" type="button">Resume (for SWE)</button>
-			<button class="btn btn-secondary btn-lg" type="button">Resume (for MLE)</button>
-			<button class="btn btn-primary btn-lg" type="button">简历</button>
+			<button class="btn btn-primary btn-sm" type="button">Resume (for SWE)</button>
+			<button class="btn btn-success btn-sm" type="button">Resume (for MLE)</button>
+			<button class="btn btn-primary btn-sm" type="button">简历</button>
 		</div>
 	</div>
 
@@ -74,23 +104,7 @@
 			&copy; 2021
 		</footer>
 	</div>
-</body>
-</div>
 </main>
 
-<!-- Facebook -->
-<i class="fab fa-facebook-f"></i>
-
-<!-- Instagram -->
-<i class="fab fa-instagram"></i>
-
-<!-- Linkedin -->
-<i class="fab fa-linkedin-in"></i>
-
-<!-- Youtube -->
-<i class="fab fa-youtube"></i>
-
-<!-- Github -->
-<i class="fab fa-github"></i>
 </body>
 </html>
