@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
-.navbar {
-  margin-bottom: 20px;
+
+
+/* --- extra styles for navigation bar transition effects --- */
+/* Adapted from: https://codepen.io/maheshambure21/pen/QwXaRw */
+
+.nav-link {
+  position: relative;
+  text-align: center;
 }
+
+.nav-link:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  content: '.';
+  color: transparent;
+  background: #aaf;
+  height: 3px;
+}
+
+.nav-link, .nav-link:after, .nav-link:before {
+  transition: all .5s;
+}
+
+.nav-link:hover:after {
+  width: 29px;
+}
+
+/*.navbar {*/
+/*  margin-bottom: 20px;*/
+/*}*/

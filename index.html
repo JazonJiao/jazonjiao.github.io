@@ -1,7 +1,4 @@
-<!-- tutorial: https://youtu.be/9cKsq14Kfsw -->
-<!-- cheat sheeet: http://www.newthinktank.com/2015/11/learn-bootstrap-one-video/ -->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -28,29 +25,30 @@
 	<!-- include icon -->
 	<link rel="icon" href="file/icon/brainy.ico" type="image/x-icon"/>
 </head>
-
 <body>
 
-<!-- Navigation -->
-<!-- md stands for Small device; when size reaches sm, then expand -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+<!-- Navigation: expand at MD. Should use container-fluid instead of container so that it fills all of the top -->
+<nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Third navbar example">
 	<div class="container-fluid">
-		<!-- FIXME: img doesn't work -->
-		<a class="navbar-brand" href="/">Jazon Jiao</a>
-		<!--		<a class="navbar-brand" href="index.html"><img manimjs="file/tmp2.png"</a>-->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_responsive">
+		<!-- include logo -->
+		<a class="navbar-brand" href="index.html">
+			<img src="file/icon/jazon-logo.png" alt="logo" style="max-width:37%;"/>
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+						aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbar_responsive">
+
+		<div class="collapse navbar-collapse" id="navbarsExample03">
 			<!-- ms-auto: margin-start (margin-right in Bootstrap 4), align elements to the right -->
 			<ul class="navbar-nav ms-auto">
 				<!-- items in the navigation bar -->
 				<!-- NOTE: the href cannot be `/xxx` since that would break when running locally -->
-				<li class="nav-item"> <a class="nav-link" href="about">About</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="blog">Blog</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="experience">Experience</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="project">Project</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="d5">Diary</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="about/">About</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="blog/">Blog</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="experience/">Experience</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="proj/">Projects</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="d5/">Diary</a> </li>
 			</ul>
 		</div>
 	</div>
@@ -58,13 +56,15 @@
 
 <main>
 	<div class="p-5 mb-4 bg-light rounded-3">
-		<div class="container-fluid py-5">
-			<h1 class="display-5 fw-bold">I'm Jazon Jiao (焦灿文)</h1>
+		<div class="container">
+			<h1 class="display-5 fw-bold">Jazon (Canwen) Jiao (焦灿文)</h1>
 			<p class="col-md-8 fs-4">
+				Hello and welcome!
 				I am a masters student studying Computer Science at Stanford University.
 				I am a Software Engineering intern at TuSimple in Summer 2021.
 			</p>
-			<button class="btn btn-primary btn-lg" type="button">Resume</button>
+			<button class="btn btn-primary btn-lg" type="button">Resume (for SWE)</button>
+			<button class="btn btn-secondary btn-lg" type="button">Resume (for MLE)</button>
 			<button class="btn btn-primary btn-lg" type="button">简历</button>
 		</div>
 	</div>
@@ -78,5 +78,19 @@
 </div>
 </main>
 
+<!-- Facebook -->
+<i class="fab fa-facebook-f"></i>
+
+<!-- Instagram -->
+<i class="fab fa-instagram"></i>
+
+<!-- Linkedin -->
+<i class="fab fa-linkedin-in"></i>
+
+<!-- Youtube -->
+<i class="fab fa-youtube"></i>
+
+<!-- Github -->
+<i class="fab fa-github"></i>
 </body>
 </html>

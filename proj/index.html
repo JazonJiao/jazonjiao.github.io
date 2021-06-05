@@ -31,29 +31,27 @@
 <body>
 
 <!-- Navigation -->
-<!-- md stands for Small device; when size reaches sm, then expand -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Third navbar example">
   <div class="container-fluid">
-    <!-- FIXME: img doesn't work -->
-    <a class="navbar-brand" href="../">Jazon Jiao</a>
-    <!--		<a class="navbar-brand" href="index.html"><img manimjs="file/tmp2.png"</a>-->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_responsive">
+    <a class="navbar-brand" href="../">
+      <img src="../file/icon/jazon-logo.png" alt="logo" style="max-width:37%;"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbar_responsive">
-      <!-- ms-auto: margin-start (margin-right in Bootstrap 4), align elements to the right -->
+
+    <div class="collapse navbar-collapse" id="navbarsExample03">
       <ul class="navbar-nav ms-auto">
-        <!-- items in the navigation bar -->
-        <li class="nav-item"> <a class="nav-link" href="../about">About</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="../blog">Blog</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="../experience">Experience</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="../project">Project</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="../d5">Diary</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../about/">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../blog/">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../experience/">Experience</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../proj/">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../d5/">Diary</a> </li>
       </ul>
     </div>
   </div>
 </nav>
-
 <main>
 
   <div class="container">
@@ -87,9 +85,6 @@
       </div>
 
     </div>
-
-
-
 
     <footer class="pt-3 mt-4 text-muted border-top">
       &copy; 2021
