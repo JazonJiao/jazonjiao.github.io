@@ -1,3 +1,8 @@
+/* background image */
+/*body {*/
+/*  background-image: url("../file/bg/mission-peak.png");*/
+/*  background-size: cover;*/
+/*}*/
 
 /* --- margin of navbar --- */
 .navbar {
@@ -34,6 +39,10 @@
   width: 37px;
 }
 
+.nav-item {  /* space each item further apart */
+  margin-right: 19px;
+}
+
 /* ================================ */
 /* --- styles for personal card --- */
 
@@ -51,6 +60,9 @@
   margin-right: auto;
   margin-top: 17px;
   max-width: 179px;
+  border: 1px solid #bbb;
+  padding: 3px;
+  background: #fff;
 }
 
 .jazon-name {
@@ -72,16 +84,14 @@
   margin: 4px;
 }
 
-a:hover {
-  color: #4DD0E1; !important;
+/* --- Misc --- */
+
+.btn-light {
+  border: 1px solid #bbb
 }
 
-.social-icon {
-  display: inline-block;
-  width: 39px;
-  height: 39px;
-  margin: 6px;
-  background-color: #555;
+.btn-light:hover {
+  border: 1px solid #777
 }
 
 

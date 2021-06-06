@@ -60,10 +60,11 @@
 	</div>
 </nav>
 
-<main class="container">
+<!-- Personal Card -->
+<main class="container" id="personal_card">
 	<div class="row" id="jazon-box">
 		<div class="col-sm-5 col-md-4 col-lg-4">
-			<img src="file/icon/jazon-pic.png" class="img-thumbnail" id="jazon-pic" alt="Jazon Picture">
+			<img src="file/icon/1907.png" class="rounded-circle" id="jazon-pic" alt="Jazon Picture">
 		</div>
 		<div class="col-sm-7 col-md-8 col-lg-8">
 			<h1 class="jazon-name" style="margin-top: 17px">Jazon (Canwen) Jiao</h1>
@@ -76,35 +77,81 @@
 				<li><a href="https://youtube.com/channel/UC8bvGUlaTahF0lHhMsZFhfw" target="_blank"><i class="fab fa-youtube" style="color: #ff0000"></i></a></li>
 				<li><a href="https://github.com/JazonJiao" target="_blank"><i class="fab fa-github" style="color: #111111"></i></a></li>
 			</ul>
-
-<!--			<div id="social-icons">-->
-<!--				<div class="social-icon rounded-circle"></div>-->
-<!--			</div>-->
 		</div>
 	</div>
 </main>
 
-<main>
-	<div class="container">
-		<div class="row">
-			<h1 class="display-5 fw-bold">Jazon (Canwen) Jiao ()</h1>
-			<p class="col-md-8 fs-4">
-				Hello and welcome!
-				I am a masters student studying Computer Science at Stanford University.
-				I am a Software Engineering intern at TuSimple in Summer 2021.
-			</p>
-			<button class="btn btn-primary btn-sm" type="button">Resume (for SWE)</button>
-			<button class="btn btn-success btn-sm" type="button">Resume (for MLE)</button>
-			<button class="btn btn-primary btn-sm" type="button">简历</button>
+<!-- Introduction -->
+<main class="container" id="intro">
+	<div class="row">
+		<!-- col-10 is supposed to mean col-xs-10; mx-auto to center text -->
+		<div class="col-10 col-sm-10 col-md-9 col-lg-8 mx-auto" style="margin-top: 49px;">
+
+			<!--todo: welcome firework effects-->
+
+			Welcome to my site! I'm a master's student at the Stanford University Computer Science department.
+			I have interned at Tencent and TuSimple, and my interests and skills span many aspects of software engineering.
+		</div>
+	</div>
+</main>
+
+<!-- Resume -->
+<!-- Note: It took me a long, long time to center the two buttons, and I just kind of stumbled upon the result... -->
+<main class="container" id="resume" style="margin-top: 49px;">
+	<div class="row">
+		<div class="col-12 mx-auto" style="display: flex; justify-content: center;">
+			<div class="btn-group">
+
+				<!-- fixme: Links to English Resume -->
+
+				<div class="dropdown mx-3">
+					<button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Resume
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="file/resume/">for SWE positions</a></li>
+						<li><a class="dropdown-item" href="file/resume/">for ML/data positions</a></li>
+						<li><hr class="dropdown-divider"></li>
+
+						<!-- fixme: Last Updated -->
+
+						<li><a class="dropdown-item disabled" style="font-size: 14px;">(last updated:)</a></li>
+					</ul>
+				</div>
+
+				<!-- fixme: Links to English Resume -->
+
+				<!-- somehow the border is broken if I don't put in border-radius -->
+				<a class="btn btn-light mx-3" href="file/resume/" style="border-radius: 3px;">简历</a>
+			</div>
+		</div>
+	</div>
+</main>
+
+
+<main class="container">
+	<div class="row">
+		<div class="col-10 col-sm-10 col-md-9 col-lg-8 mx-auto" style="margin-top: 49px;">
+
+			<div style="border-bottom: 2px #4DD0E1;">
+				<!-- SVG for calendar -->
+				
+				<h4 style="display: inline-flex; margin-left: 9px;">More</h4>
+			</div>
+
+			<ul>
+				<li>Projects showcases the stuff I've made with my technical skills.</li>
+				<li>Blog records my experience and insights into tech and life.</li>
+				<li>About introduces my personal details, hobbies, and quirks :-)</li>
+			</ul>
 		</div>
 	</div>
 
-	<div class="container py-4">
-		<footer class="pt-3 mt-4 text-muted border-top">
-			&copy; 2021
-		</footer>
-	</div>
+	<footer class="pt-3 mt-4 text-muted border-top">
+		&copy; 2021
+	</footer>
 </main>
+
 
 </body>
 </html>
