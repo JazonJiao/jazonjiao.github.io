@@ -35,7 +35,7 @@
 
 <!-- Navigation: expand at SM. Should use container-fluid instead of container so that it fills all of the top -->
 <!-- navbar sticks to the top; should not use fixed-top here -->
-<nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light" aria-label="Third navbar example">
+<nav class="navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
 	<div class="container-fluid mt-1 mx-2">  <!-- set top and side margins -->
 		<!-- include logo -->
 		<a href="index.html">
@@ -63,9 +63,12 @@
 <!-- Personal Card -->
 <main class="container" id="personal_card">
 	<div class="row" id="jazon-box">
+		<!-- Jazon's photo; `title` is used for displaying text when hovered -->
 		<div class="col-sm-5 col-md-4 col-lg-4">
-			<img src="file/icon/1907.png" class="rounded-circle" id="jazon-pic" alt="Jazon Picture">
+			<img src="file/icon/1907.png" class="rounded-circle" id="jazon-pic" alt="Jazon Picture"
+					 title="Taken in Xi'an, China at the PanoFair, July 14, 2019">
 		</div>
+		<!-- custom-font name, and social media links -->
 		<div class="col-sm-7 col-md-8 col-lg-8">
 			<h1 class="jazon-name" style="margin-top: 17px">Jazon (Canwen) Jiao</h1>
 			<h1 class="jazon-name">焦灿文</h1>
@@ -97,15 +100,15 @@
 
 <!-- Resume -->
 <!-- Note: It took me a long, long time to center the two buttons, and I just kind of stumbled upon the result... -->
-<main class="container" id="resume" style="margin-top: 49px;">
+<main class="container" id="resume" style="margin-top: 29px;">
 	<div class="row">
 		<div class="col-12 mx-auto" style="display: flex; justify-content: center;">
 			<div class="btn-group">
 
 				<!-- fixme: Links to English Resume -->
 
-				<div class="dropdown mx-3">
-					<button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<div class="dropdown mx-4 bg-gradient">
+					<button class="btn btn-lg btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 						Resume
 					</button>
 					<ul class="dropdown-menu">
@@ -122,31 +125,40 @@
 				<!-- fixme: Links to English Resume -->
 
 				<!-- somehow the border is broken if I don't put in border-radius -->
-				<a class="btn btn-light mx-3" href="file/resume/" style="border-radius: 3px;">简历</a>
+				<a class="btn btn-lg btn-light mx-4" href="file/resume/" style="border-radius: 3px;">简历</a>
 			</div>
 		</div>
 	</div>
 </main>
 
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+	<symbol id="calendar-date" viewBox="0 0 118 94">
+		<path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+		<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+	</symbol>
+	<symbol id="folder" viewBox="0 0 16 16" style="fill:#fff;">
+		<path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z"/>
+	</symbol>
+</svg>
 
-<main class="container">
-	<div class="row">
-		<div class="col-10 col-sm-10 col-md-9 col-lg-8 mx-auto" style="margin-top: 49px;">
-
-			<div style="border-bottom: 2px #4DD0E1;">
-				<!-- SVG for calendar -->
-				
-				<h4 style="display: inline-flex; margin-left: 9px;">More</h4>
+<div class="container px-4 py-5" id="hanging-icons" style="margin-top: 59px; ">
+	<div class="row col-12 col-sm-12 col-md-10 col-lg-8 mx-auto">
+		<div class="col d-flex align-items-start">
+			<div class="icon-square bg-primary bg-gradient flex-shrink-0 me-3">
+				<svg class="bi" width="1em" height="1em"><use xlink:href="#folder"/></svg>
 			</div>
-
-			<ul>
-				<li>Projects showcases the stuff I've made with my technical skills.</li>
-				<li>Blog records my experience and insights into tech and life.</li>
-				<li>About introduces my personal details, hobbies, and quirks :-)</li>
-			</ul>
+			<div>
+				<h4 class="mb-4">Website Directory</h4>
+				<p><b><a href="proj/" style="color: forestgreen">Projects</a></b> showcases the stuff I've made with my technical skills.</p>
+				<p><b><a href="blog/" style="color: darkorange">Blog</a></b> records my stories, and my thoughts about tech and life.</p>
+				<p><b><a href="about/" style="color: dodgerblue">About</a></b> introduces my personal details, hobbies, and quirks :-)</p>
+				</p>
+			</div>
 		</div>
 	</div>
+</div>
 
+<main class="container">
 	<footer class="pt-3 mt-4 text-muted border-top">
 		&copy; 2021
 	</footer>

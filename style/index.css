@@ -1,10 +1,20 @@
 /* background image */
-/*body {*/
-/*  background-image: url("../file/bg/mission-peak.png");*/
-/*  background-size: cover;*/
-/*}*/
+body {
+  background: #e9f9ff;
+  /*background-image: url("../file/bg/mission-peak.png");*/
+  /*background-size: cover;*/
+}
+
+br {
+  line-height: 150%;
+}
 
 /* --- margin of navbar --- */
+nav {
+  background-image: linear-gradient(#B9E9FF, #99d9ff);
+  /*background: #B9E9FF;*/
+  color: #333333;
+}
 .navbar {
   margin-bottom: 67px;
 }
@@ -27,7 +37,7 @@
   width: 0;
   content: '.';
   color: transparent;
-  background: #aaf;
+  background: #66f;
   height: 3px;
 }
 
@@ -47,7 +57,7 @@
 /* --- styles for personal card --- */
 
 #jazon-box {
-  background: #F4F4F4;
+  background: #F9F9FF;
   box-shadow: 4px 4px 9px -3px #4f4f4f;
   border-radius: 12px;  /* rounded corners */
   margin: 9px;
@@ -84,14 +94,36 @@
   margin: 4px;
 }
 
-/* --- Misc --- */
+#jazon-social li:hover {  /* animation effects when hovering over social media icons */
+  transition: margin-top 0.2s;
+  margin-top: 1px;
+}
+
+/* ================================ */
+/* --- Style for Resume buttons --- */
 
 .btn-light {
-  border: 1px solid #bbb
+  background-image: linear-gradient(to bottom left, #b9e9ff, #99cfff);
+  border: 1px solid deepskyblue;
+  box-shadow: 2px 2px 5px -3px #4f4f4f;
 }
 
 .btn-light:hover {
-  border: 1px solid #777
+  border: 1px solid royalblue;
+}
+
+/* ====================== */
+/* --- Style for icon --- */
+
+.icon-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: .75rem;
+  color: #fff; !important;
 }
 
 
