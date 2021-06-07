@@ -5,11 +5,11 @@ body.pic {
   background-size: cover;
 }
 
-body.cold {
+body.cold-theme {
   background: #ebf9ff;
 }
 
-body.warm {
+body.warm-theme {
   background: #ffedd9;
 }
 
@@ -23,12 +23,12 @@ body.warm {
   max-width: 159px;
 }
 
-nav.cold {
+nav.cold-theme {
   background-image: linear-gradient(#B9E9FF, #99d9ff);
   color: #333333;
 }
 
-nav.warm {
+nav.warm-theme {
   background-image: linear-gradient(#FFd9bc, #ffc999);
   color: #333333;
 }
