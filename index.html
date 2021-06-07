@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
-	<title>Jazon Jiao</title>
+	<title>Jazon Jiao · Home</title>
 
 	<!-- Bootstrap and popper -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
@@ -31,15 +31,15 @@
 		@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Zhi+Mang+Xing&display=swap');
 	</style>
 </head>
-<body>
+<body class="cold">
 
 <!-- Navigation: expand at SM. Should use container-fluid instead of container so that it fills all of the top -->
 <!-- navbar sticks to the top; should not use fixed-top here -->
-<nav class="navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+<nav class="cold navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
 	<div class="container-fluid mt-1 mx-2">  <!-- set top and side margins -->
 		<!-- include logo -->
 		<a href="index.html">
-			<img src="file/icon/jazon-logo.png" alt="logo" style="max-width: 159px;"/>
+			<img src="file/icon/jazon-logo.png" id="jazon-logo" alt="logo"/>
 		</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
 						aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,7 +100,7 @@
 
 <!-- Resume -->
 <!-- Note: It took me a long, long time to center the two buttons, and I just kind of stumbled upon the result... -->
-<main class="container" id="resume" style="margin-top: 29px;">
+<main class="container" id="resume" style="margin-top: 39px;">
 	<div class="row">
 		<div class="col-12 mx-auto" style="display: flex; justify-content: center;">
 			<div class="btn-group">
@@ -131,6 +131,7 @@
 	</div>
 </main>
 
+<!-- SVG files for icons -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 	<symbol id="calendar-date" viewBox="0 0 118 94">
 		<path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
@@ -141,10 +142,11 @@
 	</symbol>
 </svg>
 
-<div class="container px-4 py-5" id="hanging-icons" style="margin-top: 59px; ">
+<!-- Website directory -->
+<div class="container px-4 py-5" id="hanging-icons" style="margin-top: 69px; ">
 	<div class="row col-12 col-sm-12 col-md-10 col-lg-8 mx-auto">
-		<div class="col d-flex align-items-start">
-			<div class="icon-square bg-primary bg-gradient flex-shrink-0 me-3">
+		<div class="col d-flex">
+			<div class="icon-square bg-primary bg-gradient flex-shrink-0 me-3" style="box-shadow: 2px 2px 5px -3px #4f4f4f;">
 				<svg class="bi" width="1em" height="1em"><use xlink:href="#folder"/></svg>
 			</div>
 			<div>

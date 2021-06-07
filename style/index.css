@@ -1,27 +1,41 @@
-/* background image */
-body {
-  background: #e9f9ff;
-  /*background-image: url("../file/bg/mission-peak.png");*/
-  /*background-size: cover;*/
+/* background color/image */
+
+body.pic {
+  background-image: url("../file/bg/mission-peak.png");
+  background-size: cover;
 }
 
-br {
-  line-height: 150%;
+body.cold {
+  background: #ebf9ff;
 }
 
-/* --- margin of navbar --- */
-nav {
-  background-image: linear-gradient(#B9E9FF, #99d9ff);
-  /*background: #B9E9FF;*/
-  color: #333333;
+body.warm {
+  background: #ffedd9;
 }
-.navbar {
-  margin-bottom: 67px;
-}
+
 
 /* ========================================================== */
 /* --- extra styles for navigation bar transition effects --- */
 /* Adapted from: https://codepen.io/maheshambure21/pen/QwXaRw */
+/* -- Gradient color schemes are designed by Jazon Jiao -- */
+
+#jazon-logo {
+  max-width: 159px;
+}
+
+nav.cold {
+  background-image: linear-gradient(#B9E9FF, #99d9ff);
+  color: #333333;
+}
+
+nav.warm {
+  background-image: linear-gradient(#FFd9bc, #ffc999);
+  color: #333333;
+}
+
+.navbar {
+  margin-bottom: 67px;
+}
 
 .nav-link {
   position: relative;
@@ -96,11 +110,12 @@ nav {
 
 #jazon-social li:hover {  /* animation effects when hovering over social media icons */
   transition: margin-top 0.2s;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 /* ================================ */
 /* --- Style for Resume buttons --- */
+/* -- Gradient color schemes are designed by Jazon Jiao -- */
 
 .btn-light {
   background-image: linear-gradient(to bottom left, #b9e9ff, #99cfff);
