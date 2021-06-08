@@ -133,7 +133,7 @@
 
 <!-- SVG files for icons -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-	<symbol id="calendar-date" viewBox="0 0 118 94">
+	<symbol id="calendar-date" viewBox="0 0 16 16" style="fill:#fff;">
 		<path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
 		<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
 	</symbol>
@@ -150,17 +150,54 @@
 				<svg class="bi" width="1em" height="1em"><use xlink:href="#folder"/></svg>
 			</div>
 			<div>
-				<h4 class="mb-4">Website Directory</h4>
-				<p><b><a href="proj/" style="color: forestgreen">Projects</a></b> showcases the stuff I've made with my technical skills.</p>
-				<p><b><a href="blog/" style="color: darkorange">Blog</a></b> records my stories, and my thoughts about tech and life.</p>
-				<p><b><a href="about/" style="color: dodgerblue">About</a></b> introduces my personal details, hobbies, and quirks :-)</p>
-				</p>
+				<h4 class="mb-3 py-2">Website Directory</h4>
+				<p class="mb-2"><b><a href="proj/" style="color: forestgreen">Projects</a></b> showcases the stuff I've made with my technical skills.</p>
+				<p class="mb-2"><b><a href="blog/" style="color: darkorange">Blog</a></b> records my stories, and my thoughts about tech and life.</p>
+				<p class="mb-2"><b><a href="about/" style="color: dodgerblue">About</a></b> introduces my personal details, hobbies, and quirks :-)</p>
 			</div>
 		</div>
 	</div>
 </div>
 
+<!-- Experience Timeline -->
+<div class="container px-4" style="margin-top: 29px; ">
+	<div class="row col-12 col-sm-12 col-md-10 col-lg-8 mx-auto">
+		<div class="col d-flex">
+			<div class="icon-square bg-primary bg-gradient flex-shrink-0 me-3" style="box-shadow: 2px 2px 5px -3px #4f4f4f;">
+				<svg class="bi" width="1em" height="1em"><use xlink:href="#calendar-date"/></svg>
+			</div>
+			<div id="tmln">
+				<h4 class="mb-4 py-2">My Timeline</h4>
+				<img class="tl-logo" src="file/icon/stf-logo.png" alt="Stf logo">
+				<h5>Stanford University</h5>
+				<p class="dur">2020.9 — present</p>
+				<p>M.S. Computer Science</p>
+				<a data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					View coursework
+				</a>
+				<div class="collapse" id="collapseExample">
+					<p class="tl-card">
+						<em>Track</em>:
+						<a href="https://cs.stanford.edu/academics/masters/choosing-specialization#info" target="_blank">
+							Information Management and Analytics</a> <br/>
+						CS 110 - Computer Systems<br/>
+						CS 142 - Web Applications<br/>
+						CS 145 - Databases<br/>
+						CS 221 - Artificial Intelligence<br/>
+						CS 224n - NLP with Deep Learning <a href="blog/nlp-2.html" style="display: inline;">(blog post)</a><br/>
+						CS 246 - Data Mining<br/>
+					</p>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
 <main class="container">
+
 	<footer class="pt-3 mt-4 text-muted border-top">
 		&copy; 2021
 	</footer>

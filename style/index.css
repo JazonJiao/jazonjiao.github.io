@@ -29,6 +29,7 @@ nav.cold-theme {
 }
 
 nav.warm-theme {
+  /*background: #323;*/
   background-image: linear-gradient(#FFd9bc, #ffc999);
   color: #333333;
 }
@@ -138,10 +139,62 @@ nav.warm-theme {
   height: 3rem;
   font-size: 1.5rem;
   border-radius: .75rem;
-  color: #fff; !important;
+  z-index: 1;  /* layer icon element on the top (over the timeline blue line) */
+}
+
+/* ========================== */
+/* --- Style for timeline --- */
+/* (yes, this is a sh*t ton of hacking to make it work...) */
+
+#tmln {
+  position: relative;
+  left: -41px;
+  border-left: 4px solid #49f;
+  padding-left: 41px;
+}
+
+.tl-logo {
+  box-shadow: 2px 2px 5px -3px #4f4f4f;
+  border: 3px solid #49f;
+  padding: 0;
+  border-radius: 12px;
+  width: 45px;
+  position: relative;
+  left: -66px;  /* let's position it out of the parent's original boundary... lol */
+}
+
+/* header (institution name) */
+#tmln h5 {
+  display: inline-flex;
+  position: relative;
+  left: -50px;
+  margin-bottom: 14px;
+}
+
+/* duration (start/end dates) */
+p.dur {
+  font-style: italic;
+  font-size: 14px;
+  color: #296799;
+  margin-bottom: 9px;
+}
+
+.tl-card {
+  position: relative;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #c9e9ff;
+  background-clip: border-box;
+  padding: 0.5em 1em;  /* top/bottom, left/right */
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  font-size: 14px;
 }
 
 
 
 
+/* ============= */
+/* --- other --- */
 
