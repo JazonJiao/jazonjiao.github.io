@@ -145,6 +145,7 @@ nav.warm-theme {
 /* ========================== */
 /* --- Style for timeline --- */
 /* (yes, this is a sh*t ton of hacking to make it work...) */
+/* I later realized I could've used ::before to position the school/company icons */
 
 #tmln {
   position: relative;
@@ -153,18 +154,23 @@ nav.warm-theme {
   padding-left: 41px;
 }
 
+.tl-item {
+  margin-top: 47px;
+}
+
 .tl-logo {
   box-shadow: 2px 2px 5px -3px #4f4f4f;
-  border: 3px solid #49f;
+  border: 2px solid #49f;
   padding: 0;
   border-radius: 12px;
   width: 45px;
+  height: 45px;
   position: relative;
-  left: -66px;  /* let's position it out of the parent's original boundary... lol */
+  left: -65px;  /* let's position it out of the parent's original boundary... lol */
 }
 
 /* header (institution name) */
-#tmln h5 {
+#tmln h5, h6 {
   display: inline-flex;
   position: relative;
   left: -50px;
@@ -175,7 +181,25 @@ nav.warm-theme {
 p.dur {
   font-style: italic;
   font-size: 14px;
-  color: #296799;
+  color: #3979c9;
+  margin-bottom: 9px;
+}
+
+/* duration (start/end dates) */
+span.o47 {
+  font-style: normal;
+  opacity: 47%;
+}
+
+.tl-view:link {
+  background-image: linear-gradient(to bottom left, #b9e9ff, #99cfff);
+  border: 1px solid deepskyblue;
+  border-radius: .25rem;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 2px 7px;
+  text-align: center;
+  display: inline-block;
   margin-bottom: 9px;
 }
 
@@ -189,6 +213,7 @@ p.dur {
   padding: 0.5em 1em;  /* top/bottom, left/right */
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
+  margin-bottom: 0;
   font-size: 14px;
 }
 
