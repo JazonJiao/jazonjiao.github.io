@@ -25,6 +25,7 @@ These indicators be separate lines and will be copied into the HTML document.
 I sometimes refer to my previous or future Diary in the form of `D5Pxxx`. These will be
 converted to hyperlinks to that Diary.
 
+todo: responsive font size
 """
 import os
 
@@ -61,8 +62,6 @@ def head(title, n_layers=1):
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"></script>
-  <!-- font, used for social file icons -->
-  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
   <link href="{root_dir}style/index.css" rel="stylesheet">
   <link href="{root_dir}style/diary.css" rel="stylesheet">
@@ -101,29 +100,44 @@ def nav(n_layers=2):
 
 
 # note: remember to close the divs
-container_s = '<div class="container my-4 px-4 row col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
-col_s = '<div class="col d-flex">\n'
+container_s = '\n<div class="container my-4 px-4 row col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
+col_s = '<div class="row d-flex">\n'
 
 
 # ----------------------------------------------------------
 # ------------ methods that build html files ---------------
 
 def generate_archive_html():
+    def write_period_name(fw, p):
+        _ = ord(p[2]) - ord('a')
+        if p[:2] >= '20':
+            name = ['年 1 ~ 4 月', '年 5 ~ 8 月', '年 9 ~ 12 月'][_]
+        else:
+            name = ['Jan. — Apr.', 'May — Aug.', 'Sept. — Dec.'][_]
+        fw.write(f'<h4>20{period[:2]} {name}</h4>\n')
+
     out_file = 'd5/index.html'
-    period_i = len(PERIODS) - 1
+    period_i = len(PERIODS) - 1  # index in the PERIOD array
+    period = PERIODS[period_i][0]
 
     with open(out_file, 'w') as fw:
         # write head and nav
         fw.write(head('Jazon Jiao · D5 archive', n_layers=1) + nav(n_layers=1))
         # write bootstrap container and <p> tag
-        fw.write(container_s + col_s + '<p>\n')
+        fw.write(container_s + col_s + '\n')
+        # first statistical period
+        write_period_name(fw, period)
 
         for i in range(PERIODS[-1][1], 0, -1):  # go thru each Diary entry in reverse order
-            if i == PERIODS[period_i - 1][1]:  # end of current statistical period todo add it to html
+            if i == PERIODS[period_i - 1][1]:  # end of current statistical period
                 period_i -= 1
+                period = PERIODS[period_i][0]
+                write_period_name(fw, period)
+            #
+            i_inner = PERIODS[period_i][1] - (PERIODS[period_i - 1][1] if period_i > 0 else 1)
 
             # get the date of the Diary
-            in_file = f'd5/{PERIODS[period_i][0]}/{i}.txt'
+            in_file = f'd5/{period}/{i}.txt'
             if not os.path.exists(in_file):  # if source D5 txt file does not exist, skip it
                 continue
             with open(in_file) as fr:
@@ -134,7 +148,7 @@ def generate_archive_html():
             fw.write(f'<a href="p/{i:03d}">D5p{d5p}</a><br/>\n')
 
         # close tags
-        fw.write('</p>\n</div>\n</div>\n</body>\n')
+        fw.write('\n</div>\n</div>\n</body>\n')
 
 
 def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
@@ -166,19 +180,20 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
             # write head and nav-bar
             fw.write(head(f'Jazon Jiao · D5p{i}', n_layers=3) + nav(n_layers=3))
 
-            # write container and header (DxPxxx)
+            # write container and header (D5p#)
             fw.write(container_s)
-            d5p = fr.readline()
-            fw.write(f'<h2>{d5p}</h2>')
-            fw.write(col_s + '\n<p>')
+            d5p = fr.readline()[:-1]
+            fw.write(f'<h2>{d5p}</h2>\n')
+            fw.write(col_s)
 
             # write body
             for l in fr:
-                # start quote
-                fw.write(f'{l}<br/>')
+                if len(l) > 2 and l[2] == '`':
+                    l = l[3:]
+                fw.write(f'<p>{l[:-1]}</p>\n')
 
             # close the tags
-            fw.write('</p>\n</div>\n</div>\n</body>\n')
+            fw.write('</div>\n</div>\n</body>\n')
             # end of the i-th Diary document
 
         if i == PERIODS[period_i][1]:     # end of current statistical period

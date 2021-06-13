@@ -11,6 +11,12 @@
 body {
     /*font-family: 'Noto Serif SC', serif;*/
     font-family: 'TNR', 'Kaiti', sans-serif;
-    font-size: 21px;
+    font-size: 3.7vmin;
 }
+
+p {
+    line-height: 4.7vmin;;   /* within paragraph */
+    margin-bottom: 2.4vmin;; /* between paragraphs */
+}
+
 
