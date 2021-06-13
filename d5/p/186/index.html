@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p186</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+  <!-- font, used for social file icons -->
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container px-4 row col-12 col-sm-12 col-md-10 col-lg-8 mx-auto" style="margin-top: 29px; ">
+<h2>D5P186-190111
+</h2>
+<p><div class="col d-flex">
+22`On 1/11 I spent about half an hour crafting an essay to Khan Academy, with a link to the unfinished Chapter 1 video on. (A month later I was kindly rejected for the internship position.)
+<br/>22`I have loved watching educational math and science videos since the start of college. Channels like Khan Academy, Crash Course, the Coding Train, and 3Blue1Brown, have accompanied me throughout my college life, and they provided tremendous support for my academic career. I'm particularly influenced by Grant Sanderson from 3b1b, who had also worked at Khan Academy once. I have watched each of his videos at least 3 times, and his videos completely changed the way I view and learn Math. I look up to his projects since he is spreading a spirit, a passion for learning, to so many people—including me—by making obscure math concepts come to live.
+<br/>22`Inspired by Grant, during winter break, I have started to build my own explanatory video project, a 4-part video series explaining Linear Regression using a JavaScript Library, p5.js. I believe teaching is one of the best ways to motivate myself to gain mastery of a subject; and I also hope to carry on that ideal of making Math concepts visual and enjoyable for everyone. That's why I am so excited to apply to Khan Academy.
+<br/>12`On 1/14 I finished the Chapter 1. By then the line count for my library had reached almost 4,000 lines! Later I might learn from Eugene to add some beautiful classical music and read super slowly, and there is a ton to learn from Michael’s narration and explanation skills at Vsauce. Sometimes I really wish JavaScript could have C++ features such as friend and operator overloading.
+<br/>12`On 1/15 I sent an email to Grant entitled I Am Making A 3b1b-style Linear Algebra Video Series!, along with a link to my video. However, he hasn’t replied yet.
+<br/><em>
+<br/>Hi Grant!
+<br/>12`I am a Chinese student majoring in Math and CS at Vanderbilt University, and inspired by your work, I am now working on a 3b1b-style video series on linear regression, which will cover linear algebra topics including least squares, orthogonality, the normal equation, and projection matrices.
+<br/>12`For the past one year, I’ve watched each of your video on the 3b1b channel at least three times, and words couldn’t express how much they changed the way I view and learn math. I have also been one of your patreons since last summer. I decided to make videos of your style a few months ago, and after a winter break’s work, I’ve completed Chapter 1—Simple Linear Regression Formula, Visualized, and I plan to publish it on YouTube this weekend.
+<br/>12`You can get a preview of this video here (the published video will have higher resolution), and any suggestion is more than welcome: https://www.dropbox.com/sh/cj3doqojybws2xh/AADVwnNQqFYDx5HVVrkpnPRAa?dl=0
+<br/>12`Here’s my plan: Chapter 2 will begin by explaining the regression problem in the context of linear algebra (least squares), and then generalize the result to multiple regression. Chapter 3 will expand on Chapter 2 and go through the projection matrix step by step, first expanding on your EoLA video “Dot Product Duality” to talk about projection from 2D space onto a line, and then lead up to the equation ŷ=X〖(X^T X)〗^(-1) X^T y. Some of the animation and script are already finished (see link to the folder above).
+<br/>12`I try to emulate the quality of your videos as much as possible, and I estimate the first three chapters to take about 250 hours to complete (about 10 hours spent per minute of video). If they worked out well, I’ll work on further chapters about Gram-Schmidt, QR factorization, Ridge Regression, and so on; if not, I might turn to other topics like CS algorithms, or other linear algebra concepts / machine learning techniques, such as PCA.
+<br/>12`I implemented the animations using JavaScript (p5.js), inspired by Daniel Shiffman’s channel, The Coding Train. p5.js is pretty handy to use (especially for 3d scenes), although I still couldn’t figure out how to animate math formulas with it. I’ve looked extensively to manim.py for inspiration, but due to the framework of p5, I’m taking quite a different approach from manim in my own work. If you’re curious, here’s the source code repo: https://github.com/JazonJiao/Essence-Linear-Regression
+<br/>31`Although I only have limited time as a college student, I hope that with my efforts, I can help you spread a passion for math, and make a difference in the math-learning community!
+<br/>Have a wonderful New Year!
+<br/>Jazon Jiao
+<br/></em>
+<br/>12`I feel a bit discouraged for not getting replies. I checked my Youku account for the first time in several years (and changed my phone number to my U.S. one…), and was surprised to find I now have 3 videos with nearly 10k views.
+<br/>24`On 1/15 afternoon I also held my first office hour this semester, and I met 462 there. I asked her about her course selection (CS-4260 is a bad course), what language she used in interviews (Python), whether non-technical, behavioral questions were asked (no), what she put on the resume, etc. She happily asks me to update her with how I end up.
+<br/>22`On 1/16 I learned from 495 that I can check employer information on DoreWays; on 1/17 I registered for an Amazon event on 1/29 and learned that they’ll be here during the winter career fair. I also learned from Gwen that there’s a Google Summer of Code thing…
+<br/>11`On 1/16 afternoon in the middle of our Algorithms class, Jeremy received a phone call about her wife stopping breathing, and he dismissed the class. He cautioned us on the first day of class that his wife has a fatal disease and so he has to keep his phone on in case of an emergency. He later canceled class on Friday since his wife passed away. R.I.P.!! Well, at least I could eat lunch earlier on Friday (I have to have lunch at 14:00 on MWF since I have class from 11:00 to 14:00)…
+<br/>34`In fact, I have decided to first get some porridge at 8 and then at 9:30 get some breakfast at Kissam on WMF so that I don’t get hungry until 14:00. When I eat food from munchie, my body will still complain fiercely, so I try not to do that.
+<br/>34`BTW, last Friday-ish I tried out eBronson’s lunch for the first time, and it went pretty well. On 1/16 I ate there again and my stomach was the fullest ever in all of sophomore year at school. By now my physical condition and social life is much better, while the course load is much lower than last semester.
+<br/>12`On 1/16 afternoon I fixed an important problem of my 3d scenes in Project ELR, by using profiling in Chrome for the first time. In improving the performance of my program, knowledge from Comp Org became pretty helpful (especially those about memory and caching).
+<br/>12`On 1/17 I fixed another issue about coordinates, and had to do a lot of refactoring, which is pretty painful—that’s the importance of writing thoughtful code before beginning on a large project…
+<br/></p>
+</div>
+</div>
+</body>

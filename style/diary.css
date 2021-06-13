@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Kaiti';
+    src: url('../file/font/STKAITI.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+    font-family: 'TNR';
+    src: url('../file/font/times.ttf'); /* IE9 Compat Modes */
+}
+
+body {
+    /*font-family: 'Noto Serif SC', serif;*/
+    font-family: 'TNR', 'Kaiti', sans-serif;
+    font-size: 21px;
+}
+

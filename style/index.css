@@ -1,9 +1,9 @@
 /* background color/image */
 
-body.pic {
-  background-image: url("../file/bg/mission-peak.png");
-  background-size: cover;
-}
+/*body.pic {*/
+/*  background-image: url("../file/bg/mission-peak.png");*/
+/*  background-size: cover;*/
+/*}*/
 
 body.cold-theme {
   background: #ebf9ff;
