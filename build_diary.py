@@ -19,7 +19,7 @@ such as "12`".
 Some parts of my Diary quotes (1) my non-Diary writings, such as letters to others;
 (2) my past Diary; or (3) others' verbatim words.
 These quotes should be surrounded by `<em>` at the beginning and `</em>` at the end.
-These indicators should occupy their own lines.
+These indicators be separate lines and will be copied into the HTML document.
 
 - Intra-site links
 I sometimes refer to my previous or future Diary in the form of `D5Pxxx`. These will be
@@ -29,19 +29,19 @@ converted to hyperlinks to that Diary.
 import os
 
 # My Diaries are divided into statistical periods by time.
-# Each year has 3 stats periods, denoted `a`, `b`, `c`.
-# The following lists the ending D5 No. for each period.
-# The No. for the last period is the No. for the latest Diary.
+# Each year has 3 stat periods, denoted `a`, `b`, `c`.
+# The following lists the ending D5 No. for each period (inclusive).
+# The No. for the last period is the No. for the latest (i.e. current) Diary.
 PERIODS = [('17a', 45), ('17b', 71), ('17c', 105),
            ('18a', 138), ('18b', 154), ('18c', 184),
            ('19a', 209), ('19b', 232), ('19c', 276),
-           ('20a', 314), ('20b', 339), ('20c', 364),
+           ('20a', 311), ('20b', 339), ('20c', 364),
            ('21a', 389), ('21b', 392)]
 
 # ---------------------------------------------------------------
 # ------------ methods that return html templates ---------------
 
-def head(title, n_layers=2):
+def head(title, n_layers=1):
     root_dir = '../' * n_layers
     return f"""
 <!doctype html>
@@ -99,8 +99,9 @@ def nav(n_layers=2):
 </nav>
 """
 
+
 # note: remember to close the divs
-container_s = '<div class="container px-4 row col-12 col-sm-12 col-md-10 col-lg-8 mx-auto" style="margin-top: 29px; ">\n'
+container_s = '<div class="container my-4 px-4 row col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
 col_s = '<div class="col d-flex">\n'
 
 
@@ -108,17 +109,17 @@ col_s = '<div class="col d-flex">\n'
 # ------------ methods that build html files ---------------
 
 def generate_archive_html():
-    out_file = './d5/archive/index.html'
+    out_file = 'd5/index.html'
     period_i = len(PERIODS) - 1
 
     with open(out_file, 'w') as fw:
         # write head and nav
-        fw.write(head('Jazon Jiao · D5 archive', n_layers=2) + nav(n_layers=2))
+        fw.write(head('Jazon Jiao · D5 archive', n_layers=1) + nav(n_layers=1))
         # write bootstrap container and <p> tag
         fw.write(container_s + col_s + '<p>\n')
 
         for i in range(PERIODS[-1][1], 0, -1):  # go thru each Diary entry in reverse order
-            if i == PERIODS[period_i - 1][1]:  # end of current statistical period todo
+            if i == PERIODS[period_i - 1][1]:  # end of current statistical period todo add it to html
                 period_i -= 1
 
             # get the date of the Diary
@@ -126,11 +127,11 @@ def generate_archive_html():
             if not os.path.exists(in_file):  # if source D5 txt file does not exist, skip it
                 continue
             with open(in_file) as fr:
-                d5p = fr.readline()[:-1]
+                d5p = fr.readline()[3:-1]
                 print(d5p)
 
             # NOTE: THE href PATH IS RELATIVE TO d5/archive HERE!!!
-            fw.write(f'<a href="../p/{i:03d}">{d5p}</a><br/>\n')
+            fw.write(f'<a href="p/{i:03d}">D5p{d5p}</a><br/>\n')
 
         # close tags
         fw.write('</p>\n</div>\n</div>\n</body>\n')
@@ -151,6 +152,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
         period_i = _
     period = PERIODS[period_i][0]
 
+    # go thru each Diary No.
     for i in range(start_i, end_i + 1):
         in_file = f'd5/{period}/{i}.txt'
         if not os.path.exists(in_file):  # if source D5 txt file does not exist, skip it
@@ -167,8 +169,8 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
             # write container and header (DxPxxx)
             fw.write(container_s)
             d5p = fr.readline()
-            fw.write(f'<h2>{d5p}</h2>\n<p>')
-            fw.write(col_s)
+            fw.write(f'<h2>{d5p}</h2>')
+            fw.write(col_s + '\n<p>')
 
             # write body
             for l in fr:
@@ -186,6 +188,6 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(185, 187)
+    generate_d5_html(185, 187)  # fixme
 
 
