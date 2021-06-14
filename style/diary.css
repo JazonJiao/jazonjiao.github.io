@@ -3,20 +3,19 @@
     src: url('../file/font/STKAITI.ttf'); /* IE9 Compat Modes */
 }
 
-@font-face {
-    font-family: 'TNR';
-    src: url('../file/font/times.ttf'); /* IE9 Compat Modes */
-}
-
 body {
-    /*font-family: 'Noto Serif SC', serif;*/
-    font-family: 'TNR', 'Kaiti', sans-serif;
+    font-family: serif, 'Kaiti', serif;  /* times new roman by default */
     font-size: 3.7vmin;
 }
 
+h1 {  /* h1 tag: Diary titles, like D5p84 */
+    font-size: 4.9vmin;  /* vmin: 1vw/1vh = 1% of viewport width/height; 1vmin = 1vw or 1vh, whichever is smaller */
+    margin: 2.9vmin 0;
+}
+
 p {
-    line-height: 4.7vmin;;   /* within paragraph */
-    margin-bottom: 2.4vmin;; /* between paragraphs */
+    line-height: 4.4vmin;   /* within paragraph */
+    margin-bottom: 2.7vmin; /* between paragraphs */
 }
 
 

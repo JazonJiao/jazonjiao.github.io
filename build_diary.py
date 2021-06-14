@@ -99,8 +99,17 @@ def nav(n_layers=2):
 """
 
 
+def toplinks(i):
+    s = '<a href="../../">Archive</a>\n'
+    if i > 1:
+        s += f'<a href="../{i - 1:03d}">← Prev</a>\n'
+    if i < PERIODS[-1][1]:
+        s += f'<a href="../{i + 1:03d}">Next →</a>\n'
+    return s
+
+
 # note: remember to close the divs
-container_s = '\n<div class="container my-4 px-4 row col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
+container_s = '\n<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
 col_s = '<div class="row d-flex">\n'
 
 
@@ -183,14 +192,16 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
             # write container and header (D5p#)
             fw.write(container_s)
             d5p = fr.readline()[:-1]
-            fw.write(f'<h2>{d5p}</h2>\n')
-            fw.write(col_s)
+            fw.write(toplinks(i) + f'<h1>{d5p}</h1>\n' + col_s)
 
             # write body
             for l in fr:
-                if len(l) > 2 and l[2] == '`':
+                if len(l) > 2 and l[2] == '`':   # categorized paragraph
                     l = l[3:]
-                fw.write(f'<p>{l[:-1]}</p>\n')
+                if len(l) > 4 and l[0] == '<':   # start/end quotes
+                    fw.write(f'{l}')
+                else:
+                    fw.write(f'<p>{l[:-1]}</p>\n')
 
             # close the tags
             fw.write('</div>\n</div>\n</body>\n')
