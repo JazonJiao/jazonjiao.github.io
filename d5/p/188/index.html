@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p188</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+<a href="../../">Archive</a>
+<a href="../187">← Prev</a>
+<a href="../189">Next →</a>
+<h1>D5P188-190118</h1>
+<div class="row d-flex" id="rdf" style="margin-bottom: 199px;">
+<p id="p2">On Friday, 1/18 afternoon, I posted the Chapter 1 to YouTube; no one viewed it at first, but later I posted a post on the 3b1b subreddit, and its popularity rose (although I had no idea how to use reddit and didn’t even manage to insert the video into my post, only posting an url).</p>
+<p id="p3">By the morning of 1/19, the video had more than 100 views. 24 hours have passed, and somehow the view count froze at 133. I received some friendly suggestions, the most upvoted of which is about not using Comic Sans… I’m really happy about the feedback, and just like last January, my mood fluctuated, causing me to lose concentration.</p>
+<p id="p4">I only published on Reddit, partly because I don’t yet want the excessive publicity to interfere with my studies, as the scale of the project could go out of control if I gain too much attention. Another reason is I don’t think the first chapter is worthy enough to share with a wider community; I think I’ll publish on WeChat and FB after Chapter 2 is out (perhaps on Friday, March 1).</p>
+<p id="p5">On 1/20 a nice coder from Brazil refactored my entire ELR library. I merged his/her pull request and now my sketch is running in “instance mode” instead of “global mode”. My experience in GitHub increased rapidly.</p>
+<p id="p6">On 1/19 noon 619 organized a meeting between NFLS 2017ers and 2018ers. Apart from introductions, the people across the two grades hardly talked to each other. Our 2017ers are, as always, talking about primary/middle school peoples and some other boring games stuff, and I couldn’t engage in them. Yeah, this gives me another reason to leave early—I don’t fit in with these bunch of people.</p>
+<p id="p7">On 1/19 night it snowed. In Week 3, my body condition is not as good as the 1st. My sleep quality is usually very bad after 6, but unlike in the 1st Week when I was wide awake and energetic during the day despite little sleep, now I’m often feeling sleepy throughout the day. This sleepiness is apparently due to too much low-quality sleep. On 1/23 my neck swelled and hurt for no apparent reason. On 1/24 my stomach had intense pain for a little while.</p>
+<p id="p8">On 1/26 I attended the LNYF midway checkpoint. The feeling on stage is quite different from when practices, as when the music is loud, I feel much more energetic. Attending these dances is really a great personality boost!</p>
+<p id="p9">By now into the ELR project, my growth is becoming slower as the job gets more and more repetitive. I’ve written a total of 5036 lines of code by 1/27—I counted this because I needed to update my resume. But of these 5000 lines, some of the code is pretty redundant and not reusable. I’m putting less and less thought on my code, and thinking less about long-run modularity; sometimes I just copy stuff from previous files.</p>
+<p id="p10">Part of the reason is I don’t know what parts of a program will be reused, and what parts won’t. For example, I really should have developed a matrix class and a vector class, instead of using arrays everywhere. I severely underestimated the number of times these constructs will be used in my project (especially since I have now planned to do PCA and SVD before Chapter 4—least squares, because people may be more interested in that). As I write more code, I will be more experienced about which parts I need to “abstract out”.</p>
+<p id="p11">In the next Diary I will talk about suspending my project until after the interview (if I get one…). This actually gives me time to reflect on my project and think on a high level how my structure and style can be improved. Last week when the progress was really fast, I was writing code that would make my future project less and less maintainable, partly because my code is based on some previous bad code.</p>
+<p id="p12">For example, I should have defined a master base class that all classes inherit from. This makes a lot of things much easier, such as moving a structure in the scene. Even though this operation is somewhat different across the derived classes, there are some core operations that I should have defined abstractly, if I put more thought into it. (I later did make this restructuring.)</p>
+<p id="p13">Maybe I would do another massive refactoring of all the base classes in utils.js; it will break much of my previous code and I won’t fix it, but it would make my future efforts much less effortful.</p>
+</div>
+</div>
+</body>

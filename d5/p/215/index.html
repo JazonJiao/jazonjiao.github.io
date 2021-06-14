@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p215</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+<a href="../../">Archive</a>
+<a href="../214">← Prev</a>
+<a href="../216">Next →</a>
+<h1>D5P215-190510</h1>
+<div class="row d-flex" id="rdf" style="margin-bottom: 199px;">
+<p id="p2">On 5/10, I was still focusing on my Graph Algorithm visualization project, when I was stuck on a problem: how to generate a random shuffling of an array. I then searched the internet and found a Leetcode problem about it (Prob. 384).</p>
+<p id="p3">I then restarted Leetcode, months after solving only 11 problems in the winter and then forgetting about it. And since then, I’ve been spending much of my studying time on Leetcode solving problems or otherwise learning about Python, and it’s pretty satisfactory. I personally feel that shuati on Leetcode is a lot easier and less painful than learning stuff from the Algorithms class.</p>
+<p id="p4">Now as I’m working on <a href="../211/">D5P211</a>, I’m also concurrently exploring the best way to learn from Leetcode. I aim at solving 500 problems (although I aimed for 1,000 back in January…), but quality is more important than quality, and for some good problems, I can resolve it using many different methods. Whatever the number, the principle is to spend about 500 hours from 5/10 to the end of 2019 on shuati.</p>
+<p id="p5">I just added the number of “assisted” problems in my daily tally. Sometimes I am stuck on a problem for more than a few hours, usually because I could not meet the given time or space complexity requirements, or because I fail on a few special test cases, and feel that I will need an entirely different method that I cannot discover by myself. I can then resort to the solutions and, after thoroughly understanding it or coding it myself, add it to the “assisted” problems list.</p>
+<p id="p6">I think it’s better for me to, say, solve 4 problems every day than to solve 8 problems every other day. This way, I can digest the problems and techniques better, and remember them in the long run.</p>
+<p id="p7">When solving a hard problem, it’s often the case that I encounter many dead ends, before finding a correct solution or resort to hints. I should reflect on the methods I try during the exploration.</p>
+<p id="p8">For days, I can concentrate on shuati for several hours straight, and enjoy it very much. On 5/16 I suddenly recalled how I felt “I can’t have sustained focus when studying data structures” back in <a href="../187/">D5P187-190117</a>. I then realized the importance of the Algorithm class I took, as well as my hard work for this class. They are crucial preparation for Leetcode.</p>
+<p id="p9">Taking the CS-3250 class, of course, is vastly different than shuati. I would say that in general, I take a bottom-up, input-driven approach to the class, but a top-down, output-driven approach to shuati. I came to realize the distinction between these two modes of studying first in <a href="../209/">D5P209-190424</a>: the former means I need to understand a difficult concept by digesting information, while the latter is to output my thoughts based on what I already know; the latter is generally much easier and more satisfying.</p>
+<p id="p10">The algorithms we learned in class are so hard that we often don’t know how it’s derived. Up till now I still don’t know why MTM have to take O(n^3) while OBST takes only O(n^2), i.e. how the reduction trick in the latter’s DP algorithm works; or why the Big-5 Algorithm cannot run with arrays of 3 numbers. I also don’t quite know, say, how to prove the correctness Prim’s, Kruskal’s, and Dijkstra’s algorithms. These are so hard that the professor doesn’t require us to know. We often only need to know the steps of the algorithm as well as when to use them.</p>
+<p id="p11">Less than half of what we learned in class is directly related to shuati. But that doesn’t mean the course isn’t useful. After the rigorous training, I can understand techniques such as dynamic programming, DFS or other graph/tree traversal algorithms; and analyses such as time complexity, much more easily. Enjoyable top-down learning can only be possible after painful bottom-up studying.</p>
+<p id="p12">And these methods can be adapted in unexpected ways. For example, the principle of Dijkstra’s Algorithm comes up in Prob. 64, although it’s a 2D array problem.</p>
+<p id="p13">Another difference between the course and shuati is that in shuati, we need to care about implementation and syntactical details. Learning about Python’s utility classes and their interfaces sometimes need memorization. But oftentimes, these kinds of memorization can also deepen one’s understanding of data structures.</p>
+<p id="p14">I seem to be good at some kinds of problems than at others. Even “Hard” tree problems seem easy for me, while some “Medium” array problems are unintuitive.</p>
+<p id="p15">By 5/20, here are some caveats for Leetcode that I’ve found. First, I sometimes have the temptation to get my program to “beat 99% of submissions” in terms of runtime. Some experienced coders have argued that obsessing with efficiency is nonsensical when what’s more important is to write clean, readable code. Also, the runtime measurement is not stable: when my code is identical to another person’s submission, sometimes the runtimes are different.</p>
+<p id="p16">Second, in order to pass all tests, I sometimes have to deal with some nasty edge conditions that may cause me to do extra hours of debugging. I’m not saying it’s not beneficial to care about edge cases, but it sometimes deviates from the main goal, especially when the original program is already basically correct.</p>
+<p id="p17">Third, solving on Leetcode can cause me to make certain assumptions about problems. For example, usually string problems say that the input letters will always be lowercase, so I gradually began to assume string problems always concern lowercase letters, and so failed on LC 345.</p>
+<p id="p18"></p>
+</div>
+</div>
+</body>

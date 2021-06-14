@@ -3,7 +3,7 @@
 Run the following to generate diary folders
 
 ```
-for i in {343..392}
+for i in {187..250}
 do
     mkdir d5/p/$i
 done

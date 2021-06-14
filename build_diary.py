@@ -4,6 +4,7 @@ Run this file locally to build HTML files for D5 pages and the archive page
 Note that some difference exists between my own version of Diary and the online version,
 mostly for category-4 texts.
 
+
 === Format description of input Diary txt files: ===
 
 The majority of my Diary consists of plain text. Other features include:
@@ -25,9 +26,11 @@ These indicators be separate lines and will be copied into the HTML document.
 I sometimes refer to my previous or future Diary in the form of `D5Pxxx`. These will be
 converted to hyperlinks to that Diary.
 
-todo: responsive font size
+
+=== Abbreviations used in my Diary that is to be replaced in the online version ===
+GR2, GR3, GR4
 """
-import os
+import os, re
 
 # My Diaries are divided into statistical periods by time.
 # Each year has 3 stat periods, denoted `a`, `b`, `c`.
@@ -39,8 +42,10 @@ PERIODS = [('17a', 45), ('17b', 71), ('17c', 105),
            ('20a', 311), ('20b', 339), ('20c', 364),
            ('21a', 389), ('21b', 392)]
 
+
 # ---------------------------------------------------------------
 # ------------ methods that return html templates ---------------
+
 
 def head(title, n_layers=1):
     root_dir = '../' * n_layers
@@ -109,8 +114,8 @@ def toplinks(i):
 
 
 # note: remember to close the divs
-container_s = '\n<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
-col_s = '<div class="row d-flex">\n'
+def container():
+    return f'\n<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
 
 
 # ----------------------------------------------------------
@@ -123,7 +128,10 @@ def generate_archive_html():
             name = ['年 1 ~ 4 月', '年 5 ~ 8 月', '年 9 ~ 12 月'][_]
         else:
             name = ['Jan. — Apr.', 'May — Aug.', 'Sept. — Dec.'][_]
-        fw.write(f'<h4>20{period[:2]} {name}</h4>\n')
+        fw.write(f'<h4>20{p[:2]} {name}</h4>\n' +
+                 f'<div class="row d-flex" id="{p}" style="margin-bottom: 29px;">\n')
+
+    # === end of helper function definitions ===
 
     out_file = 'd5/index.html'
     period_i = len(PERIODS) - 1  # index in the PERIOD array
@@ -133,17 +141,16 @@ def generate_archive_html():
         # write head and nav
         fw.write(head('Jazon Jiao · D5 archive', n_layers=1) + nav(n_layers=1))
         # write bootstrap container and <p> tag
-        fw.write(container_s + col_s + '\n')
+        fw.write(container() + '\n')
         # first statistical period
         write_period_name(fw, period)
 
         for i in range(PERIODS[-1][1], 0, -1):  # go thru each Diary entry in reverse order
             if i == PERIODS[period_i - 1][1]:  # end of current statistical period
+                fw.write('</div>\n')
                 period_i -= 1
                 period = PERIODS[period_i][0]
                 write_period_name(fw, period)
-            #
-            i_inner = PERIODS[period_i][1] - (PERIODS[period_i - 1][1] if period_i > 0 else 1)
 
             # get the date of the Diary
             in_file = f'd5/{period}/{i}.txt'
@@ -151,13 +158,12 @@ def generate_archive_html():
                 continue
             with open(in_file) as fr:
                 d5p = fr.readline()[3:-1]
-                print(d5p)
 
             # NOTE: THE href PATH IS RELATIVE TO d5/archive HERE!!!
-            fw.write(f'<a href="p/{i:03d}">D5p{d5p}</a><br/>\n')
+            fw.write(f'<div class="col-4"><a href="p/{i:03d}/">D5p{d5p}</a></div>\n')
 
         # close tags
-        fw.write('\n</div>\n</div>\n</body>\n')
+        fw.write('</div>\n<br/><br/><br/><br/>\n</div>\n</div>\n</body>\n')
 
 
 def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
@@ -167,6 +173,39 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
     :param start_i: starting Diary No. to build (inclusive)
     :param end_i: ending Diary No. to build (inclusive)
     """
+
+    def insert_spaces(line):
+        """
+        Insert spaces between Chinese characters and alphanumeric chars (letters, numbers)
+        Adapted from https://blog.csdn.net/qq_26064989/article/details/107517919
+        """
+        str1 = re.sub(r"([A-Za-z]+)([\u4e00-\u9fa5]+)", r'\1 \2', line)
+        str2 = re.sub(r"([\u4e00-\u9fa5]+)([A-Za-z]+)", r"\1 \2", str1)
+        str3 = re.split(r"([\u4e00-\u9fa5])", str2)
+
+        wordlist = [ss + " " for ss in str3]
+        return "".join(wordlist)
+
+    def insert_diary_links(line):
+        """
+        `line` should be one single paragraph, since this code breaks if
+        (1) two formats, e.g. `D5P84` and `D5P84-171008`, appear simultaneously in the input
+        (2) one Diary entry appears > 1 times in the input
+        """
+        # r2 = r"D5(P|p)(\d+)-\d{6}"
+        list = re.findall(r"D5P(\d+)", line)  # find all D5 numbers that appeared
+        for d5_number in list:
+            idx = line.find(f'D5P{d5_number}')  # d5_number is str here
+            m = len(f'D5P{d5_number}')
+            href = f'<a href="../{int(d5_number):03d}/">'
+            if line[idx + m] == '-':  # of the form D5P#-yymmdd
+                line = f'{line[:idx]}{href}{line[idx: idx + m + 7]}</a>{line[idx + m + 7:]}'
+            else:  # of the form D5P#
+                line = f'{line[:idx]}{href}{line[idx: idx + m]}</a>{line[idx + m:]}'
+        return line
+
+    # === end of helper function definitions ===
+
     # initialize the current period
     period_i = 0
     for _ in range(len(PERIODS) - 1, -1, -1):
@@ -190,18 +229,23 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
             fw.write(head(f'Jazon Jiao · D5p{i}', n_layers=3) + nav(n_layers=3))
 
             # write container and header (D5p#)
-            fw.write(container_s)
+            fw.write(container())
             d5p = fr.readline()[:-1]
-            fw.write(toplinks(i) + f'<h1>{d5p}</h1>\n' + col_s)
+            fw.write(toplinks(i) +
+                     f'<h1>{d5p}</h1>\n<div class="row d-flex" id="rdf" style="margin-bottom: 199px;">\n')
 
             # write body
+            j = 0  # paragraph count
             for l in fr:
-                if len(l) > 2 and l[2] == '`':   # categorized paragraph
+                if len(l) > 2 and l[2] == '`':   # categorized paragraph (fixme)
                     l = l[3:]
                 if len(l) > 4 and l[0] == '<':   # start/end quotes
                     fw.write(f'{l}')
-                else:
-                    fw.write(f'<p>{l[:-1]}</p>\n')
+                    continue  # i.e., else:
+                # create links
+                l = insert_diary_links(l)
+                j += 1
+                fw.write(f'<p id="p{j + 1}">{l[:-1]}</p>\n')
 
             # close the tags
             fw.write('</div>\n</div>\n</body>\n')
@@ -214,6 +258,6 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(185, 187)  # fixme
+    generate_d5_html(185, 219)  # fixme
 
 
