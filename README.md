@@ -12,8 +12,8 @@ done
 Then run the following to generate diary 
 
 ```
-for i in {185..209}
+for i in {155..184}
 do
-    touch d5/19a/$i.txt
+    touch d5/18c/$i.txt
 done
 ```

@@ -13,6 +13,11 @@ h1 {  /* h1 tag: Diary titles, like D5p84 */
     margin: 2.9vmin 0;
 }
 
+h4 {  /* h1 tag: Statistical Period titles, like 2019 Spring */
+    font-size: 4.9vmin;  /* vmin: 1vw/1vh = 1% of viewport width/height; 1vmin = 1vw or 1vh, whichever is smaller */
+    margin: 2.9vmin 0;
+}
+
 p {
     line-height: 4.4vmin;   /* within paragraph */
     margin-bottom: 2.7vmin; /* between paragraphs */

@@ -37,10 +37,10 @@ import os, re
 # The following lists the ending D5 No. for each period (inclusive).
 # The No. for the last period is the No. for the latest (i.e. current) Diary.
 PERIODS = [('17a', 45), ('17b', 71), ('17c', 105),
-           ('18a', 138), ('18b', 154), ('18c', 184),
+           ('18a', 138), ('18b', 154), ('18c', 183),
            ('19a', 209), ('19b', 232), ('19c', 276),
            ('20a', 311), ('20b', 339), ('20c', 364),
-           ('21a', 389), ('21b', 392)]
+           ('21a', 389), ('21b', 395)]
 
 
 # ---------------------------------------------------------------
@@ -114,8 +114,8 @@ def toplinks(i):
 
 
 # note: remember to close the divs
-def container():
-    return f'\n<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
+def container(px=3):
+    return f'\n<div class="container my-4 px-{px} col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
 
 
 # ----------------------------------------------------------
@@ -141,7 +141,7 @@ def generate_archive_html():
         # write head and nav
         fw.write(head('Jazon Jiao · D5 archive', n_layers=1) + nav(n_layers=1))
         # write bootstrap container and <p> tag
-        fw.write(container() + '\n')
+        fw.write(container(2) + '\n')
         # first statistical period
         write_period_name(fw, period)
 
@@ -258,6 +258,6 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(185, 219)  # fixme
+    generate_d5_html(155, 219)  # fixme
 
 
