@@ -29,6 +29,8 @@ converted to hyperlinks to that Diary.
 
 === Abbreviations used in my Diary that is to be replaced in the online version ===
 GR2, GR3, GR4
+
+todo: anchors
 """
 import os, re
 
@@ -37,7 +39,7 @@ import os, re
 # The following lists the ending D5 No. for each period (inclusive).
 # The No. for the last period is the No. for the latest (i.e. current) Diary.
 PERIODS = [('17a', 45), ('17b', 71), ('17c', 105),
-           ('18a', 138), ('18b', 154), ('18c', 183),
+           ('18a', 138), ('18b', 155), ('18c', 183),
            ('19a', 209), ('19b', 232), ('19c', 276),
            ('20a', 311), ('20b', 339), ('20c', 364),
            ('21a', 389), ('21b', 395)]
