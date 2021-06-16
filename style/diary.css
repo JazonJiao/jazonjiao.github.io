@@ -8,14 +8,29 @@ body {
     font-size: 3.7vmin;
 }
 
-h1 {  /* h1 tag: Diary titles, like D5p84 */
+/* h1 tag: Diary titles, like D5p84 */
+/* h2 tag: Diary subtitles, like "Trip to Beijing" */
+/* h3 tag: Diary section headers in entries that are divided into "parts", like "【Part 2】Road to workforce" */
+/* h4 tag: Statistical Period titles in d5/index.html, like 2019 Spring */
+
+h1 {
     font-size: 4.9vmin;  /* vmin: 1vw/1vh = 1% of viewport width/height; 1vmin = 1vw or 1vh, whichever is smaller */
     margin: 2.9vmin 0 4.9vmin 0;
 }
 
-h4 {  /* h4 tag: Statistical Period titles, like 2019 Spring */
-    font-size: 4.9vmin;  /* vmin: 1vw/1vh = 1% of viewport width/height; 1vmin = 1vw or 1vh, whichever is smaller */
+h4 {
+    font-size: 3.9vmin;
     margin: 2.9vmin 0;
+}
+
+h2, h3 {
+    color: #777;
+    font-size: 3.6vmin;
+    margin: 2.9vmin 0;
+}
+
+h3 {
+    text-decoration: underline;
 }
 
 p {
@@ -23,4 +38,13 @@ p {
     margin-bottom: 2.7vmin; /* between paragraphs */
 }
 
+p:target, h1:target, h3:target, h4:target {
+    /* this is to offset the anchor location; https://stackoverflow.com/questions/4086107 */
+    padding-top: 79px;
+    margin-top: -79px;
+}
+
+span {
+    color: #d4c9c9;
+}
 

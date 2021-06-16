@@ -9,8 +9,16 @@ mostly for category-4 texts.
 
 The majority of my Diary consists of plain text. Other features include:
 
-- Title
+- Title <h1>
 The first line should be the title of the Diary, of the form `D5Pxxx-yymmdd`.
+
+- Subtitle <h2>
+If there is a subtitle, then that line is surrounded by <h2> tags, such as
+`<h2>Trip to Northern Capital</h2>`
+
+- Sections <h3>
+Some diary such as D5P84 is organized into sections. Each section header starts with the [h3]
+identifier.
 
 - Category
 "Categorized paragraphs" are paragraphs preceded by 3 characters representing its category,
@@ -30,7 +38,19 @@ converted to hyperlinks to that Diary.
 === Abbreviations used in my Diary that is to be replaced in the online version ===
 GR2, GR3, GR4
 
-todo: anchors
+
+=== Output HTML file format ===
+
+h1 tag: Diary titles
+h2 tag: Diary subtitles
+h3 tag: Diary section headers
+h4 tag: Statistical Period titles in d5/index.html, like "2019 Spring"
+
+- id (used for anchoring)
+(1) Diary title has id = "0".
+(2) Each paragraph has id = the paragraph's index (1-indexed), such as "7", "15", etc.
+(3) Each section header (h3) has id = "part#", such as "part1", "part6", etc.
+
 """
 import os, re
 
@@ -120,6 +140,10 @@ def container(px=3):
     return f'\n<div class="container my-4 px-{px} col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
 
 
+circled_n = '⓪ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ ㉑ ㉒ ㉓ ㉔ ㉕ ' \
+            '㉖ ㉗ ㉘ ㉙ ㉚ ㉛ ㉜ ㉝ ㉞ ㉟ ㊱ ㊲ ㊳ ㊴ ㊵ ㊶ ㊷ ㊸ ㊹ ㊺ ㊻ ㊼ ㊽ ㊾ ㊿'
+
+
 # ----------------------------------------------------------
 # ------------ methods that build html files ---------------
 
@@ -130,8 +154,8 @@ def generate_archive_html():
             name = ['年 1 ~ 4 月', '年 5 ~ 8 月', '年 9 ~ 12 月'][_]
         else:
             name = ['Jan. — Apr.', 'May — Aug.', 'Sept. — Dec.'][_]
-        fw.write(f'<h4>20{p[:2]} {name}</h4>\n' +
-                 f'<div class="row d-flex" id="{p}" style="margin-bottom: 29px;">\n')
+        fw.write(f'<h4 id="{p}">20{p[:2]} {name}</h4>\n' +
+                 f'<div class="row d-flex" style="margin-bottom: 29px;">\n')
 
     # === end of helper function definitions ===
 
@@ -142,8 +166,8 @@ def generate_archive_html():
     with open(out_file, 'w') as fw:
         # write head and nav
         fw.write(head('Jazon Jiao · D5 archive', n_layers=1) + nav(n_layers=1))
-        # write bootstrap container and <p> tag
-        fw.write(container(2) + '\n')
+        # write bootstrap container and <p> tag, then title
+        fw.write(container(2) + '\n<h4>D5 Archive</h4>')
         # first statistical period
         write_period_name(fw, period)
 
@@ -219,10 +243,13 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
     # go thru each Diary No.
     for i in range(start_i, end_i + 1):
         in_file = f'd5/{period}/{i}.txt'
+        out_path = f'd5/p/{i:03d}'  # `03d` makes `1` -> `001`, `19` -> `019`, etc.
+        if i == PERIODS[period_i][1] and i < PERIODS[-1][1]:  # end of current statistical period
+            period_i += 1
+            period = PERIODS[period_i][0]
         if not os.path.exists(in_file):  # if source D5 txt file does not exist, skip it
             continue
 
-        out_path = f'd5/p/{i:03d}'      # `03d` makes `1` -> `001`, `19` -> `019`, etc.
         if not os.path.isdir(out_path):
             os.mkdir(out_path)
 
@@ -233,33 +260,36 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
             # write container and header (D5p#)
             fw.write(container())
             d5p = fr.readline()[:-1]
-            fw.write(toplinks(i) +
-                     f'<h1>{d5p}</h1>\n<div class="row d-flex" id="rdf" style="margin-bottom: 199px;">\n')
+            fw.write(toplinks(i) + f'<h1 id="0">{d5p}</h1>\n<div class="row d-flex" id="rdf" '
+                                   f'style="margin-bottom: 199px;">\n')
 
             # write body
             j = 0  # paragraph count
+            h = 0  # h3 section header count
             for l in fr:
                 if len(l) > 2 and l[2] == '`':   # categorized paragraph (fixme)
                     l = l[3:]
-                if len(l) > 4 and l[0] == '<':   # start/end quotes
+                if len(l) >= 4 and l[0] == '<':   # start/end quotes; h2 subtitles
                     fw.write(f'{l}')
-                    continue  # i.e., else:
+                    continue
+                if len(l) > 4 and l[:4] == '[h3]':  # h3 section headers
+                    h += 1
+                    fw.write(f'<h3 id="part{h}">{l[4:-1]}</h3>\n')
+                    continue
                 # create links
                 l = insert_diary_links(l)
                 j += 1
-                fw.write(f'<p id="p{j + 1}">{l[:-1]}</p>\n')
+                fw.write(f'<p id="{j}"><span>{circled_n[j * 2]}</span> {l[:-1]}</p>\n')
 
             # close the tags
             fw.write('</div>\n</div>\n</body>\n')
+            print(i, period)
             # end of the i-th Diary document
-
-        if i == PERIODS[period_i][1]:     # end of current statistical period
-            period_i += 1
-            period = PERIODS[period_i][0]
 
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(155, 219)  # fixme
+    generate_d5_html(120, 219)  # fixme
+
 
 
