@@ -24,9 +24,13 @@ h4 {
 }
 
 h2, h3 {
-    color: #777;
+    color: #766;
     font-size: 3.6vmin;
     margin: 2.9vmin 0;
+}
+
+h2 {
+    font-weight: bold;
 }
 
 h3 {
@@ -45,6 +49,10 @@ p:target, h1:target, h3:target, h4:target {
 }
 
 span {
-    color: #d4c9c9;
+    color: #d4c9c9;  /* color of the paragraph marker */
+}
+
+#rdf {
+    margin-bottom: 57vh;  /* margin at the bottom of page */
 }
 

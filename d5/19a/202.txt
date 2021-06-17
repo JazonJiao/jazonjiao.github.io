@@ -11,4 +11,3 @@ D5P202-190330
 11`469 says that in a test, if you encounter a question you can’t solve, it’s okay. It’s crucial to get the other three problems absolutely right, and get half the points on the other one. Getting an 87 on tests is enough for an A. For the unsolvable problem, she says, it’s important that you write as long, messy, and confusing as possible. You can give contradicting conclusions in different parts of your nonsense answer.
 11`So, if I do encounter a NP-complete problem I have no idea how to prove, I could rant about the definition of various concepts and shamelessly add common ways to do reductions—adding empty vertices, adding universal vertices, splitting vertices… well, maybe one of these would work!
 11`The test will constitute 17.5% of the final grade. It will take place on 4/10, the 3rd anniversary of my life’s “New Era.” Hopefully this will give me the best of luck!
-

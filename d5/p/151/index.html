@@ -51,7 +51,7 @@
 <a href="../150">← Prev</a>
 <a href="../152">Next →</a>
 <h1 id="0">D5P151-180726</h1>
-<div class="row d-flex" id="rdf" style="margin-bottom: 199px;">
+<div class="row d-flex" id="rdf">
 <p id="1"><span>①</span> On 7/26 morning, after 4 hours of trial and error, I finally figured out how to use Python and recursion to generate a 2D array that stores all combinations of n choose k (for example, 3 choose 1 returns [[1, 0, 0], [0, 1, 0], [0, 0, 1]]). This gives many new insights into how to solve a problem, as for 2 hours or so I was headed in the wrong direction. I finally realized that the return type of base cases should also be 2D arrays instead of 1D arrays.</p>
 <p id="2"><span>②</span> I spent another hour figuring out what’s wrong with my permutation algorithm (for example, permutation of 3 returns [[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]]), which always alters my original array for each recursive call. I eventually found that function calls in Python passes by “object reference” instead of value, so I added a B = A.copy() to solve the problem.</p>
 <p id="3"><span>③</span> On 8/4 I successfully solved the problem of generating all ~ n!/e derangements of a given array (for example, derangements of 3 returns [[1, 2, 0], [2, 0, 1]). This is another challenging recursive problem in combinatorics, and my ability to think abstractly enhanced greatly.</p>
@@ -64,5 +64,8 @@
 <p id="10"><span>⑩</span> On 8/4 I attended the Third Place match and our team got the fourth (last) place but still everyone got a beautiful medal. Later I talked to 909 about some topics in CS, and he says that many profs teaching in UCLA are dashens that got champions in math competitions, but the class size is too big and when they teach, they often expect the students to understand difficult concepts easily…</p>
 <p id="11"><span>⑪</span> On 8/6 I briefly read about some integration tricks, and pondered on the philosophy of mathematics. As I concluded earlier, the fundamental principle of solving a problem—whether mathematical or interpersonal—is that you should analyze information in your head constantly. You should definitely avoid thinking in only one direction, easily wasting hours of time at a dead end. To achieve this, you need a versatile toolkit of problem-solving techniques.</p>
 </div>
+<footer class="pt-3 mt-4 text-muted border-top">
+&copy; 2021 Jazon Jiao<br/>
+</footer>
 </div>
 </body>

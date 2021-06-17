@@ -140,6 +140,14 @@ def container(px=3):
     return f'\n<div class="container my-4 px-{px} col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
 
 
+def footer(path):
+    return f"""
+<footer class="pt-3 mt-4 text-muted border-top">
+&copy; 2021 Jazon Jiao<br/>
+</footer>
+"""
+
+
 circled_n = '⓪ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ ㉑ ㉒ ㉓ ㉔ ㉕ ' \
             '㉖ ㉗ ㉘ ㉙ ㉚ ㉛ ㉜ ㉝ ㉞ ㉟ ㊱ ㊲ ㊳ ㊴ ㊵ ㊶ ㊷ ㊸ ㊹ ㊺ ㊻ ㊼ ㊽ ㊾ ㊿'
 
@@ -260,8 +268,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
             # write container and header (D5p#)
             fw.write(container())
             d5p = fr.readline()[:-1]
-            fw.write(toplinks(i) + f'<h1 id="0">{d5p}</h1>\n<div class="row d-flex" id="rdf" '
-                                   f'style="margin-bottom: 199px;">\n')
+            fw.write(toplinks(i) + f'<h1 id="0">{d5p}</h1>\n<div class="row d-flex" id="rdf">\n')
 
             # write body
             j = 0  # paragraph count
@@ -281,15 +288,17 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
                 j += 1
                 fw.write(f'<p id="{j}"><span>{circled_n[j * 2]}</span> {l[:-1]}</p>\n')
 
+            #fw.write()
+
             # close the tags
-            fw.write('</div>\n</div>\n</body>\n')
+            fw.write(f'</div>{footer(out_path)}</div>\n</body>\n')
             print(i, period)
             # end of the i-th Diary document
 
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(120, 219)  # fixme
+    generate_d5_html(120, 232)  # fixme
 
 
 
