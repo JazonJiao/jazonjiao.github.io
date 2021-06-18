@@ -32,7 +32,7 @@ These indicators be separate lines and will be copied into the HTML document.
 
 - Intra-site links
 I sometimes refer to my previous or future Diary in the form of `D5Pxxx`. These will be
-converted to hyperlinks to that Diary.
+converted to hyperlinks to that Diary. todo: add support for D4F (e.g. D5P230-190726)
 
 
 === Abbreviations used in my Diary that is to be replaced in the online version ===
@@ -60,7 +60,7 @@ import os, re
 # The No. for the last period is the No. for the latest (i.e. current) Diary.
 PERIODS = [('17a', 45), ('17b', 71), ('17c', 105),
            ('18a', 138), ('18b', 155), ('18c', 183),
-           ('19a', 209), ('19b', 232), ('19c', 276),
+           ('19a', 209), ('19b', 233), ('19c', 276),
            ('20a', 311), ('20b', 339), ('20c', 364),
            ('21a', 389), ('21b', 395)]
 
@@ -298,7 +298,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(120, 232)  # fixme
+    generate_d5_html(120, 234)  # fixme
 
 
 
