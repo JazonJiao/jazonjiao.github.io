@@ -57,12 +57,23 @@ import os, re
 # My Diaries are divided into statistical periods by time.
 # Each year has 3 stat periods, denoted `a`, `b`, `c`.
 # The following lists the ending D5 No. for each period (inclusive).
-# The No. for the last period is the No. for the latest (i.e. current) Diary.
-PERIODS = [('17a', 45), ('17b', 71), ('17c', 105),
-           ('18a', 138), ('18b', 155), ('18c', 183),
-           ('19a', 209), ('19b', 233), ('19c', 276),
-           ('20a', 311), ('20b', 339), ('20c', 364),
-           ('21a', 389), ('21b', 395)]
+# The D5 No. for the last period is the No. for the latest (i.e. current) Diary.
+PERIODS = [
+    ('17a', 45, '17 Spring', 'null', 'null', 'null', 'null', 'null'),
+    ('17b', 71, '17 Summer', 'null', 'null', 'null', 'null', 'null'),
+    ('17c', 105, '17 Autumn', 36685, 20.7, 26.9, 19.1, 33.3),
+    ('18a', 138, '18 Spring', 26730, 31.3, 21.2, 18.3, 29.2),
+    ('18b', 155, '18 Summer', 12302, 36.9, 16.1, 33.7, 13.4),
+    ('18c', 183, '18 Autumn', 18986, 41.7, 17.9, 29.0, 11.5),
+    ('19a', 209, '19 Spring', 19179, 43.1, 19.5, 26.7, 10.7),
+    ('19b', 233, '19 Summer', 'null', 0, 0, 0, 0),
+    ('19c', 276, '19 Autumn', 33733, 17.9, 31.7, 7.4, 43.0),
+    ('20a', 311, '2020 春', 'null', 'null', 'null', 'null', 'null'),
+    ('20b', 339, '2020 夏', 'null', 'null', 'null', 'null', 'null'),
+    ('20c', 364, '2020 秋', 'null', 'null', 'null', 'null', 'null'),
+    ('21a', 389, '2021 春', 'null', 'null', 'null', 'null', 'null'),
+    ('21b', 395, '2021 夏', 'null', 'null', 'null', 'null', 'null')
+]
 
 
 # ---------------------------------------------------------------
@@ -126,12 +137,46 @@ def nav(n_layers=2):
 """
 
 
+def table():
+    tbody = ''
+    for period_id, _, period_name, wc, c1, c2, c3, c4 in reversed(PERIODS[2:]):  # ignore 17a, 17b for now
+        wc_unit = 'words' if period_id < '20a' else '字'
+        tbody += f"""
+    <tr>
+      <th scope="row"><a href="#{period_id}">{period_name}</a></th>
+      <td>{wc} {wc_unit}</td><td>{c1} %</td><td>{c2} %</td><td>{c3} %</td><td>{c4} %</td>
+    </tr>"""
+
+    return f"""
+
+<div class="container my-4 px-2 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+  <table class="table table-sm">
+    <thead>
+    <tr>
+      <th scope="col">Period</th>
+      <th scope="col">Word Count</th>
+      <th scope="col">Learning</th>
+      <th scope="col">Growth</th>
+      <th scope="col">Life</th>
+      <th scope="col">Love</th>
+    </tr>
+    </thead>
+    <tbody>
+{tbody}
+    </tbody>
+  </table>
+</div>
+
+"""
+
+
 def toplinks(i):
-    s = '<a href="../../">Archive</a>\n'
+    s = '<p><a href="../../">Archive</a> '
     if i > 1:
-        s += f'<a href="../{i - 1:03d}">← Prev</a>\n'
+        s += f'<a href="../{i - 1:03d}">← Prev</a> '
     if i < PERIODS[-1][1]:
-        s += f'<a href="../{i + 1:03d}">Next →</a>\n'
+        s += f'<a href="../{i + 1:03d}">Next →</a>'
+    s += '</p>\n'
     return s
 
 
@@ -167,13 +212,16 @@ def generate_archive_html():
 
     # === end of helper function definitions ===
 
-    out_file = 'd5/index.html'
+    out_file = 'index.html'
     period_i = len(PERIODS) - 1  # index in the PERIOD array
     period = PERIODS[period_i][0]
 
     with open(out_file, 'w') as fw:
         # write head and nav
         fw.write(head('Jazon Jiao · D5 archive', n_layers=1) + nav(n_layers=1))
+
+        fw.write(table())
+
         # write bootstrap container and <p> tag, then title
         fw.write(container(2) + '\n<h4>D5 Archive</h4>')
         # first statistical period
@@ -187,7 +235,7 @@ def generate_archive_html():
                 write_period_name(fw, period)
 
             # get the date of the Diary
-            in_file = f'd5/{period}/{i}.txt'
+            in_file = f'{period}/{i}.txt'
             if not os.path.exists(in_file):  # if source D5 txt file does not exist, skip it
                 continue
             with open(in_file) as fr:
@@ -250,8 +298,8 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
     # go thru each Diary No.
     for i in range(start_i, end_i + 1):
-        in_file = f'd5/{period}/{i}.txt'
-        out_path = f'd5/p/{i:03d}'  # `03d` makes `1` -> `001`, `19` -> `019`, etc.
+        in_file = f'{period}/{i}.txt'
+        out_path = f'p/{i:03d}'  # `03d` makes `1` -> `001`, `19` -> `019`, etc.
         if i == PERIODS[period_i][1] and i < PERIODS[-1][1]:  # end of current statistical period
             period_i += 1
             period = PERIODS[period_i][0]
