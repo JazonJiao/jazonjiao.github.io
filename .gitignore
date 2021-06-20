@@ -1,5 +1,6 @@
 .idea/*
 .DS_Store
+__pycache__
 node_modules/
 d5/18a
 d5/18b
