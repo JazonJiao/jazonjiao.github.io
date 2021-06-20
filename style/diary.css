@@ -1,11 +1,6 @@
-@font-face {
-    font-family: 'Kaiti';
-    src: url('../file/font/STKAITI.ttf'); /* IE9 Compat Modes */
-}
-
 body {
-    font-family: serif, 'Kaiti', serif;  /* times new roman by default */
     font-size: 3.7vmin;
+    /*color: dodgerblue;*/
 }
 
 /* h1 tag: Diary titles, like D5p84 */
@@ -56,3 +51,8 @@ span {
     margin-bottom: 57vh;  /* margin at the bottom of page */
 }
 
+th, td {
+    text-align: center;
+    font-size: 3.2vmin;
+    height: 67%;
+}

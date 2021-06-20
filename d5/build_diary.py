@@ -58,6 +58,8 @@ import os, re
 # Each year has 3 stat periods, denoted `a`, `b`, `c`.
 # The following lists the ending D5 No. for each period (inclusive).
 # The D5 No. for the last period is the No. for the latest (i.e. current) Diary.
+# The array also hardcodes the word count for that period, as well as
+# percentages for 4 categories.
 PERIODS = [
     ('17a', 45, '17 Spring', 'null', 'null', 'null', 'null', 'null'),
     ('17b', 71, '17 Summer', 'null', 'null', 'null', 'null', 'null'),
@@ -80,8 +82,14 @@ PERIODS = [
 # ------------ methods that return html templates ---------------
 
 
-def head(title, n_layers=1):
+def head(title, n_layers=1, lang='en'):
     root_dir = '../' * n_layers
+    if lang == 'en':
+        font = '<style> body { font-family: serif; } </style>'
+    elif lang == 'zh':
+        font = f'<link href="{root_dir}style/cn-font.css" rel="stylesheet">'
+    else:
+        raise Exception('Language error')
     return f"""
 <!doctype html>
 <html lang="en">
@@ -103,7 +111,7 @@ def head(title, n_layers=1):
 
   <link href="{root_dir}style/index.css" rel="stylesheet">
   <link href="{root_dir}style/diary.css" rel="stylesheet">
-
+  {font}
   <link rel="icon" href="{root_dir}file/icon/brainy.ico" type="image/x-icon"/>
 </head>
 
@@ -137,28 +145,37 @@ def nav(n_layers=2):
 """
 
 
-def table():
+def stats_table():
+    # colors for the 4 categories
+    colors = ['#e96700',
+              'green',
+              'dodgerblue',
+              'rebeccapurple']
+
     tbody = ''
     for period_id, _, period_name, wc, c1, c2, c3, c4 in reversed(PERIODS[2:]):  # ignore 17a, 17b for now
         wc_unit = 'words' if period_id < '20a' else '字'
         tbody += f"""
     <tr>
       <th scope="row"><a href="#{period_id}">{period_name}</a></th>
-      <td>{wc} {wc_unit}</td><td>{c1} %</td><td>{c2} %</td><td>{c3} %</td><td>{c4} %</td>
+      <td>{wc} {wc_unit}</td>
+      <td style="color: {colors[0]}">{c1} %</td>
+      <td style="color: {colors[1]}">{c2} %</td>
+      <td style="color: {colors[2]}">{c3} %</td>
+      <td style="color: {colors[3]}">{c4} %</td>
     </tr>"""
 
     return f"""
-
 <div class="container my-4 px-2 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
   <table class="table table-sm">
     <thead>
     <tr>
-      <th scope="col">Period</th>
+      <th scope="col" style="color: darkred;">Period</th>
       <th scope="col">Word Count</th>
-      <th scope="col">Learning</th>
-      <th scope="col">Growth</th>
-      <th scope="col">Life</th>
-      <th scope="col">Love</th>
+      <th scope="col" style="color: {colors[0]}">Learning</th>
+      <th scope="col" style="color: {colors[1]}">Growth</th>
+      <th scope="col" style="color: {colors[2]}">Life</th>
+      <th scope="col" style="color: {colors[3]}">Love</th>
     </tr>
     </thead>
     <tbody>
@@ -166,7 +183,6 @@ def table():
     </tbody>
   </table>
 </div>
-
 """
 
 
@@ -218,10 +234,9 @@ def generate_archive_html():
 
     with open(out_file, 'w') as fw:
         # write head and nav
-        fw.write(head('Jazon Jiao · D5 archive', n_layers=1) + nav(n_layers=1))
-
-        fw.write(table())
-
+        fw.write(head('Jazon Jiao · D5 archive', n_layers=1, lang='zh') + nav(n_layers=1))
+        # write the table for Diary statistics
+        fw.write(stats_table())
         # write bootstrap container and <p> tag, then title
         fw.write(container(2) + '\n<h4>D5 Archive</h4>')
         # first statistical period
@@ -311,7 +326,8 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
         with open(in_file) as fr, open(out_path + '/index.html', 'w') as fw:
             # write head and nav-bar
-            fw.write(head(f'Jazon Jiao · D5p{i}', n_layers=3) + nav(n_layers=3))
+            lang = 'en' if period < '20a' else 'cn'
+            fw.write(head(f'Jazon Jiao · D5p{i}', n_layers=3, lang=lang) + nav(n_layers=3))
 
             # write container and header (D5p#)
             fw.write(container())

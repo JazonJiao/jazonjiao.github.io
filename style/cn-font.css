@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Kaiti';
+    src: url('../file/font/STKAITI.ttf'); /* IE9 Compat Modes */
+}
+
+@font-face {
+    font-family: 'TNR';
+    src: url('../file/font/times.ttf');
+}
+
+/* font is times new roman by default, then Kaiti; used for Chinese Diaries
+   The reason I used "font-family: serif" in English Diaries is that
+   the following style goes wrong when bolding/italicizing the TNR text.
+ */
+body {
+    font-family: 'TNR', 'Kaiti', serif;
+    font-size: 3.7vmin;
+}
