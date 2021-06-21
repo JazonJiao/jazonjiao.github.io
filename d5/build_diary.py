@@ -85,7 +85,7 @@ PERIODS = [
 def head(title, n_layers=1, lang='en'):
     root_dir = '../' * n_layers
     if lang == 'en':
-        font = "<style> body { font-family: serif, 'Kai', serif; } </style>"
+        font = f'<link href="{root_dir}style/en-font.css" rel="stylesheet">'
     elif lang == 'zh':
         font = f'<link href="{root_dir}style/cn-font.css" rel="stylesheet">'
     else:
@@ -189,7 +189,7 @@ def stats_table():
 <div class="container px-xs-5 px-sm-3 px-md-0 py-4">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
     <div class="col">
-      <div class="card h-100" style="border-color: {colors[0]}; background: {bgcolor};">
+      <div class="card h-100" style="border-color: {colors[0]}; background: {bgcolor}; box-shadow: 3px 3px 9px -4px #999;">
         <div class="card-body">
           <h5 class="card-header fw-bold" style="color: {colors[0]}; border-bottom-color: {colors[0]};">1. Learning (学习)</h5>
           <p class="mt-3 categ">
@@ -201,12 +201,11 @@ def stats_table():
 <li>Course logistics</li>
 <li>Study plans and goals; self-encouragements</li>
 </ul>
-          </p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card h-100" style="border-color: {colors[1]}; background: {bgcolor};">
+      <div class="card h-100" style="border-color: {colors[1]}; background: {bgcolor}; box-shadow: 3px 3px 9px -4px #999;">
         <div class="card-body">
           <h5 class="card-header fw-bold" style="color: {colors[1]}; border-bottom-color: {colors[1]};">2. Growth (成长)</h5>
           <p class="mt-3 categ">
@@ -218,12 +217,11 @@ def stats_table():
 <li>life trajectories of myself and others; personality analysis</li>
 <li>Interpersonal relationships</li>
 </ul>
-          </p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card h-100" style="border-color: {colors[2]}; background: {bgcolor};">
+      <div class="card h-100" style="border-color: {colors[2]}; background: {bgcolor}; box-shadow: 3px 3px 9px -4px #999;">
         <div class="card-body">
           <h5 class="card-header fw-bold" style="color: {colors[2]}; border-bottom-color: {colors[2]};">3. Life (生活)</h5>
           <p class="mt-3 categ">
@@ -234,12 +232,11 @@ def stats_table():
 <li>Sleep and health conditions</li>
 <li>Food, housing, climate, pets, money...</li>
 </ul>
-          </p>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card h-100" style="border-color: {colors[3]}; background: {bgcolor};">
+      <div class="card h-100" style="border-color: {colors[3]}; background: {bgcolor}; box-shadow: 3px 3px 9px -4px #999;">
         <div class="card-body">
           <h5 class="card-header fw-bold" style="color: {colors[3]}; border-bottom-color: {colors[3]};">4. Love (情感)</h5>
           <p class="mt-3 categ">
@@ -248,7 +245,6 @@ def stats_table():
 <li>Analysis of my past love experiences</li>
 <li>Viewpoint on romantic relationships</li>
 </ul>
-          </p>
         </div>
       </div>
     </div>

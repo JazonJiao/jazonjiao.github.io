@@ -1,6 +1,5 @@
 body {
     font-size: 3.7vmin;
-    /*color: dodgerblue;*/
 }
 
 /* h1 tag: Diary titles, like D5p84 */
@@ -37,8 +36,8 @@ h5 {
 }
 
 p.categ, li {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 19px;
+    line-height: 22px;
 }
 
 ul {

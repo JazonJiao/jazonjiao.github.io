@@ -1,0 +1,10 @@
+/* only show advanced fonts on large screens
+ this is because serif is hard to read on the phone...
+ */
+
+@media screen and (min-width: 576px) {
+    body {
+        font-family: serif;
+    }
+}
+

@@ -3,20 +3,25 @@
   I need to refactor the code so as not to take up a lot of bandwidth.
 */
 
-@font-face {
-    font-family: 'Kai';
-    src: url('../file/font/stkaiti.ttf'); /* IE9 Compat Modes */
+@media screen and (min-width: 576px) {  /* only show advanced fonts on large screens */
+
+    @font-face {
+        font-family: 'Kai';
+        src: url('../file/font/stkaiti.ttf'); /* IE9 Compat Modes */
+    }
+
+    @font-face {
+        font-family: 'TNR';
+        src: url('../file/font/times.ttf');
+    }
+
+    /* font is times new roman by default, then Kaiti; used for Chinese Diaries
+       The reason I used "font-family: serif" in English Diaries is that
+       the following style goes wrong when bolding/italicizing the TNR text.
+     */
+    body {
+        font-family: 'TNR', 'Kai', serif;
+    }
+
 }
 
-@font-face {
-    font-family: 'TNR';
-    src: url('../file/font/times.ttf');
-}
-
-/* font is times new roman by default, then Kaiti; used for Chinese Diaries
-   The reason I used "font-family: serif" in English Diaries is that
-   the following style goes wrong when bolding/italicizing the TNR text.
- */
-body {
-    font-family: 'TNR', 'Kai', serif;
-}
