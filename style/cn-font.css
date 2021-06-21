@@ -1,3 +1,8 @@
+/* 2021-06-20
+  Kaiti font file takes up 12.7MB of space, which is a lot. In case the website traffic increases,
+  I need to refactor the code so as not to take up a lot of bandwidth.
+*/
+
 @font-face {
     font-family: 'Kai';
     src: url('../file/font/stkaiti.ttf'); /* IE9 Compat Modes */

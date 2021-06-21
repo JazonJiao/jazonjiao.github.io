@@ -85,7 +85,7 @@ PERIODS = [
 def head(title, n_layers=1, lang='en'):
     root_dir = '../' * n_layers
     if lang == 'en':
-        font = '<style> body { font-family: serif; } </style>'
+        font = "<style> body { font-family: serif, 'Kai', serif; } </style>"
     elif lang == 'zh':
         font = f'<link href="{root_dir}style/cn-font.css" rel="stylesheet">'
     else:
@@ -151,7 +151,8 @@ def stats_table():
               'green',
               'dodgerblue',
               'rebeccapurple']
-
+    txtcs = ['#c94900', '#096909', '#0969b9', '#563d7c']
+    bgcolor = '#ffe7c9'
     tbody = ''
     for period_id, _, period_name, wc, c1, c2, c3, c4 in reversed(PERIODS[2:]):  # ignore 17a, 17b for now
         wc_unit = 'words' if period_id < '20a' else '字'
@@ -182,6 +183,76 @@ def stats_table():
 {tbody}
     </tbody>
   </table>
+</div>
+
+<!-- description of 4 categories -->
+<div class="container px-xs-5 px-sm-3 px-md-0 py-4">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+    <div class="col">
+      <div class="card h-100" style="border-color: {colors[0]}; background: {bgcolor};">
+        <div class="card-body">
+          <h5 class="card-header fw-bold" style="color: {colors[0]}; border-bottom-color: {colors[0]};">1. Learning (学习)</h5>
+          <p class="mt-3 categ">
+<ul style="color: {txtcs[0]};">
+<li>Technical aspects of my work, projects, or research; study notes</li>
+<li>Study methods and resources; time management</li>
+<li>Evaluation of my study efficiency; reflection on my attitudes</li>
+<li>Academic interests</li>
+<li>Course logistics</li>
+<li>Study plans and goals; self-encouragements</li>
+</ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100" style="border-color: {colors[1]}; background: {bgcolor};">
+        <div class="card-body">
+          <h5 class="card-header fw-bold" style="color: {colors[1]}; border-bottom-color: {colors[1]};">2. Growth (成长)</h5>
+          <p class="mt-3 categ">
+<ul style="color: {txtcs[1]};">
+<li>Behavioral and political aspects of work; leadership skills</li>
+<li>Career planning</li>
+<li>Application to programs (e.g. grad school, internships)</li>
+<li>Personal values; life philosophy</li>
+<li>life trajectories of myself and others; personality analysis</li>
+<li>Interpersonal relationships</li>
+</ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100" style="border-color: {colors[2]}; background: {bgcolor};">
+        <div class="card-body">
+          <h5 class="card-header fw-bold" style="color: {colors[2]}; border-bottom-color: {colors[2]};">3. Life (生活)</h5>
+          <p class="mt-3 categ">
+<ul style="color: {txtcs[2]};">
+<li>Fun activity with friends; my hobbies</li>
+<li>Travel logs; world cultures</li>
+<li>Current events; societal issues</li>
+<li>Sleep and health conditions</li>
+<li>Food, housing, climate, pets, money...</li>
+</ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100" style="border-color: {colors[3]}; background: {bgcolor};">
+        <div class="card-body">
+          <h5 class="card-header fw-bold" style="color: {colors[3]}; border-bottom-color: {colors[3]};">4. Love (情感)</h5>
+          <p class="mt-3 categ">
+<ul style="color: {txtcs[3]};">
+<li>My feelings for, and interactions with, the girls who I like(d) and/or who liked me</li>
+<li>Analysis of my past love experiences</li>
+<li>Viewpoint on romantic relationships</li>
+</ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 """
 
@@ -235,10 +306,13 @@ def generate_archive_html():
     with open(out_file, 'w') as fw:
         # write head and nav
         fw.write(head('Jazon Jiao · D5 archive', n_layers=1, lang='zh') + nav(n_layers=1))
+        # write title
+        fw.write('\n<h1 style="text-align: center; text-decoration: underline; margin-bottom: 67px;">'
+                 '【 Diary 5 Archive 】</h1>')
         # write the table for Diary statistics
         fw.write(stats_table())
-        # write bootstrap container and <p> tag, then title
-        fw.write(container(2) + '\n<h4>D5 Archive</h4>')
+        # write bootstrap container and <p> tag
+        fw.write(container(2))
         # first statistical period
         write_period_name(fw, period)
 

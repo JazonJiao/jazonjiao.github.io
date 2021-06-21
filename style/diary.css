@@ -32,6 +32,19 @@ h3 {
     text-decoration: underline;
 }
 
+h5 {
+    text-align: center;
+}
+
+p.categ, li {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+ul {
+    padding-left: 1rem;
+}
+
 p {
     line-height: 4.4vmin;   /* within paragraph */
     margin-bottom: 2.7vmin; /* between paragraphs */
