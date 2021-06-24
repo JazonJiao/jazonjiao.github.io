@@ -35,6 +35,10 @@ h5 {
     text-align: center;
 }
 
+.col-4 {
+    font-size: 3.2vmin;
+}
+
 p.categ, li {
     font-size: 19px;
     line-height: 22px;
@@ -68,3 +72,14 @@ th, td {
     font-size: 3.2vmin;
     height: 67%;
 }
+
+td.b_ {
+    font-weight: bolder;
+    color: #0969b9;
+}
+
+td.g_ {
+    font-weight: bolder;
+    color: #990999;
+}
+
