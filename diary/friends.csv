@@ -1,5 +1,5 @@
 number,nationality,gender,undergrad,grad
-745,🇨🇳,♂,Toronto 20,stf MSCS 20
+745,🇨🇦,♂,Toronto 20,stf MSCS 20
 746,🇨🇳,♂,Alberta 20,stf MSCS 20
 747,🇨🇳,♀,UCSB 20,stf MSCS 20
 749,🇨🇦,♀,Toronto 20,stf MSCS 20
@@ -86,7 +86,7 @@ number,nationality,gender,undergrad,grad
 
 329,🇨🇳,♂,VU 21,
 339,🇨🇳,♀,VU 21,
-357,🇨🇳,♂,VU 21,
+# 357,🇨🇳,♂,Renmin 18,
 358,🇨🇳,♂,VU 21,
 359,🇨🇳,♂,VU 21,
 360,🇨🇳,♂,VU 21,
@@ -94,7 +94,8 @@ number,nationality,gender,undergrad,grad
 560,🇨🇳,♂,
 561,🇨🇳,♂,
 562,🇨🇳,♂,
-563,🇨🇳,♂,
+563,🇨🇳,♂,FDU 21,
+565,🇨🇳,♂,VU 21,
 569,🇨🇳,♀,
 
 671,🇨🇳,♀,VU 21,
