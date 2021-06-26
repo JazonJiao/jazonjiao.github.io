@@ -69,7 +69,7 @@ PERIODS = [
     ('18b', 155, '18 Summer', 12302, 36.9, 16.1, 33.7, 13.4),
     ('18c', 183, '18 Autumn', 18986, 41.7, 17.9, 29.0, 11.5),
     ('19a', 209, '19 Spring', 19179, 43.1, 19.5, 26.7, 10.7),
-    ('19b', 233, '19 Summer', 'null', 0, 0, 0, 0),
+    ('19b', 233, '19 Summer', 20293, 37.2, 34.1, 25.2, 3.4),
     ('19c', 276, '19 Autumn', 33733, 17.9, 31.7, 7.4, 43.0),
     ('20a', 311, '2020 春', 'null', 'null', 'null', 'null', 'null'),
     ('20b', 339, '2020 夏', 'null', 'null', 'null', 'null', 'null'),
@@ -123,6 +123,16 @@ def stats_table():
   </table>
 </div>
 
+{container(additional_class_name=" fs_sm")}
+<h1 style="text-align: center; margin-top: 97px; margin-bottom: 37px;">【 Categories 】</h1>
+My diary content falls into one of 4 categories. What each category means shifts greatly over time, 
+but the principle of division into
+<span style="color: {colors[0]}">Learning</span>,
+<span style="color: {colors[1]}">Growth</span>,
+<span style="color: {colors[2]}">Life</span>, and
+<span style="color: {colors[3]}">Love</span> remains the same.
+</div>
+
 <!-- description of 4 categories -->
 <div class="container px-xs-5 px-sm-3 px-md-0 py-4">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
@@ -131,13 +141,13 @@ def stats_table():
         <div class="card-body">
           <h5 class="card-header fw-bold" style="color: {colors[0]}; border-bottom-color: {colors[0]};">1. Learning (学习)</h5>
           <p class="mt-3 categ">
-<ul style="color: {txtcs[0]};">
-<li>Technical aspects of my work, projects, or research; study notes</li>
-<li>Study methods and resources; time management</li>
-<li>Evaluation of my study efficiency; reflection on my attitudes</li>
-<li>Academic interests</li>
-<li>Course logistics</li>
-<li>Study plans and goals; self-encouragements</li>
+<ul class="cat" style="color: {txtcs[0]};">
+<li class="cat">Technical aspects of my work, projects, or research; study notes</li>
+<li class="cat">Study methods and resources; time management</li>
+<li class="cat">Evaluation of my study/work efficiency; reflection on my attitudes</li>
+<li class="cat">Academic interests</li>
+<li class="cat">Course logistics</li>
+<li class="cat">Study plans and goals; self-encouragements</li>
 </ul>
         </div>
       </div>
@@ -147,13 +157,14 @@ def stats_table():
         <div class="card-body">
           <h5 class="card-header fw-bold" style="color: {colors[1]}; border-bottom-color: {colors[1]};">2. Growth (成长)</h5>
           <p class="mt-3 categ">
-<ul style="color: {txtcs[1]};">
-<li>Behavioral and political aspects of work; leadership skills</li>
-<li>Career planning</li>
-<li>Application to programs (e.g. grad school, internships)</li>
-<li>Personal values; life philosophy</li>
-<li>life trajectories of myself and others; personality analysis</li>
-<li>Interpersonal relationships</li>
+<ul class="cat" style="color: {txtcs[1]};">
+<li class="cat">Behavioral and political aspects of work; leadership skills</li>
+<li class="cat">Work environment</li>
+<li class="cat">Career planning</li>
+<li class="cat">Application to programs (e.g. grad school, internships)</li>
+<li class="cat">Personal values; life philosophy</li>
+<li class="cat">life trajectories of myself and others; personality analysis</li>
+<li class="cat">Interpersonal relationships</li>
 </ul>
         </div>
       </div>
@@ -163,12 +174,12 @@ def stats_table():
         <div class="card-body">
           <h5 class="card-header fw-bold" style="color: {colors[2]}; border-bottom-color: {colors[2]};">3. Life (生活)</h5>
           <p class="mt-3 categ">
-<ul style="color: {txtcs[2]};">
-<li>Fun activity with friends; my hobbies</li>
-<li>Travel logs; world cultures</li>
-<li>Current events; societal issues</li>
-<li>Sleep and health conditions</li>
-<li>Food, housing, climate, pets, money...</li>
+<ul class="cat" style="color: {txtcs[2]};">
+<li class="cat">Fun activity with friends; my hobbies</li>
+<li class="cat">Travel logs; world cultures</li>
+<li class="cat">Current events; societal issues</li>
+<li class="cat">physical and mental health; sleep conditions</li>
+<li class="cat">Food, housing, climate, pets, money...</li>
 </ul>
         </div>
       </div>
@@ -178,10 +189,10 @@ def stats_table():
         <div class="card-body">
           <h5 class="card-header fw-bold" style="color: {colors[3]}; border-bottom-color: {colors[3]};">4. Love (情感)</h5>
           <p class="mt-3 categ">
-<ul style="color: {txtcs[3]};">
-<li>My feelings for, and interactions with, the girls who I like(d) and/or who liked me</li>
-<li>Analysis of my past love experiences</li>
-<li>Viewpoint on romantic relationships</li>
+<ul class="cat" style="color: {txtcs[3]};">
+<li class="cat">My feelings for, and interactions with, the girls who I like(d) and/or who liked me</li>
+<li class="cat">Analysis of my past love experiences</li>
+<li class="cat">Viewpoint on romantic relationships</li>
 </ul>
         </div>
       </div>
@@ -228,8 +239,7 @@ def generate_archive_html():
         # write head and nav
         fw.write(head('Jazon Jiao · D5 archive', n_layers=1, lang='zh') + nav(n_layers=1))
         # write title
-        fw.write('\n<h1 style="text-align: center; text-decoration: underline; margin-bottom: 67px;">'
-                 '【 Diary 5 Archive 】</h1>')
+        fw.write('\n<h1 style="text-align: center; margin-bottom: 67px;">【 Diary 5 Archive 】</h1>')
         # write the table for Diary statistics
         fw.write(stats_table())
         # write bootstrap container and <p> tag

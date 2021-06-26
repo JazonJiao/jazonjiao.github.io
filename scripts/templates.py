@@ -64,9 +64,10 @@ def nav(n_layers=2):
 """
 
 
+# note: `additional_class_name`, if supplied, should start with a space
 # note: remember to close the divs
-def container(px=3):
-    return f'\n<div class="container my-4 px-{px} col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">\n'
+def container(px=3, additional_class_name=""):
+    return f'\n<div class="container my-4 px-{px} col-12 col-sm-12 col-md-10 col-lg-9 mx-auto{additional_class_name}">\n'
 
 
 def footer(path):
