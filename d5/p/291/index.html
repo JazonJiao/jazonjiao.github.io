@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p291</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+  <link href="../../../style/cn-font.css" rel="stylesheet">
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+<p><a href="../../">Archive</a> <a href="../290">← Prev</a> <a href="../292">Next →</a></p>
+<h1 id="0">D5P291-200215</h1>
+<div class="row d-flex" id="rdf">
+<p id="1"><span>①</span> 11 号中午接了第一封拒信来自 CMU   MSCV，这当然是意料之中，因为我没有相关的 paper，也许我早一年进 MASI 会不一样吧。498 评价说 CV 竞争很激烈，国内搞 CV 的人非常疯狂，有的申博时已经发了五六篇 paper…？
+</p>
+<p id="2"><span>②</span> 11 号在 MASI 标完了 7 个数据，还遇见了 293，原来是 492 推荐给她这个 lab 的，不过老师没答应，说她还没上 2231…哎，这货大一就知道这么多，再一次自愧不如…
+</p>
+<p id="3"><span>③</span> 498 现在在做的项目：（1）多器官分割，这是纯 CS 的项目，与临床无关。（2）kidney   atlas，平均肾，根据 700 个正常肾，做出模型来辅助诊断。（3）糖尿病检测，根据胰脏的 CT 图像和其他各种身高体重年龄性别等等数据，来做预测。
+</p>
+<p id="4"><span>④</span>  多器官分割的问题是，有的器官专业人工标注都不一定能有 80% 准确性，所以机器能学到 70% 就很好了。对于很小的器官如肾上腺，498 做过一个方法是先把范围缩小，再做分割，可以达到 80% 准确率。
+</p>
+<p id="5"><span>⑤</span> 14 号本来应该去 11 点听开会的，但现在我的生物钟已经崩了，于是就睡过了。467 给了我新的 9 个图集，让我 17 号之前跑完预测，结果我当天就搞好了。至此，我对项目的流程已经比较熟悉了：先把 CT 图转化成 png，然后跑网络，最后把输出转回 nii 格式。
+</p>
+<p id="6"><span>⑥</span>  这个流程可能还有改进的空间，比如可以去掉转化 png 的这一步。467 和我讲了这些文件格式以及怎么用 Python 把图片读成 array。另外 467 有好几个 conda 环境，每个环境对应不同的 ML 软件的不同版本（torch,   tf,   keras,   caffe），好厉害。还听了 497 和 K 学长的对话，大概是说他做肺癌检测，数据库只有患者的图像，没有非患者的。
+</p>
+<p id="7"><span>⑦</span> 15 号下午 4 点排练完 LNYF 回 Towers 的时候，我收到了 MSML 的拒信，期待了 5 个月的项目最终还是和我擦肩而过，我梦想中的人生巅峰之实现，又开始充满了变数。想想也没啥意外的，我的推荐信分量和研究经历，在那么多申请者里估计排不到前 3%（录取率）的。优秀的人太多了，给我的时间太少了。
+</p>
+<p id="8"><span>⑧</span>  之后看了点 Philip   Guo 的视频解闷：“学习潜规则”，MIT 的教职是 800 人竞争 1 个岗位，等等（话说边走路边录 vlog 真的大大提升视频观赏性）。想想 937、941 “失败”的大学申请，我已经幸运过很多回了，不过这次幸运女神终究还是没有降临。
+</p>
+<p id="9"><span>⑨</span>  晚上收到了 495、139 的鼓励，说到 495，她上周和老师争取到了我们 Project   1a 的附加分部分两组一起完成，以弥补我们人数上的劣势，真是一如既往地能做事啊。
+</p>
+<p id="10"><span>⑩</span>  她说上完 4269 就和 CS 无缘了；按我 1 月初的思想，听她这么讲我会油然而生转行的冲动，而现在我觉得金融这个东西，从 CS 转去容易（似乎很多金融岗位并不需要直接的金融经验），反过来难。还是先坚持自己吧。
+</p>
+<p id="11"><span>⑪</span>  被 MSML 拒了以后，我开始思考自己如果 gap 一年，应该怎么操作。还有就是春假的计划，之前有机会和 979 去 Alaska 的，后来没搞成，我父母也不同意我到处乱跑。我想如果收到录取就学学游泳和做饭，没有的话就多做做科研。
+</p>
+<p id="12"><span>⑫</span> 15 号晚上在 CMS 偶遇一位大一的南外学弟，是 pre-med。哎这条路比我这还要难，如果申请 med   school 全军覆没，该怎么办呢。他们那届录了 10 个本部 3 个国际部，他说下一届 ED1+ED2 南外加起来只录了一个 Vandy，其他学校情况也很糟糕，好迷哦。
+</p>
+<p id="13"><span>⑬</span>  话说之前我说过自己“浪费”了很多不必要的时间在课业上。现在看来其实也还好，毕竟（1）我的 AP 帮我省了很多很多事；（2）工院帮我避免了繁琐的文科课，CS 毕业要求也不高；（3）我选的课基本上都是必修或者自己感兴趣的，避开了 3300 之类的坑的课。
+</p>
+<p id="14"><span>⑭</span>  所以说调整好心态，我在课业上花的时间不算多的。看到 big   data 那门课作业那么烦，庆幸自己 drop 了这门课，现在上这些课边际效益已经严重降低了。
+</p>
+</div>
+<footer class="pt-3 mt-4 text-muted border-top">
+&copy; 2021 Jazon Jiao<br/>
+</footer>
+</div>
+</body>

@@ -73,12 +73,12 @@ th, td {
     height: 67%;
 }
 
-td.b_ {
+.b_ {
     font-weight: bolder;
     color: #0969b9;
 }
 
-td.g_ {
+.g_ {
     font-weight: bolder;
     color: #990999;
 }

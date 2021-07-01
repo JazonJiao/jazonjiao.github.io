@@ -71,7 +71,7 @@ PERIODS = [
     ('19a', 209, '19 Spring', 19179, 43.1, 19.5, 26.7, 10.7),
     ('19b', 233, '19 Summer', 20293, 37.2, 34.1, 25.2, 3.4),
     ('19c', 276, '19 Autumn', 33733, 17.9, 31.7, 7.4, 43.0),
-    ('20a', 311, '2020 春', 'null', 'null', 'null', 'null', 'null'),
+    ('20a', 311, '2020 春', 60971, 11.6, 67.1, 10.9, 10.3),
     ('20b', 339, '2020 夏', 'null', 'null', 'null', 'null', 'null'),
     ('20c', 364, '2020 秋', 'null', 'null', 'null', 'null', 'null'),
     ('21a', 389, '2021 春', 'null', 'null', 'null', 'null', 'null'),
@@ -159,7 +159,6 @@ but the principle of division into
           <p class="mt-3 categ">
 <ul class="cat" style="color: {txtcs[1]};">
 <li class="cat">Behavioral and political aspects of work; leadership skills</li>
-<li class="cat">Work environment</li>
 <li class="cat">Career planning</li>
 <li class="cat">Application to programs (e.g. grad school, internships)</li>
 <li class="cat">Personal values; life philosophy</li>
@@ -198,7 +197,23 @@ but the principle of division into
       </div>
     </div>
   </div>
+  <div class="my-4 border-top"></div>
 </div>
+<h1 style="text-align: center; margin-bottom: 17px;">【 Entries 】</h1>
+"""
+
+
+def archive_notes():
+    return f"""
+<h1 style="text-align: center; margin-top: 67px; margin-bottom: 37px;">【 Notes 】</h1>
+<ul>
+<li class="cat">Friend list is <a href="./friends/">here</a>.</li>
+<li class="cat">Not all Diaries are published; I’m usually less selective on older entries.
+The statistics above are for the full version of my Diary.</li>
+<li class="cat">Sometimes, the category of a piece of Diary text is ambiguous, so the
+stats aren’t 100% accurate. That’s fine, since most tallies need to deal with fuzzy definitions
+(for example, figuring out the religious decomposition of a country’s population).</li>
+</ul>
 """
 
 
@@ -265,7 +280,7 @@ def generate_archive_html():
             fw.write(f'<div class="col-4"><a href="p/{i:03d}/">D5p{d5p}</a></div>\n')
 
         # close tags
-        fw.write('</div>\n<br/><br/><br/><br/>\n</div>\n</div>\n</body>\n')
+        fw.write(f'</div>{archive_notes()}{footer("EMPTY")}\n</div>\n</div>\n</body>\n')
 
 
 def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
@@ -277,16 +292,28 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
     """
 
     def insert_spaces(line):
-        """
+        """ 2021-06-30
         Insert spaces between Chinese characters and alphanumeric chars (letters, numbers)
-        Adapted from https://blog.csdn.net/qq_26064989/article/details/107517919
         """
-        str1 = re.sub(r"([A-Za-z]+)([\u4e00-\u9fa5]+)", r'\1 \2', line)
-        str2 = re.sub(r"([\u4e00-\u9fa5]+)([A-Za-z]+)", r"\1 \2", str1)
-        str3 = re.split(r"([\u4e00-\u9fa5])", str2)
+        def is_cn_punc(char):
+            return char in '，。？！、：；（）《》【】…'
 
-        wordlist = [ss + " " for ss in str3]
-        return "".join(wordlist)
+        en_words = re.split(u"[^A-Za-z0-9_,.:+%()’\[\]-]+", line)
+        zh_words = re.split(u"[A-Za-z0-9_,.:+%()’\[\]-]+", line)
+        if zh_words[0] == '':
+            zh_words = zh_words[1:]
+        res = ''
+        for i in range(len(en_words)):
+            if i > 0 and not is_cn_punc(zh_words[i - 1][-1]):
+                res += ' '
+            res += en_words[i]
+            if i >= len(zh_words):
+                break
+            if not is_cn_punc(zh_words[i][0]):
+                res += ' '
+            res += zh_words[i]
+
+        return res
 
     def insert_diary_links(line):
         """
@@ -343,8 +370,12 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
             j = 0  # paragraph count
             h = 0  # h3 section header count
             for l in fr:
-                if len(l) > 2 and l[2] == '`':   # categorized paragraph (fixme)
-                    l = l[3:]
+                if len(l) > 2:   # categorized paragraph (fixme)
+                    if l[2] == '`': l = l[3:]
+                    if l[1] == '`': l = l[2:]
+                # insert spaces into Chinese diary
+                if lang == 'zh':
+                    l = insert_spaces(l)
                 if len(l) >= 4 and l[0] == '<':   # start/end quotes; h2 subtitles
                     fw.write(f'{l}')
                     continue
@@ -357,8 +388,6 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
                 j += 1
                 fw.write(f'<p id="{j}"><span>{circled_n[j * 2]}</span> {l[:-1]}</p>\n')
 
-            #fw.write()
-
             # close the tags
             fw.write(f'</div>{footer(out_path)}</div>\n</body>\n')
             print(i, period)
@@ -367,7 +396,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(140, 280)  # fixme
+    generate_d5_html(270, 295)  # fixme
 
 
 

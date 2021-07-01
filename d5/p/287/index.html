@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p287</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+  <link href="../../../style/cn-font.css" rel="stylesheet">
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+<p><a href="../../">Archive</a> <a href="../286">← Prev</a> <a href="../288">Next →</a></p>
+<h1 id="0">D5P287-200127</h1>
+<div class="row d-flex" id="rdf">
+<p id="1"><span>①</span> 24 号我准备开始我的研究项目，467 学长帮了我很多忙。27 号，我正式重启了自己的科研之路！下午，498 和我见面，继续介绍我们的项目：他用了一个别人写好的 neural   net，调了一周的参，基本上都搞好了，我只要验证一下有没有 bug 就行（这么简单的项目还能写一篇 paper 出来？…）后面可能用 docker 把软件打包。回 MASI 以后我把 epoch 设成 70、batch_size 设成 8，开始 9 小时长的训练。
+</p>
+<p id="2"><span>②</span>  由于 batch_size 小，训练不需要很多内存，主机的 11   GB 就够了。467 说如果放在 ACCRE 上训练，指不定 ACCRE 挂了你的结果就没了，而且 ACCRE 每两周就会挂一次？这让我想起去年暑假每次读本来 21   GB 的数据，到 pandas 里就会占用近 70   GB 的内存，导致 Work   Lab 的大电脑也经常挂掉…
+</p>
+<p id="3"><span>③</span> 28 号我跟 686 继续去 MASI，至此已经在 lab 呆了 7 小时。先是电脑死机，于是 467 确认了一下其他人有没有在用我机子的内存跑东西，我才重启了电脑。迅速跑完 testing 之后，epoch   60 的网络 loss 竟比 epoch   70 的略低，但算主动脉分割的 Dice   coefficient（我们使用的准确度验证公式）的时候 60 比 70 稍差（88% 比 89%）。
+</p>
+<p id="4"><span>④</span> 498 说现在用的网络（DeepLabV3）是 general-purpose  图像分割里最好的算法，不过对于主动脉分割这个细方向，有更好的算法。MASI 主要还是发医学图像处理方向的 paper（Dr.   Landman 是 SPIE 的 chair），CS、ML 发的比较少，medical 和 CS 侧重点还是有区别，我们也没有专业搞 CV 的 lab 的计算资源。
+</p>
+<p id="5"><span>⑤</span>  按现在我们的算法，训练时每个 batch 是乱序的 8 个 png，图像的第三维度信息是丢失的（本应该是 100 张从上往下的横截面图片）。这种纯二维算法导致了我们的数据前处理、后处理的一些麻烦，也限制了 batch   size 和/或图像的清晰度。我问有没有更“三维”的图像分割算法（比如用于视频的），可以考虑进图像的连续性，498 说这是现在不少人在做的方向（比如 2.5 维训练）。
+</p>
+<p id="6"><span>⑥</span>  后来我 overhear 了 498 和 497 的对话，大概是讲遇到老板布置却又不想做的项目怎么办：先汇报进度给老板吃定心丸，再提别的。他还评价 467 有时会被 engineering   side 拖进度：downsample 图像总是出 bug，一搞就是好几天，阻碍了新想法的提出…
+</p>
+<p id="7"><span>⑦</span> 28 晚上，当我学习 CNN 的原理、思考 CV 问题的本质、探索 AI 究竟可以做什么，我对 AI 的热情重燃。距离我开始接触 AI 已经过去了两年时间，我才终于得以在课外真正实践这些知识！很多东西都是 YouTube 上看到的或者 18 年暑假在 Brilliant 上学的，现在终于派上用场！
+</p>
+<p id="8"><span>⑧</span>  我多希望我去年此时就加入 MASI 啊，当时我的能力完全能胜任现在的我能做的事情！这一年的迷茫倒是导致了我新年前三周对各行各业的探索，差点因为 495 而改行金融/商科（我之前还打算着 2 月开始强度 networking 一波），最后也许会回到 AI 吧…
+</p>
+<p id="9"><span>⑨</span> 29 号，498 和我说医生给了他 7 个新的 CT 图集，我需要在上面标注主动脉，然后跑算法验证。于是我下载了相应的软件，467 一如既往地热心，帮了我很多，我不熟 Linux，经常遇到啥问题的时候，他打几句 linux   command 就解决了。
+</p>
+<p id="10"><span>⑩</span> 498 说去年暑假有人需要在 100 个 CT 图集上标肝脏（每个图集会有约 100 张切片），非常费时费力。好在主动脉很好分辨，轮廓也很简单。31 号，在整好各种 bug 以后，我开始相对枯燥的标注任务。
+</p>
+<p id="11"><span>⑪</span> 498 还提了两个可能可以继续探究的问题，都和 training   data 的 class   imbalance 有关。有的器官（如肾上腺）很小，由于现在使用的 loss   function 是 cross   entropy 或 dice   coefficient，网络训练的时候会轻视这个 class 的表现，导致其准确度只有约 40%。（用中文写这些 ML 技术性的东西好蛋疼…）
+</p>
+<p id="12"><span>⑫</span>  另外，有的重症病人的 CT 图像和正常人的有不少差别，如果把它们作为 training 数据则会干扰网络的训练，但不这样的话网络在这些 outliers 上则不会表现得很好。
+</p>
+<p id="13"><span>⑬</span> 2 月 3 号，我拿着新的 7 个数据，开始尝试跑之前训练好的网络来做分割，由于这个数据和以前的有点不一样（比如没有对照组、没有 ground   truth），我需要自己研究、修改 498 的代码，现在还有不少 debug 要做。4 号跑完了 7 个新数据的 testing、标完了数据 2、3 的主动脉。
+</p>
+<p id="14"><span>⑭</span>  这几天回顾着 3b1b、carykh、Welch   Labs 的视频、Michael   Nielson 的书，我一直在边看边想，上面这两个问题不一定用神经网络，或许可以用更 analytical（偏算法）的方法做。ML 里有无数种方法，为什么我们 lab 现在在用这些方法而不是其他的呢？
+</p>
+<p id="15"><span>⑮</span>  深度学习是一个十分玄学的东西，什么东西都可以用它来做，有时会成功有时会失败，成功或失败的原因却很难知道。467 说一般他们测试一个算法的好坏，会用“ ResNet ”作为 baseline。
+</p>
+</div>
+<footer class="pt-3 mt-4 text-muted border-top">
+&copy; 2021 Jazon Jiao<br/>
+</footer>
+</div>
+</body>

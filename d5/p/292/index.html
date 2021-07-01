@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p292</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+  <link href="../../../style/cn-font.css" rel="stylesheet">
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+<p><a href="../../">Archive</a> <a href="../291">← Prev</a> <a href="../293">Next →</a></p>
+<h1 id="0">D5P292-200217</h1>
+<div class="row d-flex" id="rdf">
+<p id="1"><span>①</span> Deep   Learning 第三次作业要我们写一个两层的网络，之前写 logistic   regression 的时候我能把 loss 降到 0.1，测试准确率 97%，可是加了一层以后 loss 怎么也下不去了（最低 0.26），测试准确率卡在 90%。我后来研究了好久，发现第一层 weights 的梯度很快就全零了。
+</p>
+<p id="2"><span>②</span> 16 号浪了前半天以后，我开始燃烧大脑，更深入地思考反向传播的逻辑。17 号晚上我自己推导了一遍公式，列出每一层 tensor 的 size，发现自己在尝试把公式从对于单一 input 推广到 batch_size 个 input（第二层 vectorization）的时候，算法确实是错误的。老师的板书是正确的，我把 dz2 给 average   over   all   inputs 以后很多信息就丢失了。
+</p>
+<p id="3"><span>③</span>  我又花两小时整好了各种矩阵乘法里 size 的问题，还有 debug 向量加法的问题（原来 column   vector   [2D]  减去 row   vector   [1D]  会出来一个 square   matrix，于是我不得不把 labels 变成一个 column   vector，十分蛋疼）。终于我的 2-layer 网络突破了原来的瓶颈，准确率提到了 97.4%，感动啊，感觉自己可以手写神经网络了！
+</p>
+<p id="4"><span>④</span> 17 号收了 Princeton 的拒信，也不意外，它招人实在太少了，18 年地里只有两个人录了。17 晚上帮 477 写 3620、陪她唠嗑 bio 博士申请，一共搞了 4 小时。477 在港大读了一年以后来到 Vandy。
+</p>
+<p id="5"><span>⑤</span> （注：我最近分析商科同学们特质的时候，发现 042、698 都对人际交往特别敏感，我与对方的互动他们很久都不会忘。所以理论上我也应该训练自己这方面的记忆力，这些个人信息不记在日记里，而是记在脑子里。话说我倒是对数字极其敏感，如果有人报一串数字给我，我也会记得很深很久。）
+</p>
+<p id="6"><span>⑥</span> 477 和我讲了很多她面试的事情，她的面试显然比我那两次正式多了，需要去校园，不过食宿全包，可以在城里玩一两天，羡慕啊。477 会在每次面试后给每个教授发感谢信，她写得都好长（我都感觉有点肉麻…），会加入一些和教授对话的内容。她给我分享了教授给她的各种回复，有非常热情的“ hope   to   see   you   at   [college] ”，还有教授还给她主动发邮件抢人的，也有比较敷衍的。
+</p>
+<p id="7"><span>⑦</span> 477 说起 bio 界的竞争：哥大的项目并非很好，但她还是在和一群清北的人竞争。连 bio 都这么可怕了，CS 难成这样也就不奇怪了。还说起各个学校不同的学习氛围，有的偏恶性竞争，有的是互帮互助。
+</p>
+<p id="8"><span>⑧</span>  我和 477 说起 MASI 的科研，也从她那儿知道了一些 686 的情况，686 可能想做 bioinformatics，去年暑假是跟着 Dr.   Bradley   Malin 做的，还发了一篇一作，话题和我去年暑假做的很像（data   imputing）。她还给我推荐 bioinformatics 这个方向，天哪这跨度好大…
+</p>
+<p id="9"><span>⑨</span> 18 号我在 MASI 整理 training   data、继续研究他们的代码。ZB 数据库里 training   data 的标注质量比我标的那些低不少，哎。
+</p>
+<p id="10"><span>⑩</span>  这周很多博士生都出去开会了，4 点时剩余的博士们都去上课了，我便和 686 聊了一会人生。原来她是想做 CS   +   healthcare 的，没申实习，也不是很清楚自己想要干啥。
+</p>
+<p id="11"><span>⑪</span> 18 晚上我和我的 3250   TA 同事 463 约饭，他是研究生想转商科，申了八九所学校的金融/数据分析。他提到一个观点是金融行业的工作不太稳定，经济蒸蒸日上的时候缺人做事，衰退的时候就不需要你了。这种用供需关系分析问题的思路值得学习啊。我说起 WST，他评价是 WST 想忽悠所有人都去搞金融 hhh。
+</p>
+</div>
+<footer class="pt-3 mt-4 text-muted border-top">
+&copy; 2021 Jazon Jiao<br/>
+</footer>
+</div>
+</body>
