@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p308</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+  <link href="../../../style/cn-font.css" rel="stylesheet">
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+<p><a href="../../">Archive</a> <a href="../307">← Prev</a> <a href="../309">Next →</a></p>
+<h1 id="0">D5P308-200329</h1>
+<div class="row d-flex" id="rdf">
+<p id="1"><span>①</span> 29 号，我收到了头条和腾讯的面试。岗位分别是研发和数据分析（pre 留学生），时间是 1 号和 2 号晚上。于是我雄心勃勃地设置了一个突击计划，想在不到 4 天内速成计算机网络、操作系统、SQL。当然，准备的侧重点是腾讯，毕竟他们的 pre 留学生项目是肯定没有身份限制的，其他公司基本只招 21 届毕业生，所以即使面试过了也难说。
+</p>
+<p id="2"><span>②</span> 4 月 1 号，我复习了一下已经忘得差不多了的操作系统，用英文课件对照中文资料，学习了一下各个概念的中文名。后来在知乎上找到了面试题总结的文章，就背了一下什么 TCP 三次握手之类的常考知识点。
+</p>
+<p id="3"><span>③</span>  这一波准备国内春招让我学到好多啊。明白了程序员需要掌握的一些核心技能（知乎上说阿里 P8 面试也考 CS 基础知识？）。到现在还是不明白为啥国内外面试侧重点这么不同……
+</p>
+<p id="4"><span>④</span> ok，1 号晚上面试，结果今天复习的一概没考，倒是考了机器学习的问题，我提到刚刚期中考试考了 Adam、上一个作业也是写 Adam，于是面试官就疯狂追问我 Adam 的特性和与 SGD 的区别，嗯感觉很多面试都是考深度重于广度的。扯了 20 分钟以后考了一道算法，是求根号 / 次方（LC   69、50），这和我平常做的数据结构题不一样啊，于是挣扎了一会。啊，看来我题刷得还是不够多…
+</p>
+<p id="5"><span>⑤</span> 31、2 号一共刷了 11 道 SQL 类的 Leetcode，还学习了 Hadoop 等分布式大数据处理平台的原理。2 号晚上面腾讯，21:00 开始，我脑子进水设了 21:40 的闹钟，于是 21:12 才被面试官的微信电话叫醒，完了感觉我要凉了，希望他不要在意…
+</p>
+<p id="6"><span>⑥</span>  这次的面试倒是广度大于深度，考了一堆乱七八糟东西。第 1 题：简单的 SQL，由于没学过 case   when 所以只答出一半；第 2 题：哪个更容易达到 60% 成功率，成功率 50% 试 1000 次还是成功率 40% 试 10 次；第 3 题是我在 Brilliant.org 上做过的概率题，6 个子弹两个相邻，对方开枪不死，自己再开枪死亡概率（是 1/4）。
+</p>
+<p id="7"><span>⑦</span>  然后问了我 bias-variance   tradeoff，我的暑研，以及一大堆设计类问题：微信开发一个新功能如何计算用户体验（有测试组、无测试组），如何设计标准评价公众号、短视频质量，哎感觉这种题不是谁都能扯出来嘛，还是喜欢技术类问题。真是，3 次面试，3 个完全不同的体验…
+</p>
+<p id="8"><span>⑧</span> 40 分钟面试结束后半小时，面试官给我发了一长串话，说名额只有 1 个，更倾向于招 pre 博士生，天哪那我根本没法竞争啊。我也不晓得这是事实还是只是安慰我的借口，也许给我面试只是礼貌性的面一下。小哥人还是很好的，给了我很多建议（比如讲经历要用 STAR），还说我有潜力、想和我保持联系，嗯也算是积累人脉了吧！
+</p>
+<p id="9"><span>⑨</span>  话说 3 月 19 号我的睡觉时间推到早 7 点以后，我不再记录我的睡眠时间，每天想什么时候睡就什么时候睡，经常日出睡到日落，生物钟彻底混乱了。直到 4 月 4 号我的生物钟继续推迟，“转了一圈”，回到了 0 点睡到 7 点的正常水平。
+</p>
+<p id="10"><span>⑩</span>  我和 329、360 算是“相依为命”了，他们帮了我很多。整层楼其他所有人都搬走了，洗澡的时候热水都要等好久，食堂的菜品种单一，也不怎么好吃。
+</p>
+<p id="11"><span>⑪</span>  最近我陆续把我录取的消息告诉了我的好友们；5 号给 3 位推荐老师发了感谢信（推荐老师竟然不知道我的申请结果，我以为学校会通知他们诶）；给 J 教授 update 了一下。这样私聊分开报喜的好处是可以避免公开的那一刻私聊爆炸（参考 <a href="../297/">D5P297-200229</a>），于是就可以和朋友们多聊一会。
+</p>
+<p id="12"><span>⑫</span> 3 号中午和 983 打了大半小时的电话，她热情祝贺了我，特别为我高兴。是啊，她当时录了 FB 我也觉得特别高兴，有些同学拿了好 offer 我就有种奇怪的感觉。983 分享了她在 FB 的见闻：她领导的领导是 UIUC 的 PhD、管理层的技术背景、FB 的食堂特好吃、FB 的 move   fast 信条、Stanford 就在 FB 总部边上、FB 大家庭对实习生的关心，去滑雪还发钱，等等，向我疯狂安利 FB。
+</p>
+<p id="13"><span>⑬</span>  疫情爆发后，今年 FB 的春季实习生可以选择继续工作或者结束实习（提前结束的可以拿全工资），FB 所有员工都发了 1000 刀，2020 上半年评级全部 Exceed   Expectations。早就听闻湾区公司“养老”，但她说的这些还是让我很吃惊。
+</p>
+<p id="14"><span>⑭</span>  这些激起了我深深的思考，不是说美帝 40% 的人拿不出 400 块救命钱吗，上层人民却过着如此奢华的生活，这社会财富的分配确实相差太大了。像 FLAG、对冲基金这类公司，很多都是躺着赚钱的，所以才有能力对员工这么好。话说前几年进 FLAG 还是挺容易的，员工少、赚钱多，不要太舒服，现在竞争迅速变得激烈了。
+</p>
+<p id="15"><span>⑮</span>  浪了一周末以后（这周末我真的什么也不想做，一点也打不起精神，当然我知道动力周期律，休息一会自然就好了），5 号晚上我又投了一波简历。发现我错过了 29 号的百度春招笔试，哎。
+</p>
+</div>
+<footer class="pt-3 mt-4 text-muted border-top">
+&copy; 2021 Jazon Jiao<br/>
+</footer>
+</div>
+</body>
