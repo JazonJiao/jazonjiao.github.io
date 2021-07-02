@@ -69,9 +69,9 @@ PERIODS = [
     ('18b', 155, '18 Summer', 12302, 36.9, 16.1, 33.7, 13.4),
     ('18c', 183, '18 Autumn', 18986, 41.7, 17.9, 29.0, 11.5),
     ('19a', 209, '19 Spring', 19179, 43.1, 19.5, 26.7, 10.7),
-    ('19b', 233, '19 Summer', 20293, 37.2, 34.1, 25.2, 3.4),
+    ('19b', 233, '19 Summer', 20293, 39.9, 31.4, 25.2, 3.4),
     ('19c', 276, '19 Autumn', 33733, 17.9, 31.7, 7.4, 43.0),
-    ('20a', 311, '2020 春', 60971, 11.6, 67.1, 10.9, 10.3),
+    ('20a', 311, '2020 春', 60971, 13.8, 64.9, 11.0, 10.3),
     ('20b', 339, '2020 夏', 'null', 'null', 'null', 'null', 'null'),
     ('20c', 364, '2020 秋', 'null', 'null', 'null', 'null', 'null'),
     ('21a', 389, '2021 春', 'null', 'null', 'null', 'null', 'null'),
@@ -298,8 +298,8 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
         def is_cn_punc(char):
             return char in '，。？！、：；（）《》【】…'
 
-        en_words = re.split(u"[^A-Za-z0-9_,.:+%()’\[\]-]+", line)
-        zh_words = re.split(u"[A-Za-z0-9_,.:+%()’\[\]-]+", line)
+        en_words = re.split(u"[^A-Za-z0-9_,.:+%()<>’/&\[\]-]+", line)
+        zh_words = re.split(u"[A-Za-z0-9_,.:+%()<>’/&\[\]-]+", line)
         if zh_words[0] == '':
             zh_words = zh_words[1:]
         res = ''
@@ -358,7 +358,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
         with open(in_file) as fr, open(out_path + '/index.html', 'w') as fw:
             # write head and nav-bar
-            lang = 'en' if period < '20a' else 'zh'
+            lang = 'en' if i < 277 else 'zh'
             fw.write(head(f'Jazon Jiao · D5p{i}', n_layers=3, lang=lang) + nav(n_layers=3))
 
             # write container and header (D5p#)
@@ -396,7 +396,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(270, 295)  # fixme
+    generate_d5_html(270, 311)  # fixme
 
 
 
