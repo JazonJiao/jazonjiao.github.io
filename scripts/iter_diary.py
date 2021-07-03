@@ -21,9 +21,8 @@ if __name__ == '__main__':
         if not os.path.exists(in_file):  # if source D5 txt file does not exist, skip it
             continue
         with open(in_file) as fr:
-            nl = fr.read().count('\n') - 1
-            if max_n < nl:
-                dn = i
-                max_n = nl
+            for l in fr:
+                if '983' in l and ('FB' in l or 'Facebook' in l):
+                    print(i, l)
 
     print(max_n, dn)

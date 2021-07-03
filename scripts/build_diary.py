@@ -70,7 +70,7 @@ PERIODS = [
     ('18c', 183, '18 Autumn', 18986, 41.7, 17.9, 29.0, 11.5),
     ('19a', 209, '19 Spring', 19179, 43.1, 19.5, 26.7, 10.7),
     ('19b', 233, '19 Summer', 20293, 39.9, 31.4, 25.2, 3.4),
-    ('19c', 276, '19 Autumn', 33733, 17.9, 31.7, 7.4, 43.0),
+    ('19c', 276, '19 Autumn', 33733, 18.4, 31.3, 7.4, 43.0),
     ('20a', 311, '2020 春', 56021, 14.3, 68.5, 9.6, 7.7),
     ('20b', 339, '2020 夏', 'null', 'null', 'null', 'null', 'null'),
     ('20c', 364, '2020 秋', 'null', 'null', 'null', 'null', 'null'),
@@ -396,7 +396,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(270, 314)  # fixme
+    generate_d5_html(270, 329)  # fixme
 
 
 

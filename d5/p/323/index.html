@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p323</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+  <link href="../../../style/cn-font.css" rel="stylesheet">
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+<p><a href="../../">Archive</a> <a href="../322">← Prev</a> <a href="../324">Next →</a></p>
+<h1 id="0">D5P323-200609</h1>
+<div class="row d-flex" id="rdf">
+<p id="1"><span>①</span>  第 4 周，我在腾讯的实习终于有可观的产出了。现在我的任务是找腾讯和 N 路网之间的红绿灯数据差异。我看了 NavInfo 公司的网站，CTO 竟然是 Stanford 的 CS   MS/PhD，厉害了。
+</p>
+<p id="2"><span>②</span>  在计算机中，路网是由一系列 nodes 和 links 组成的，nodes（节点）大致对应路口，links（连接）则对应道路，nodes 和 links 各有很多种属性，比如路口是否有红绿灯，道路的类型、方向、名称等。
+</p>
+<p id="3"><span>③</span>  找差异的任务并没有那么简单，主要是因为 N 的数据里没有 nodes 的位置信息，如果要取 node 的经纬度，需要取它对应的所有 links 的起终点的交集。得到位置以后可以通过一个 mentor 生成的匹配表格，和腾讯的 node 一一对应起来，然后比较它们的红绿灯信息。
+</p>
+<p id="4"><span>④</span>  由于已经构思过算法，6.9 晚上拿到数据以后，我两个小时就一气呵成地写出了差异分析的程序，6.10 继续燃烧大脑，把代码推广到了可以跑全国数据，这种感觉真爽啊。
+</p>
+<p id="5"><span>⑤</span>  爽过以后，就是蛋疼的小改进和 debug 了。6.11 我花了几小时才发现了一个 bug，由于程序越来越长，function 之间的关系错综复杂，所以 debug 起来非常难。那个 bug 的本质原因还是自己修改了之前的逻辑，逻辑链断了、不能跟上之前的逻辑，所以造成了逻辑不一致。Debug 时大脑思考得太慢了，如何更高效地 debug 呢？
+</p>
+<p id="6"><span>⑥</span>  截至 6.12，现在最大的问题是两个路网里，大约一半的道路节点都匹配不上，这样何谈分析差异呢。我想如果能知道匹配数据是怎么产出的，会对我的工作有帮助，正好 mentor 让我参与这个任务，于是我就开始看他做路网匹配的代码。
+</p>
+<p id="7"><span>⑦</span>  这个代码是 python 加 shell 写的，于是我自学了一点 shell，发现这真是个神奇的语言。他给的代码，我不谦虚地说，比我的“不规范”多了（哼，您还是高级工程师呢…）我的所有函数都有对输入、输出的简单描述，以及不少代码注释，如果必要的话我还会加上整个程序的输入输出格式描述，而他的代码都没啥注释，我怎么看哪。后来看了另一位程序员小哥文档，写得不错。
+</p>
+<p id="8"><span>⑧</span>  另外，由于使用中文可能造成文件编码上的问题，函数名、变量名，以及很多文档、注释都是用英语写的，而中国工程师的塑料英语啊…哎。
+</p>
+<p id="9"><span>⑨</span>  话说 mentor 周末时给了我一些路网匹配的细分任务，但我根本看不懂他想让我干啥，尝试理解他的代码也进展很慢。6.16 我回顾了一下之前红绿灯挖掘的代码，发现一个 bug，修复以后配对成功率从 31% 提升到了 49%。
+</p>
+<p id="10"><span>⑩</span>  组会汇报过后，mentor 打电话和我说，小组项目中，我需要对自己代码的正确性有数，他建议我好好再确认一下自己的逻辑。确实，这和我刷 LC 一般都尽可能确保代码无误再上传，原则是一样的（Leetcode 上我的接受 - 提交比很高，一般一道题我最多有一次错误然后就做对了，偶尔还会连续地一次性做对十几题）。
+</p>
+<p id="11"><span>⑪</span>  那之后，我灵光闪现，既然按一一对应的方法成功率这么低，为什么不直接按坐标匹配呢。于是构思之后进入疯狂肝代码模式；这种模式和我之前的生活状态很不一样，之前没事干时我喜欢看公司里的各种资料。可能是急于证明自己，我给了自己不少压力，这种现象在职场新人里应该挺正常的。
+</p>
+<p id="12"><span>⑫</span> 6.17 下午，我完成了代码，配对率一下子提升到了 96%，剩下的经过手动验证，大都是 2 个路网中确实存在的差异，好激动。
+</p>
+</div>
+<footer class="pt-3 mt-4 text-muted border-top">
+&copy; 2021 Jazon Jiao<br/>
+</footer>
+</div>
+</body>
