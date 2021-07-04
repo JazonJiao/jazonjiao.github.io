@@ -62,19 +62,19 @@ from scripts.templates import *  # base directory is jazonjiao.github.io/
 # The array also hardcodes the word count for that period, as well as
 # percentages for 4 categories.
 PERIODS = [
-    ('17a', 45, '17 Spring', 'null', 'null', 'null', 'null', 'null'),
-    ('17b', 71, '17 Summer', 'null', 'null', 'null', 'null', 'null'),
-    ('17c', 105, '17 Autumn', 36685, 20.7, 26.9, 19.1, 33.3),
-    ('18a', 138, '18 Spring', 26730, 31.3, 21.2, 18.3, 29.2),
-    ('18b', 155, '18 Summer', 12302, 36.9, 16.1, 33.7, 13.4),
-    ('18c', 183, '18 Autumn', 18986, 41.7, 17.9, 29.0, 11.5),
-    ('19a', 209, '19 Spring', 19179, 43.1, 19.5, 26.7, 10.7),
-    ('19b', 233, '19 Summer', 20293, 39.9, 31.4, 25.2, 3.4),
-    ('19c', 276, '19 Autumn', 33733, 18.4, 31.3, 7.4, 43.0),
-    ('20a', 311, '2020 春', 56021, 14.3, 68.5, 9.6, 7.7),
-    ('20b', 339, '2020 夏', 'null', 'null', 'null', 'null', 'null'),
-    ('20c', 364, '2020 秋', 'null', 'null', 'null', 'null', 'null'),
-    ('21a', 389, '2021 春', 'null', 'null', 'null', 'null', 'null'),
+    ('17a', 45, '17 Spring', 'null', 'null', 'null', 'null', 'null'),  # 45 entries
+    ('17b', 71, '17 Summer', 'null', 'null', 'null', 'null', 'null'),  # 26 entries
+    ('17c', 105, '17 Autumn', 36685, 20.7, 26.9, 19.1, 33.3),  # 34 entries
+    ('18a', 138, '18 Spring', 26730, 31.3, 21.2, 18.3, 29.2),  # 33 entries
+    ('18b', 155, '18 Summer', 12302, 36.9, 16.1, 33.7, 13.4),  # 23 entries
+    ('18c', 183, '18 Autumn', 18986, 41.7, 17.9, 29.0, 11.5),  # 28 entries
+    ('19a', 209, '19 Spring', 19179, 43.1, 19.5, 26.7, 10.7),  # 26 entries
+    ('19b', 233, '19 Summer', 20293, 39.9, 31.4, 25.2, 3.4),  # 24 entries
+    ('19c', 276, '19 Autumn', 33733, 18.4, 31.3, 7.4, 43.0),  # 43 entries
+    ('20a', 311, '2020 春', 56021, 14.3, 68.5, 9.6, 7.7),  # 35 entries
+    ('20b', 339, '2020 夏', 44368, 23.7, 37.2, 22.0, 17.1),  # 28 entries
+    ('20c', 364, '2020 秋', 'null', 'null', 'null', 'null', 'null'),  # 25 entries
+    ('21a', 389, '2021 春', 'null', 'null', 'null', 'null', 'null'),  # 25 entries
     ('21b', 395, '2021 夏', 'null', 'null', 'null', 'null', 'null')
 ]
 
@@ -298,8 +298,8 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
         def is_cn_punc(char):
             return char in '，。？！、：；（）《》【】…'
 
-        en_words = re.split(u"[^A-Za-z0-9_,.:+%()<>’°/&\[\]-]+", line)
-        zh_words = re.split(u"[A-Za-z0-9_,.:+%()<>’°/&\[\]-]+", line)
+        en_words = re.split(u"[^A-Za-z0-9_,.:+%()<>’°/@&\[\]-]+", line)
+        zh_words = re.split(u"[A-Za-z0-9_,.:+%()<>’°/@&\[\]-]+", line)
         if zh_words[0] == '':
             zh_words = zh_words[1:]
         res = ''
@@ -396,7 +396,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
-    generate_d5_html(270, 339)  # fixme
+    generate_d5_html(72, 389)  # fixme
 
 
 
