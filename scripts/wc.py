@@ -1,4 +1,8 @@
-en = """D5P282-200114
+# Used to get a sense of how English and Chinese word counts translate into each other
+# currently, use 1:1.5 (2:3)
+
+# google translated
+en = ["""D5P282-200114
 I met with Dr. Landman on the afternoon of the 14th. There are many gifts from Chinese in his office. He introduced the 7 divisions of the lab, promised to help me register for a CS-3860 class, and described what I should do if I take for credit (final report, etc.). He said that the priority of undergraduates is one study, two life, and three research, while graduate students are the other way around. The teacher said that I hope I can learn something from this study, even if I only learn to use ACCRE, even if I learn that I am not suitable for PhD.
 If I get accepted to graduate school at the end (of course this is unlikely), I can work here for another year before applying for a PhD. I haven't graduated early with my teacher for the time being. I hope I can stay here for another two months during the summer vacation.
 After that, classmate ljj asked me to borrow the algorithm textbook, and I talked with her for half an hour by the way. Like 495, she went to GHC last year and then got the Tech Analyst Intern of Xiaomo New York. I also heard about this position for the first time, and I feel it matches me very well. Maybe I can try it in the future! She said that she was autistic and didn't do much networking before, and I rarely saw her. Hey, 698 is still awesome.
@@ -14,9 +18,96 @@ At 12:40, I had to interrupt her and started to introduce myself: I studied CS u
 On the night of the 15th, I chatted with 565 in Kissam for a while. He recorded Deloitte’s technology consulting as an internship in DC. He has almost never prepared a case. The first interview question is how to detect drugs from inbound packages. Of course, the focus of this interview is how to "propose and solve" and how to solve the problem. The second question is whether a company should upload a database to the cloud. He can really analyze the pros and cons from various angles, and it has been a while. But these are relatively fictitious things. Consultation is just to give advice, not practical.
 I used the knowledge I learned in the last three weeks to discuss with him his future plans: studying for an MBA, jumping to a technology company to do management, and even studying for a PhD. Born in Hangzhou in 565, he almost went to Qingbei as an international student, but it is better to be in the United States. Vandy's FA and government scholarship together can cover most of his tuition and fees. Although he is a U.S. citizen, he is still very concerned about the country. Knowing WST, he even considered returning to China for development...?
 On the evening of the 19th, I ran into 565 again at cms. It turned out that he hadn't formally signed Deloitte. Now Linen also gave him the offer of SWE, which is closer to his home and the hourly salary is at least $10. He is still struggling-writing codes It's easy to transfer consultation, but it's difficult to reverse it.
-"""  # google translated
+""", f"""
+D5P333-200729
+On 7.27, the admissions office of Stanford MSCS made an exception to allow a one-year postponement (previously, it can be postponed up to one semester). I don't know how many domestic students will choose one year, and how will this affect the next application.
+As for me, I can actually postpone it for one year. After all, my self-study efficiency is quite high recently, but on the one hand, I think there will be less competition in the semester when there are few people. In addition, even if I apply for a one-year extension, it is difficult to be Approve...
+In the early morning of 8.1, Yun attended the Pre International Student Gathering, and I was very envious of watching classmates in Shenzhen climbing. The HRs who hosted were especially careful to design various activities, clothing, gifts, and food (of course I can only watch...). Tencent worked hard to make a good impression on our group of people, haha!
+On 7.31 I tried to cook chicken curry rice for the first time, but it turned over. There was too much water and it was too diluted...8.1 I put the curry directly into the fried rice and it was not very delicious. In addition, I often make hamburgers recently. Fry a meatloaf over a medium-to-low fire, add cheese, tomato sauce, and lettuce to the hamburger. (Tucao lettuce spoils so fast...)
+At this time, I have been diagnosed with over 19,000 in Davidson County, accounting for about 3% of the population. 8.1 After I went to Kroger for the last time, I landed my umbrella in the supermarket, and it rained heavily on the way back. This was a disinfection for me. 8.2 Looking for a ych haircut, so far I haven’t cut my hair for more than 5 months (new record), and my hair can barely reach my lips...8.4 I forgot to turn off the fire after breakfast, and the car turned over...
+8.1 In the evening, I played Blood Bound with 7 people such as 339 for more than 4 hours until after 2 o'clock the next day, which added a lot of color to my complete autistic life in the past 5 weeks. I haven't played board games very much, and I still can't keep up with everyone's logic. The negotiation ability displayed by ych made me admire him.
+see Warald posts, learn job when negotiations might be able to win more than 30 percent of the salary for themselves, it seems to play board games or very useful.
+8.6 I spent a very fulfilling and happy afternoon, chatting with 983 and 139 for nearly 2 hours respectively. I know that these two friends can provide me with a lot of very critical information, so be sure to get together before leaving.
+983 lives in Morris. She signed the price of cabbage for 1600 × 12 months during the epidemic. She is going to NYU to read the BF. While chatting, we admired the panoramic view of Nashville on the 19th floor of Morris, which is much more beautiful than Love Circle.
+983 and I introduced our internships to each other. 983 The daily work at FB is to clean up the data (FB has a Python-based data preprocessing system developed by itself): choose which data to use for training, organize the data format, and then adjust the parameters and run the model. Data labeling is done outsourced.
+The input of the model is a message, and the output is 4 values: whether it is hate speech, and so on. FB has its own model online platform, and each model has an ID that others can use. She runs the model once and probably uses hundreds of dollars in computing resources.
+983 also did some front-end tasks. There are Android engineers, iOS engineers, products, and ML engineers in her group. It is an independent product team, and FB is super "product-driven" (dog family is said to be more "engine-driven"). This is completely different from my team at Tencent. Our entire team is engaged in big data, and the front-end and products are all done separately by other teams.
+983 Showed me the internal photos of the MPK headquarters, and I felt that it was not modernized by Tencent. There are many types of cafeterias, with two monitors on the desks. 983 The return I got on FB is NYC (the group she intern does not have HC), which is also different from Tencent. Our internships are all returned by group. If you want to change the group, you have to re-submit your resume.
+983 The 8-week internship in Lyft was done for "integrity" (fraud detection), and the language was Go. According to payment records, it was judged whether someone exploited Lyft's system loopholes to make money, which seemed to be ML.
+The coding style here is very different from FB's move fast creed. She takes three days to write a description document before writing the code, so that you can get useful feedback, and maybe it is also a better coding habit. She said that there are many Stanford interns among Lyft's internships; Lyft was forced to cut pay when the COVID was severe, but now it has basically recovered.
+I introduced the market and salary situation of the domestic Internet industry to 983, and I feel that it is not much worse than that of the United States. 983 After considering Shenyan, the biggest worry is that the tuition fees are too expensive. I said that Stanford can be an assistant teacher without tuition fees, which made her very excited!
+After meeting with 139, he talked about his experience in interviewing other companies: Akuna Capital met with their Shanghai branch after the interview; Radix Trading took the initiative to interview him before the summer vacation, and also promoted the 8 interns recruited by his company More than half came from Princeton, making 139 very square.
+139 shared the experience of many students with me: 133 doesn’t like to pay attention to “face classics”, so 139 often introduces common exam questions with 133, such as LC 301 of FB common exam, 133 before the second round of FB 139 I took him to review several times. As a result, 133 was tested for the simple LC 20, but I couldn’t get around for a while and he just used the super-complex solution of LC 301, but it was gone. 139 lamented that 133 didn’t get the FB because he was scammed by him...this summer vacation 133 A few months after completing the byte internship, I received a full-time offer.
+619 also took a lot of interviews and even on-site, but every time it hangs in the last round ( D5P281-200110 ), the face byte has not responded after 3+3 rounds. Her BF was also rejected by Microsoft last year. In March of this year, it was picked up by Microsoft again. The interview was super simple, and now she has returned. Hey, Microsoft... Many of the people who complained about me and 139 who were unremarkable at the beginning took major factory internships.
+139 Both this year and last year’s summer studies are doing ML. If I want to apply for SWE, I’m not going to do it at all. I also face a similar dilemma. Of course it’s a little better than him... He is not very clear about the plan for the next semester. I don’t know if I want to find a full-time job. It’s still a graduate student; he spent two weeks preparing for the TOEFL during the summer school, and I complained about the confusion of the remote proctoring test. In the end, his oral English was still 23... He is also good at using one-acre three-point land, yes, I don’t forget...
+""", f"""
+D5P290-200211
+saying a half months, and I on December 28 WST share will recognize the 543 kept in touch. She is from Shanghai and should be 2 years older than me. After studying in Shanghai for two years, she went to the UK for exchange (transfer?), and then went to Duke to study a BA master's program. I shared with her my understanding and analysis of 698 and other business gods, and she shared a lot of job hunting information with me.
+We talked quite well, Chinese New Year on January 25, 543 sent a booklet BRC job to me, very useful. In early February, I began to feel our potential for further development, so I searched for information about her project, hoping to evaluate her level more comprehensively. 543's internship experience is very rich and relatively big.
+On February 10th, she suddenly told me about a bunch of things she liked about a mixed-race boy last year. As a result, he was with her classmates. I tried my best to comfort her. On the 12th, she proposed to assign her work to me (she is temporarily taking a leave of absence and is doing an internship in Shanghai). I guess it may be possible to have a fake internship experience, experience the daily life of business, and of course establish a relationship between us Opportunity, he agreed to this show operation.
+On the evening of February 13th (noon on the 14th in Shanghai), 543 discussed NYU with me. At the time, I didn’t realize that it was because her girlfriend of the male god was an undergraduate of NYU. Angrily said that I was "a straight man in engineering steel"... After that, I thought about it for a long time. I thought about what kind of business men and women around me are. It is true that girls like them need boys like them to handle them.
+I estimated that 48% of all my interpersonal interactions with students during college were between the opposite sex, but most of these were based on academic work. Although I made a lot of close friends by taking this as an opportunity, the relationship with schoolwork as a link still greatly limits my circle. It suddenly occurred to me that if my reputation as a master chef in my grades, if I do not study together but cook together when I make appointments, then my social mode will be very different, and the breadth of friends I can reach will also be different. A lot of expansion.
+In the early morning of February 19th, I discussed her project with 543. In fact, it was a very simple linear regression. She introduced me to the background of the project, oil imports and the like. Later, she mentioned the shocking thing in her master's program: a Fudan girl's boyfriend in China paid her tuition and was cheated by her, which really shattered my three views.
+She doesn't say that. I haven't realized it myself. In fact, my current social life is really very high-quality, which makes me very satisfied. Everyone is a high-quality person and will share all kinds of information in a friendly way. However, this does not necessarily mean that the overall level of our students is much higher than that of theirs. After all, in our school, students who have different values ​​from mine, such as some entangled couples, I don't have much contact with.
+Follow -up: On April 15th, after this guy learned that I was admitted to Stanford, it just...well...but I didn't respond. When I'm on a much higher platform, it's better to keep my eyes on it and don't be stupid.
+Think about it now, when I was willing to associate with 543, it was from January to February when I was seriously suspicious of my life path and blindly yearning for business.
+After I got my first master's admission on February 20, my mentality and career plan changed drastically, and my previous self-doubt disappeared.
+Now , compared with the beginning of the semester, I, who have experienced spring recruitment exercises, have a completely different understanding of how to improve my so-called "soft power". Naturally, I don’t need to find a "business girl" to "make up for me". Shortcomings".
+Note on April 30th: Recently, I also think of the time I spent with 543 from time to time, which has broadened my horizons. If you want to come to the business world and the engineering world, the logic of courtship is quite different. Business people are relatively social, savvy, and scheming. They may either endeavor to pursue the second generation of wealth, or they are more difficult and riskier-aiming at a potential stock. The ultimate goal is to get rich overnight, with high risks and high returns. There are many temptations in the business environment, and the atmosphere will be more impetuous. Obviously, such an environment is not suitable for me.
+The engineering course is relatively simple. Since we rely on our strength to speak, rather than the "sight" and luck required for starting a business, our growth path is much more stable. Finally, I think 543:
+(1) Behaving insincerely and arrogantly, often preconceivedly evaluating me;
+(2) Extensive personality, not appropriate tact, and can't feel the cute side;
+(3) The way to start a topic is often to ask me strange questions. Maybe it would be better to share some details of life?
+(4) Speaking of her previous crush, she was extremely sad, and she acted immaturely, which also gave me pressure;
+(5) The relationship with me is seriously out of balance, her ability is far inferior to me, she asks me for help far more than the opposite, and our industry is different, and there is no particularly consistent goal;
+On May 12, 543 came to contact me again. I replied indifferently, and then she withdrew some news back. Then I suddenly found that the news could not be sent out. It turned out that my friend was deleted. It's amazing, she was blacked out for the first time in her life, it's okay for her to stop thinking like this. In fact, 543's family background looks good, but now I don't think she deserves to be my friend. I changed her code name to 543, trying to stay away from the numbers of my other friends.
+""", f"""
+D5P289-200207
+I have experienced countless CS classes that cannot be cooperated. 4269 is my first experience of cooperative coding. The advantage is the collision of thoughts, but the disadvantage is that it is slightly inefficient. We want to build a class scheduling system, which has nothing to do with AI, it is a pure algorithm. In the afternoon of the 8th, 474 Karry was all over the audience, and the project was basically completed.
+saying No. 6 school I received a rejection letter Miaodao 474 of UWM, No. 7483, and I said that he had received five PhD rejection letter ... 329 and No. 7 in the evening I discussed this fall I can apply strokes in addition to SWE What direction did he say PM...? Because I will be in contact with product design sooner or later if I do SWE.
+After the LNYF rehearsal on the 8th night, I went to McTyiere to play Just Dance and dance various pop dances. It was really super decompression. While playing, I chatted with two teammates for a while. Alex wanted to study a 3-year graduate student to be a physiotherapist; his parents are both from Shanghai and both do IT in Houston. Lauren's father worked as an actuary in an insurance company and worked at 955, which was easier than the average financial worker; he passed the first two levels of the actuary certificate after graduating from his undergraduate degree. My mother studied art, did graphic design, and is now a full-time mother.
+On the afternoon of the 8th, I received a chat invitation from Professor J of the University of Chicago. Although it is not a formal interview, it is at least the first time I have received any form of feedback since the research. I am very happy. We made an appointment for a video chat on the 10th afternoon.
+time application UChicago, my attitude has been very Buddha Department before Shen UCB, Columbia, Northwestern, when I had to avoid ML, said his research is what CS education, thinking Quxianjiuguo; UChi application I Just say that I want to do ML. Even so, the direction of Mr. J's work is somewhat different from my interests (linear algebra and statistics). The core of his research is video streaming in the computer network, and he does less ML.
+Of course, Mr. J is a super-powerful person, Tsinghua Yao class, Ph.D. CMU, but following a powerful person does not necessarily mean that I can get the results I want, I still have to be cautious. The most important issue is self-positioning. I don’t know if I can enter the sprint school... Teacher J is a new professor who has just graduated from his PhD for two years. In theory, he is still struggling for Tenure. This may be the reason why he is more eager for students (his The website says that he is welcome to contact him for an internship. Professors who write in this way seem to be rare).
+In any case, since I want to "interview", I still have to get familiar with the projects mentioned in my essay, familiar with my current MASI project, and familiar with the professor's project. Obviously, I can't use the mindset of writing a diary or chatting with friends, and I have to switch when communicating with teachers. For details, please refer to "WSO Interview"; I need to show my enthusiasm for learning and desire for offer, and I need to keep smiling.
+From 15:08 to 15:32 on February 10th, Mr. J and I chatted happily for 24 minutes. I first talked about my scientific research this semester, using the principle of "WSO Interview", "concise and horrific, just talk about the key points, and let the other party ask for the details". At the beginning, I spoke according to the manuscript I wrote in advance. Later, the teacher asked me what algorithm to use and how to verify the correctness, and I answered pretty well. Then I discussed my summer research last year.
+The teacher asked me where I applied. I said that I applied for 2 Ph.Ds and 10 Masters. I explained the reason why I wanted to read their MPCS, that is, Vandy didn’t have many CS research opportunities (he asked me how I knew MPCS, I’m really Forgot...) I asked the teacher the whereabouts of the MPCS students he took; the first student he took to Amazon Research (although work was not the main goal of the project), and the second student was a master who did it with him. Reading a Ph.D. at CMU.
+Finally, the teacher said that after I hear back from them, I will find a chance to discuss his research project with me. I was ready to discuss his scientific research with the teacher (for example, I don’t know much about computer networks, but I am willing to learn). Now There was no chance to say it. I said that hearing back is waiting for the admission result, he said yes, if my admission result is not satisfactory then there is no need to discuss it. The teacher also praised me as having potential, saying that the pre-doc project is designed for students like me: I want to accumulate more experience, or I am still exploring whether I am suitable for Ph. It seems that I am quite hopeful.
+The teacher has something to leave at 3:30. Now I want to come. The time for the call is very precious. If I speak more fluently and talk less nonsense, I will be able to provide and obtain more information. Sometimes it feels like I want to show myself more, but the teacher snatched my words, I had to say Yes, exactly...
+I had an appointment with 139 in the evening (I don’t know why dinner at EBI made me very depressed...). He said that MSCS in Stanford depends on the internship experience, so I feel that I might be cold. After that, he showed me the paper (also a medical conference) that he issued with Bobby last summer. 483 is an article, so awesome!
+On the morning of the 10th, I received an email from Professor Mike Horn from the Northwest, saying that I like my application materials and want to chat with me. How am I doing it... Since I have already applied, I will bite the bullet and say that I like CS education... , It can be said that I prefer to engage in AI, but education is also very good. Later, my mother said that although education is not cutting-edge scientific research, it is also very profitable in China, um... (Note 11: 467 said that learning sciences is not education. It turned out that I misunderstood.)
+So I chatted with Dr. Horn on the phone at 19:00 on the 10th for 19 minutes. He said that he saw my video and found it very good, and he asked me why I made the video. I shared with him the impact of 3b1b on me and my views on learning methods: abstract science concepts should be learned in a visual and interactive way. He asked me about the technical details of the animation, but I was not prepared enough and spoke more generally.
+Later, he asked me if I had any problems with Northwest. I asked him how well Northwest ML was doing. He talked about many professors (I remember mentioning a ML professor who makes music), saying that Northwest ML is very interdisciplinary. MAGICS lab is mentioned in my essay, and Dr. Horn encouraged me to contact Dr. Liu, Han. If admitted, I will have a year to explore various labs and then choose an advisor. (This is the same for every school...)
+In the evening, I sent a follow-up letter to Teacher J. Before I asked 329 if I wanted to write about my desire for an offer, he said yes. I don’t know if there are any side effects. I should be fine. After that, I sent an email to Dr. Liu, but Dr. Horn said that the admission result will come out soon. I don’t know if it’s too late to send it.
+""", f"""
+D5P323-200609
+In the 4th week, my internship at Tencent finally yielded considerable results. Now my task is to find the difference in traffic light data between Tencent and N Road Network. I read the website of NavInfo, and the CTO turned out to be Stanford’s CS MS/PhD, which is great.
+In the computer, the road network is composed of a series of nodes and links, nodes (nodes) roughly correspond to intersections, links (connections) correspond to roads, nodes and links each have many attributes, such as whether there are traffic lights at the intersection, and the road Type, direction, name, etc.
+The task of finding the difference is not so simple, mainly because there is no node location information in the data of N. If you want to take the longitude and latitude of the node, you need to take the intersection of the start and end points of all the links it corresponds to. After getting the location, you can use a matching table generated by mentor to correspond with Tencent's node one by one, and then compare their traffic light information.
+Since the algorithm has been conceived, after 6.9 in the evening to get the data, me two hours to write a coherent program of gap analysis, 6.10 brain continues to burn, the code can run extended to national data, this feeling Zhenshuang ah.
+After the break, it is the small improvement and debugging of Dantong. 6.11 It took me several hours to find a bug. As the program is getting longer and longer and the relationship between functions is intricate, it is very difficult to debug. The essential reason for the bug was that I modified the previous logic, and the logic link was broken and could not keep up with the previous logic, so the logic was inconsistent. The brain thinks too slowly when debugging, how to debug more efficiently?
+As of 6.12, the biggest problem now is that about half of the road nodes in the two road networks are not matched, so how can we analyze the differences? I think if I can know how the matching data is produced, it will be helpful to my work. It happened that mentor asked me to participate in this task, so I started to see him make the code for road network matching.
+This code is written in python plus shell, so I taught myself a little shell and found that this is really a magical language. The code he gave, I don’t say humbly, is much more "non-standard" than mine (huh, you are still a senior engineer...) All of my functions have simple descriptions of input and output, as well as a lot of code comments. If necessary, I will add a description of the input and output format of the entire program, and his code has no comments, what do I think. Later, I read the documentation of another programmer, and it was pretty good.
+In addition, because the use of Chinese may cause file encoding problems, function names, variable names, as well as many documents and comments are written in English, while the plastic English of Chinese engineers...hey.
+saying mentor gave me some weekend road network segmentation tasks that match, but I simply do not understand he wanted me to doing, trying to understand his code is proceeding very slowly. 6.16 I reviewed the previous traffic light mining code and found a bug. After the fix, the pairing success rate increased from 31% to 49%.
+After the group meeting report, mentor called and told me that in the group project, I need to know the correctness of my code, and he suggested that I reconfirm my logic. Indeed, this is the same as when I scan the LC to ensure that the code is correct before uploading. The principle is the same (my acceptance on Leetcode-the submission ratio is very high. Generally, I make a mistake at most once and get it right for a question, occasionally. Do more than a dozen questions consecutively at once).
+After that, my inspiration flashed. Since the success rate of the one-to-one correspondence method is so low, why not directly match the coordinates. So after conceiving, I entered the crazy liver code mode; this mode is very different from my previous life state. When I had nothing to do before, I liked to read all kinds of information in the company. Maybe I was eager to prove myself. I put a lot of pressure on myself. This phenomenon should be quite normal among newcomers in the workplace.
+On the afternoon of 6.17, I completed the code, and the pairing rate suddenly increased to 96%. The rest was manually verified, and most of them were differences in the two road networks. I was very excited.
+""", f"""
+D5P322-200608
+6.8 In the morning, I accidentally met a girl (294, from Shanghai) who lived on my doorstep during the summer vacation. Since Mei Gao has studied for 1 year, she has just finished her freshman year. In other words, she was born in the same year as me and is 3 years younger than me... This may be the first time I have had a face-to-face chat with someone for so long since I met with 983. She is the only known full award among the 23rd Chinese. The major is HOD + CS, and the male ticket is Vandy's ABC.
+On 6.9, I went to 294 to study in the morning. I answered some of her calculus questions and chatted for a long time. At noon I tasted the salmon soup she made, and finally she borrowed a diffuser for me. We have had an in-depth conversation on the topic of "intimacy". I still insist that being in the same industry or occupation is an important part of a relationship, and that the other's intelligence and comprehensive ability are the most important.
+I commented that the particularly smart people around me are either single, or have a long relationship in love, and will not easily determine the relationship with others. She said that she basically got out of the singles this year (VU 23'), and some even broke up after the talk (also said that the quality of the Chinese students this year has disappointed her a little, and there are many naive people).
+294 said that she would take the initiative to seek confirmation of the relationship when she felt about the other party; she already knew what a relationship would be like for 1 month, 3 months, 1 year, 2 years, and her enthusiasm began to fade. "Three months is a hurdle, and there will be a feeling that there is no topic to talk about. At this time, the nature of the relationship may require a transition to emotional dependence."
+6.10 In the morning, 294 continued to drag me to study. At noon, I watched her cook a one-hour meal: shredded green pepper and potato + onion and egg + tomato thick fish soup. It was super delicious. 6.11 I ate scallion pancakes and a piece of Italian chicken she made. 6.13 We made cold noodles together and continued to be super delicious... In return, I helped her with math homework.
+Being alone with two people feels very different for both of us. For example, 294 originally controlled her calorie intake for each meal very accurately, which made her suffer from obsessive-compulsive disorder. After eating with me, she got rid of this problem. After knowing for 5 days, I also had a strange sense of intimacy at first, but now (6.13) I don’t feel it at all...
+294 asked me what my ideal way of getting along is. I said that I haven't accumulated enough experience to answer. However, after analyzing the state of my relationship with 495, it is probably very "academic", including dating in Chengdu and studying; It is also mentioned that getting along with 294 is a very different experience. 294 is much more refined than 495 at the end of 19 ( D5P261 ). 294 said that she used to like the knowledge-based approach to getting along, but I wonder why her bf is not of this type...
+Now that I value the ideal IQ so much, or is it because I am a person who likes to think very much, and being able to meet other people's thinking sparks can give me great satisfaction. Just look at the content of my diary. I don’t care too much about life. I don’t care about food, and I don’t have any desire to shop. (Even though I watched a lot of promo videos of Huahua and Sanmao…)
+But this kind of carelessness in life may also be the source of many physical and psychological unhealthy. Sometimes after 294 has just cleaned the house, there will be a particularly comfortable fragrance, which inspired me to buy a "forest smell" room spray.
+"""]
 
-zh = """D5P282-200114
+zh = ["""
+D5P282-200114
 14号下午我和Dr. Landman会面，他的办公室里有好多中国人送的礼物。他介绍了lab的7个divisions，答应帮我注册一个CS-3860的课，描述了我如果take for credit的话应该做啥（final report等）。他说本科生的priority是一学习，二生活，三研究，研究生则是反过来。老师说希望我能从这段研究中学到东西，哪怕只是学会用ACCRE，哪怕学到了自己不适合读博士。
 如果我最后研究生录取跪了（当然这不太可能），我可以在这里再干一年再申PhD。我暂时没和老师提提早毕业的事，希望到时候暑假可以在这里再做两个月吧。
 之后ljj同学找我借算法教材，我顺便和她聊了大半个小时。和495一样，她去年去了GHC，然后拿到了小摩纽约的Tech Analyst Intern。我还第一次听说这个职位，感觉和我很match，以后也许可以一试！她说她挺自闭的，之前也没怎么做networking，而我也很少见到她。哎，还是698厉害啊。
@@ -32,13 +123,109 @@ zh = """D5P282-200114
 15号晚上我在Kissam和565聊了一会人生，他实习录了德勤的科技咨询，地点是DC。他都几乎没准备过case，第一个面试问题是如何从入境包裹中检测毒品，当然这个的侧重点是怎么“提建议解决”、解决的流程如何。第二个问题是一个公司该不该上传数据库到云端，他还真能从各个角度分析利弊，扯上好一阵子。不过这些都是比较虚的东西，咨询就是给建议嘛，不实操的。
 我用最近三周学到的知识，和他探讨了他的未来规划：读MBA，跳到科技公司做管理，甚至读博士。565生于杭州，差点以国际生身份去了清北，但综合考虑还是在米国好，Vandy的FA和政府scholarship加起来能覆盖他大部分学杂费。虽然他是美国公民，但对国内还是挺关注的，知道WST，甚至考虑过回国发展…？
 19号晚上又在cms偶遇了565，原来他还没正式签约德勤，现在亚麻也给了他SWE的offer，离他家更近而且时薪高至少10刀，他还在纠结——写码转咨询容易，反过来难。
-"""
+""", f"""
+D5P333-200729
+7.27，Stanford MSCS招生办破例决定允许延期入学一年（之前最多可以延期一学期），不知道国内的同学会有多少选择1年呢，这又会对下届的申请产生怎样的影响呢。
+我嘛，其实也可以延1年，毕竟我最近自学效率还挺高的，但一方面想着人少的学期竞争会少，另外即使申请延1年，我现在的情况估计也很难被批准…
+8.1凌晨，云参加了Pre留学生聚会，看深圳的同学攀岩感觉超羡慕。承办的HR们特别用心地设计了各种活动、服装、礼品、吃的（当然我只能看着了…），腾讯为了给我们这批人留下好印象，也是挺拼的啊哈哈！
+7.31首次试做咖喱鸡饭，结果翻车，水太多了，稀释得太厉害…8.1又直接把咖喱放进炒饭里，也做得不怎么好吃。另外最近经常做汉堡吃，中小火煎个肉饼，包在汉堡里加奶酪、番茄酱、生菜即可。（吐槽一下生菜坏得好快啊…）
+至此时，我在的Davidson County确诊已超1.9万，占人口约3%。8.1最后一次去Kroger后把伞落在了超市，回来路上天降大雨，这算是帮我消毒了吧。8.2找ych理发，至此我已超5个月没剪头发了（新纪录），我的头发已经可以勉强够到嘴唇了…8.4做完早饭忘了关火，巨翻车…
+8.1晚上和339等7人一起打了4个多小时的Blood Bound直到次日2点多，为我5周以来完全的自闭生活增添了很多色彩。我没怎么玩过桌游，大家的逻辑我还是不太能跟上，ych展现出的谈判能力让我对他刮目相看。
+看Warald的帖子，求职的时候学会谈判，可能可以为自己多争取多30%的薪水，看来多玩桌游还是很有用的。
+8.6度过了一个非常充实开心的下午，和983和139分别聊了将近2小时。我知道这两位好友能给我提供很多非常关键的信息，所以走之前一定要聚一下。
+983住在Morris，趁疫情期间签了1600 × 12个月的白菜价，她bf要去NYU读法了。我们边聊边在Morris的19楼欣赏着比Love Circle还美得多的Nashville全景。
+我和983互相介绍了自己的实习。983在FB的日常工作是清理数据（FB有一个自己开发的基于Python的数据预处理体系）：选择用哪些数据来训练、整理数据格式，然后调参跑模型。数据标注是外包做的。
+模型的输入是一条消息，产出是4个值：是否是hate speech，等等。FB有自己的模型上线平台，每一个模型都有个ID，别人可以用。她跑一次模型大概要用几百块钱的计算资源。
+983还做了一些前端的任务。她的组里有安卓工程师、iOS工程师、产品、ML工程师，算是一个独立的产品团队，FB超级“产品驱动”（狗家则据说更“工程驱动”）。这和我在腾讯的小组截然不同，我们整个组都是搞大数据的，前端、产品都是其他组单独搞。
+983给我看了MPK总部的内部照片，感觉并没有腾讯现代化啊hhh。食堂种类很丰富，办公桌上都是两个显示器。983在FB拿到的return是NYC的（她实习的组没有HC了），这也和腾讯不一样，我们实习都是按组给return，要换组就得重新投简历了。
+983在Lyft的8周实习是做“integrity”（欺诈检测）的，语言是Go，根据付款记录等来判断是否有人钻Lyft的系统漏洞来赚钱，好像也是ML。
+这里的写码风格和FB的move fast信条很不同，她写码前要花三天写个描述文档，这样能得到很有用的反馈，也许也是更好的写码习惯吧。她说Lyft这届实习生里有不少Stanford的；Lyft在COVID严重的时候被迫降薪，现在则基本恢复了。
+我向983介绍了国内互联网行业的行情和薪资情况，感觉不比美国差很多。983考虑过申研，最大的担心是学费太贵，我说Stanford可以做助教免学费让她很激动！
+之后和139聚会时，说到他面试其他公司的经历：Akuna Capital面挂以后又面了他们上海的分部；暑假前Radix Trading主动给他面试，还推广自己的公司招的8位实习生一半以上来自Princeton，让139很方。
+139和我分享了不少同学们的经历：133不喜欢关注“面经”，于是139经常和133介绍常考的题，比如FB常考的LC 301，133当初面FB第二轮之前139带他复习了好几遍，结果133被考简单的LC 20，一时思维绕不过来硬是用了LC 301的超复杂解法，就没有了，139感叹133没拿到FB只是因为被他坑…这暑假133面完字节实习之后几个月，收到了全职offer。
+619也拿了不少面试甚至on-site，但每次都挂在最后一轮（D5P281-200110），面字节也是3+3轮以后没回复了。她bf去年也被微软拒了简历，今年3月被微软又捞了起来，面试超简单，现在已经拿了return。哎，微软啊…我和139一起吐槽当初感觉并不起眼的人很多都拿了大厂实习。
+139今年和去年的暑研都是做ML，要申SWE的话根本不搭，我也面临类似的困境，当然比他稍好些…他对下学期的规划也不是很清楚，不知道是找全职还是申研究生；他暑研期间用两周备考了托福，和我吐槽了远程监考的混乱，最后口语也还是23…他还比较善于使用一亩三分地，是哦我也别忘了…
+""", f"""
+D5P290-200211
+4`话说一个半月来，我和在12月28号WST分享会认识的543一直保持着联系。她是上海人，应该比我大2岁，在上海一个双非读了两年以后去英国交换（转学？），后来到Duke读一个BA硕士项目。我和她分享了我对698还有其他商科大神的了解和分析，她给我分享了不少求职的信息。
+4`我们聊得还不错，1月25号春节，543发了个BRC求职小册子给我，很有用。2月上旬，我开始感觉我们似乎进一步发展的潜力，于是搜了一下她所在项目的信息，希望能更全面地评价她的水平。543的实习经历十分丰富，也比较大牌。
+4`2月10号，她突然和我讲了一堆她去年喜欢一个混血男生，结果他和她同学在一起的事情，我尽我所能安慰了她。12号她提出把她的工作分给我做一点（她现在暂时休学，在上海做实习），我估摸着可能可以蹭个伪实习经历、体验一下商科的日常，当然也可以建立我们间联系的契机，就答应了这个骚操作。
+4`2月13号晚上（上海那边14号中午），543和我讨论NYU，当时我没意识到这是因为她男神的女友是NYU的本科，于是没理解她在说啥，结果这货生气地说我“工科钢铁直男”…那之后我想了很久，我思考着身边商科男女票是怎样类型的人，确实她们这样类型的女生很需要他们这样的男生来handle。
+4`我估算了一下，大学期间我所有与学生的人际交往，48%和是异性之间，但这大多数是基于学业的。虽然以此为契机我也认识了不少交心朋友，但是以课业为纽带的关系，还是很大局限了我的圈子。我突然想到，如果我在年级里的名声是一个大厨，如果我约人的时候不是一起学习而是一起做饭，那我的社交模式会很不一样，我能接触到的朋友广度也会扩张很多。
+3`2月19号凌晨我和543讨论她的project，其实就一个很简单的线性回归。她跟我介绍了project的背景，石油进口之类的。之后她提到她硕士项目里骇人听闻的事情：一位复旦妹子在国内的男友给她付学费，被她劈腿，果然震碎我的三观。
+2`她不这么说我自己还没意识到，其实我现在的社交真的还是很高质量、让我很满意的，大家都是素质很高的人，都会很友好地分享各种信息。不过这不一定代表我校学生整体水平比她们那儿高很多，毕竟我们学校里，和我价值观不同的同学们，比如某些纠缠在一起的情侣们，我都不怎么接触的。
+4`后续：4月15号，这货得知我录取Stanford以后，就…嗯…不过我没有回应，当我在高得多得多的平台上，还是眼光放高点好了，别犯傻。
+4`现在想来，我愿意和543交往的时候，都是1到2月，我对自己人生道路严重怀疑、对商科盲目向往的时代。
+4`2月20号拿到第一个硕士录取之后，我的心态和职业规划发生了翻天覆地的变化，之前的自我怀疑就随之消散了。
+现在，相比学期开始，经历过春招锤炼的我，对自己该如何提升自己所谓“软实力”也有了彻底不同的理解，也就自然不需要找一个“商科妹子”来“弥补我的短板”了。
+2`4月30号注：最近我也不时想起和543相处的时间，也算拓宽眼界了。想来商科世界和工科世界里，求偶的逻辑是挺不一样的。商科人相对社会、精明、心机，可能要么就是费尽心思想追富二代，要么就是更高难度也更高风险的——瞄准一个潜力股。最终的目标都是要一夜暴富，风险大、收益大。商科环境里诱惑多，风气会浮躁一些。显然，这样的环境不适合我。
+4`工科相对单纯一些，由于是靠实力说话，而不是创业所需要的“眼光”和运气，我们的成长道路稳定很多。最后，我觉得543：
+（1）表现得不真诚，而且比较傲慢，经常先入为主地评价我；
+（2）性格粗放，不会适当的委婉，感觉不到可爱的一面；
+（3）发起话题的方式常是问我奇怪的问题，也许分享一些生活的细节会更好？
+（4）说起她自己之前那次暗恋的极度伤心，表现得不太成熟，也给了我压力；
+（5）与我关系严重失衡，她能力远不如我，向我求助远多于相反，而且我们行业不同，没有特别一致的目标；
+4`5月12号，543又来联系我了，我冷淡地回了一句，然后她回了个什么消息又撤回了，之后我突然发现消息发不出去了，原来是被删好友了。好神奇，人生第一次被拉黑，她这样断了念想也好。其实543家庭背景看上去不错，但现在的我已经觉得她不配和我做朋友。我把她的代号改为了543，尽量远离我其他好友的数字。
+""", f"""
+D5P289-200207
+1`经历了无数不能合作的CS课，4269是我第一次体验合作写码，好处是思维碰撞，坏处是稍微有些低效。我们要建一个排课系统，和AI其实没啥关系，就是单纯的算法。8号下午474开瑞全场，大体搞定了project。
+2`话说6号上课我瞄到474收到一封UWM的拒信，7号483和我说他已收了5封PhD拒信…7号晚上我和329讨论我今年秋招除了SWE还可以申什么方向，他说PM…？因为我做SWE的话早晚要接触产品设计。
+3`8号晚上LNYF排练以后一起去McTyiere玩了会Just Dance，跳各种流行舞，真是超解压。玩的时候和两位队友聊了一会，Alex想读个3年的研究生做物理治疗师；他父母都是上海人，都在休斯顿做IT。Lauren的父亲在一家保险公司做精算师，工作955，比一般的金融工作者轻松；他本科毕业就考了精算师证的前两级。母亲是学艺术的，做过图像设计，现在是全职妈妈。
+2`8号下午我接到了芝大J教授发来的chat invitation，虽然不是正式面试，但至少是申研以来第一次收到任何形式的反馈，还是挺高兴的。我们约了10号下午视频聊天。
+2`当时申UChicago的时候，我的态度已十分佛系，之前申UCB、哥大、西北的时候我不得不避开ML，说自己研究方向是什么CS 教育，想着曲线救国；UChi的申请我就直接说想做ML了。即便如此，J老师做的方向和我的兴趣（线性代数和统计）还是有些差别，他科研的核心是computer network里的video streaming，做的ML比较少。
+2`当然，J老师是个超厉害的人，清华姚班、CMU博士，不过跟着厉害的人不一定代表我能收获想要的结果，还是要慎重啊。最重要的问题是自我定位，我不知道自己能不能录冲刺校…J老师是刚博士毕业两年的新教授，理论上仍然在为tenure奋斗，这可能是他比较渴求学生的原因（他的网站上说欢迎联系他做实习，这样写的教授似乎并不多见）。
+2`不管怎样，既然要“面试”，那我还是得好好熟悉一下我文书里提到的项目，熟悉我现在MASI的项目，熟悉教授的项目。显然我不能用写日记或和朋友聊天的思维模式，和老师交流得切换一下，具体参见《WSO面指》；我需要展现对学习的热情和对offer的渴望，需要保持微笑。
+2`2月10号15:08~15:32，我和J老师开心地聊了24分钟。我先是讲了我这学期的科研，讲的时候用了《WSO面指》的原则之“简明意骇，只说重点，让对方来问细节”。一开始我是照着我提前写好的稿子讲的，后来老师问了我用什么算法、如何验证正确性，我都回答得不错。之后讨论了我去年的暑研。
+2`老师问我还申了哪里，我说申了2个博10个硕，解释了自己想读他们MPCS的缘由，即Vandy的CS研究机会不多（他问我怎么知道MPCS的，我还真忘了…）我问老师他带过的MPCS学生的去向；他带的第一位学生去了Amazon Research（虽然工作不是项目的主要目标），第二位是硕二才和他做的，去了CMU读博。
+2`最后老师说等我hear back from them以后，再找机会和我讨论他的研究项目，我本来已经准备好和老师讨论他的科研（比如我不太了解计算机网络，但很愿意学习），现在便没机会说了。我说hear back是等录取结果出来吗，他说是的，如果我录取结果不理想那也没必要讨论了。老师还夸我有潜力，说pre-doc项目就是为我这样的学生设计的：想积累更多经验，或者还在探索适不适合读博。这么看来我还挺有希望的啊。
+2`3点半时老师就有事得走了，现在想来，通话的时间很宝贵，如果我说得再流利一点、少说点废话，我能提供和获得的信息会多一些。有时感觉我很想多展现自己，但老师把我的话给抢了，我只好说Yes, exactly…
+2`晚上和139约饭（在EBI晚饭不知为啥会让我很抑郁…），他说Stanford的MSCS挺看实习经历的，那我感觉自己可能要凉了。之后他给我看了他去年暑假在Bobby手下发的paper（也是一个医学的会议），483是文章一作，好厉害！
+2`10号早上我接到西北Mike Horn教授的邮件，说喜欢我的申请材料，想和我聊聊，我咋整啊…既然已经申了，就硬着头皮说自己喜欢CS教育呗…这样吧，可以说我更希望搞AI，不过教育也很好。后来我妈说做教育虽然不是前沿的科研，但在国内也很赚钱的，嗯…（11号注：467说learning sciences不是教育，原来是我误解了。）
+2`于是10号19:00和Dr. Horn电话聊了19分钟，他说看了我的视频觉得非常好，问了我做视频的原因。我和他分享了3b1b对我的影响，和我对学习方法的看法：抽象的理科概念应该通过可视化、互动化的方式学习。他问了我动画的技术细节，不过我准备不足，讲得比较一般。
+2`后来他问我对西北有没有问题，我问他西北ML做得怎么样，他讲了很多教授（我记得提了个做音乐的ML的教授），说西北的ML非常跨学科。我的文书里提到MAGICS lab，Dr. Horn鼓励我联系Dr. Liu, Han。如果录取，我会有一年的时间探索各种lab，然后再选advisor。（这个每个学校都一样嘛…）
+2`晚上给J老师发了封follow-up，之前我还问329要不要写自己对offer的渴望，他说可以，我不知道这样写有没有副作用，应该没事。之后给Dr. Liu发了邮件，不过Dr. Horn说录取结果会很快出来，我不知道现在发是不是太迟了。
+""", f"""
+D5P323-200609
+第4周，我在腾讯的实习终于有可观的产出了。现在我的任务是找腾讯和N路网之间的红绿灯数据差异。我看了NavInfo公司的网站，CTO竟然是Stanford的CS MS/PhD，厉害了。
+在计算机中，路网是由一系列nodes和links组成的，nodes（节点）大致对应路口，links（连接）则对应道路，nodes和links各有很多种属性，比如路口是否有红绿灯，道路的类型、方向、名称等。
+找差异的任务并没有那么简单，主要是因为N的数据里没有nodes的位置信息，如果要取node的经纬度，需要取它对应的所有links的起终点的交集。得到位置以后可以通过一个mentor生成的匹配表格，和腾讯的node一一对应起来，然后比较它们的红绿灯信息。
+由于已经构思过算法，6.9晚上拿到数据以后，我两个小时就一气呵成地写出了差异分析的程序，6.10继续燃烧大脑，把代码推广到了可以跑全国数据，这种感觉真爽啊。
+爽过以后，就是蛋疼的小改进和debug了。6.11我花了几小时才发现了一个bug，由于程序越来越长，function之间的关系错综复杂，所以debug起来非常难。那个bug的本质原因还是自己修改了之前的逻辑，逻辑链断了、不能跟上之前的逻辑，所以造成了逻辑不一致。Debug时大脑思考得太慢了，如何更高效地debug呢？
+截至6.12，现在最大的问题是两个路网里，大约一半的道路节点都匹配不上，这样何谈分析差异呢。我想如果能知道匹配数据是怎么产出的，会对我的工作有帮助，正好mentor让我参与这个任务，于是我就开始看他做路网匹配的代码。
+这个代码是python加shell写的，于是我自学了一点shell，发现这真是个神奇的语言。他给的代码，我不谦虚地说，比我的“不规范”多了（哼，您还是高级工程师呢…）我的所有函数都有对输入、输出的简单描述，以及不少代码注释，如果必要的话我还会加上整个程序的输入输出格式描述，而他的代码都没啥注释，我怎么看哪。后来看了另一位程序员小哥文档，写得不错。
+另外，由于使用中文可能造成文件编码上的问题，函数名、变量名，以及很多文档、注释都是用英语写的，而中国工程师的塑料英语啊…哎。
+话说mentor周末时给了我一些路网匹配的细分任务，但我根本看不懂他想让我干啥，尝试理解他的代码也进展很慢。6.16我回顾了一下之前红绿灯挖掘的代码，发现一个bug，修复以后配对成功率从31%提升到了49%。
+组会汇报过后，mentor打电话和我说，小组项目中，我需要对自己代码的正确性有数，他建议我好好再确认一下自己的逻辑。确实，这和我刷LC一般都尽可能确保代码无误再上传，原则是一样的（Leetcode上我的接受-提交比很高，一般一道题我最多有一次错误然后就做对了，偶尔还会连续地一次性做对十几题）。
+那之后，我灵光闪现，既然按一一对应的方法成功率这么低，为什么不直接按坐标匹配呢。于是构思之后进入疯狂肝代码模式；这种模式和我之前的生活状态很不一样，之前没事干时我喜欢看公司里的各种资料。可能是急于证明自己，我给了自己不少压力，这种现象在职场新人里应该挺正常的。
+6.17下午，我完成了代码，配对率一下子提升到了96%，剩下的经过手动验证，大都是2个路网中确实存在的差异，好激动。
+""", f"""
+D5P322-200608
+6.8早上意外认识了暑期住我对门的妹子（294，来自上海），由于美高多读了1年所以现在大一刚上完，也就是说，和我同年生，比我小3届…这也许是和983见面以来我第一次和人面对面聊了这么久吧。她是23届中国人里已知唯一的全奖，专业是HOD + CS，男票是Vandy的ABC。
+6.9早上找294学习，我回答了她一些微积分的问题，后来聊了好久。中午时我尝了她做的三文鱼汤，最后她借了一个diffuser给我。我们针对“亲密关系”这个话题展开了很深入的对话，我仍然坚持认为处在同一行业或职业是一段关系里重要的一部分，对方的聪明程度和综合能力最重要。
+我评价说身边特别聪明的人都是要么单身、要么谈恋爱谈很久，不会轻易和别人确定关系。她则说她这届（VU 23’）基本都迅速脱单了，甚至有的都谈完分手了（还说这届中国生源质量让她有些失望，有不少幼稚的人）。
+294说她对对方有感觉就会主动征求确定关系；她已经知道一段恋爱1个月、3个月、1年、2年会怎样，热情也开始淡了。“3个月是个坎，会有没话题可聊的感觉，这时候关系的性质可能就需要向情感上的依赖过渡。”
+6.10早上，294继续把我拉去学习，中午我看她做了一小时的饭：青椒土豆丝 + 洋葱鸡蛋 + 番茄浓鱼汤，超级好吃。6.11吃了葱油饼，还尝了一块她做的意式鸡肉。6.13一起做了凉面，继续超级好吃…作为回报，我辅导她数学作业。
+独处和两人相处，对我们两人来说都感觉很不一样。比如294本来对自己每顿的卡路里摄入量控制得很精确，都让她有强迫症了，和我一起吃饭以后就改掉了这个毛病。认识5天来，我一开始也有种奇怪的亲密感，但现在（6.13）就完全没有感觉了…
+294曾问我理想的相处模式是怎样的，我说我还没有积累足够多经验回答，不过分析了一下我和495的相处状态，大概就是非常“学术”，包括在成都约会也是去读书；也提到和294相处是很不同的体验，294比19年末的495精致多了（D5P261）。294说她以前也喜欢知识型的相处模式，不过我奇怪为啥她的bf并不是这种类型的…
+话说目前我对理想型的智商这么看重，还是因为我是一个特别喜欢思考的人，和别人能碰出思维火花能让我获得巨大满足感。看看我日记的内容就知道了，我对生活不是太在意，对吃的的要求是不难吃就行，也没有啥购物的欲望（即使天天看花花与三猫的剁手购物、恰饭视频…）
+但这种对生活的不在意，可能也是很多身体和心理上不健康的来源。有时294刚清理完屋子以后，会弥漫着一股特别舒服的清香，这启发我买了一个“森林味”的房间喷雾。
+"""]
 
 from scripts.tally import count_cn_words, count_en_words
 
-wc_cn = sum(count_cn_words(l) for l in zh.split('\n'))
-wc_en = sum(count_en_words(l) for l in en.split('\n'))
 
-print(wc_cn, wc_en, f'ratio = {wc_cn / wc_en}')
+def p(z, e):
+    wc_cn = sum(count_cn_words(l) for l in z.split('\n'))
+    wc_en = sum(count_en_words(l) for l in e.split('\n'))
+
+    print(f'char {wc_cn} : {wc_en} words, ratio = {wc_cn / wc_en}')
+    return wc_cn, wc_en
 
 
+if __name__ == "__main__":
+    z, e = 0, 0
+    for i in range(len(zh)):
+        dz, de = p(zh[i], en[i])
+        z, e = z + dz, e + de
+
+    print(f'TOTAL char {z} : {e} words, ratio = {z / e}')
