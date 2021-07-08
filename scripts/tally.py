@@ -127,13 +127,13 @@ def tally_people():
 def count_cn_words(line):  # count words in a line of Chinese Diary text
     wc = 0
     line = line[:-1]
-    alnum_words = re.split(u"[^A-Za-z0-9_\-]+", line)  # alphanumeric words
+    alnum_words = re.split(u"[^A-Za-z0-9_-]+", line)  # alphanumeric words
     wc += len(alnum_words)  # count number of words
     if wc > 0 and alnum_words[0] == '':
         wc -= 1
     if wc > 0 and alnum_words[-1] == '':
         wc -= 1
-    cn_words = re.split(u"[A-Za-z0-9_.\- ]+", line)  # include spaces
+    cn_words = re.split(u"[A-Za-z0-9_. -]+", line)  # include spaces
     wc += sum(len(s) for s in cn_words)  # count chinese characters
     return wc
 

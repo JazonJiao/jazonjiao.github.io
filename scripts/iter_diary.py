@@ -22,7 +22,7 @@ if __name__ == '__main__':
             continue
         with open(in_file) as fr:
             for l in fr:
-                if '983' in l and ('FB' in l or 'Facebook' in l):
+                if '<em>' in l:
                     print(i, l)
 
     print(max_n, dn)

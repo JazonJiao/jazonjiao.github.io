@@ -83,3 +83,7 @@ th, td {
     color: #990999;
 }
 
+blockquote {  /* quoted texts for Chinese Diary */
+  color: #778;
+  border-left: .29em solid #ccd
+}

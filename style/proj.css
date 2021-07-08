@@ -1,0 +1,20 @@
+h5 {
+    text-align: center;
+}
+
+.card {
+    background: #d7f4ff;
+}
+
+a.card-a {  /* make entire card clickable */
+    color: inherit;
+    text-decoration: none;  /* removes underline */
+}
+
+a.card-a:hover {
+    opacity: 79%;
+}
+
+.btn {
+    font-size: 12px;
+}

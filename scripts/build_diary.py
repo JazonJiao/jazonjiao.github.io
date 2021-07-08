@@ -29,6 +29,7 @@ Some parts of my Diary quotes (1) my non-Diary writings, such as letters to othe
 (2) my past Diary; or (3) others' verbatim words.
 These quotes should be surrounded by `<em>` at the beginning and `</em>` at the end.
 These indicators be separate lines and will be copied into the HTML document.
+Note for Chinese Diaries: use <blockquote> instead of em
 
 - Intra-site links
 I sometimes refer to my previous or future Diary in the form of `D5Pxxx`. These will be
@@ -65,7 +66,7 @@ PERIODS = [
     ('17a', 45, '17 Spring', 'null', 'null', 'null', 'null', 'null'),  # 45 entries
     ('17b', 71, '17 Summer', 'null', 'null', 'null', 'null', 'null'),  # 26 entries
     ('17c', 105, '17 Autumn', 36685, 20.7, 26.9, 19.1, 33.3),  # 34 entries
-    ('18a', 138, '18 Spring', 26730, 31.3, 21.2, 18.3, 29.2),  # 33 entries
+    ('18a', 138, '18 Spring', 27025, 31.0, 22.0, 18.1, 28.8),  # 33 entries
     ('18b', 155, '18 Summer', 12302, 36.9, 16.1, 33.7, 13.4),  # 23 entries
     ('18c', 183, '18 Autumn', 18986, 41.7, 17.9, 29.0, 11.5),  # 28 entries
     ('19a', 209, '19 Spring', 19179, 43.1, 19.5, 26.7, 10.7),  # 26 entries
@@ -73,8 +74,9 @@ PERIODS = [
     ('19c', 276, '19 Autumn', 33733, 18.4, 31.3, 7.4, 43.0),  # 43 entries
     ('20a', 311, '2020 春', 56021, 14.3, 68.5, 9.6, 7.7),  # 35 entries
     ('20b', 339, '2020 夏', 44368, 23.7, 37.2, 22.0, 17.1),  # 28 entries
-    ('20c', 364, '2020 秋', 'null', 'null', 'null', 'null', 'null'),  # 25 entries
-    ('21a', 389, '2021 春', 'null', 'null', 'null', 'null', 'null'),  # 25 entries
+    ('20c', 364, '2020 秋', 35197, 28.8, 37.0, 19.3, 14.9),  # 25 entries
+    ('21a', 389, '2021 春', 35165, 'null', 'null', 'null', 'null'),  # 25 entries
+    # ('21a', 389, '2021 春', 35165, 48.3, 20.7, 19.1, 11.9),  # 25 entries
     ('21b', 395, '2021 夏', 'null', 'null', 'null', 'null', 'null')
 ]
 
@@ -208,11 +210,15 @@ def archive_notes():
 <h1 style="text-align: center; margin-top: 67px; margin-bottom: 37px;">【 Notes 】</h1>
 <ul>
 <li class="cat">Friend list is <a href="./friends/">here</a>.</li>
+<li class="cat">Each year’s diary is divided into 3 periods of 4 months for statistical purposes: 
+  Spring, Summer, Autumn. Those roughly corresponded to the Spring semester (1-4), 
+  Summer break (5-8), and Fall semester (9-12) at Vanderbilt University. After graduating from Vandy 
+  in 2020, I preserved this practice.</li>
 <li class="cat">Not all Diaries are published; I’m usually less selective on older entries.
-The statistics above are for the full version of my Diary.</li>
+  The statistics above are for the full version of my Diary.</li>
 <li class="cat">Sometimes, the category of a piece of Diary text is ambiguous, so the
-stats aren’t 100% accurate. That’s fine, since most tallies need to deal with fuzzy definitions
-(for example, figuring out the religious decomposition of a country’s population).</li>
+  stats aren’t 100% accurate. That’s fine, since most tallies need to deal with fuzzy definitions
+  (for example, figuring out the religious decomposition of a country’s population).</li>
 </ul>
 """
 

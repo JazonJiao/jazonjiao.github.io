@@ -23,7 +23,7 @@
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <!-- Custom style for this website -->
   <link href="../style/index.css" rel="stylesheet">
-
+  <link href="../style/proj.css" rel="stylesheet">
   <!-- include icon -->
   <link rel="icon" href="../file/icon/brainy.ico" type="image/x-icon"/>
 </head>
@@ -33,7 +33,7 @@
 <!-- Navigation -->
 <nav class="cold-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
   <div class="container-fluid mt-1 mx-2">
-    <a href="../">
+    <a href="..">
       <img src="../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
@@ -43,52 +43,43 @@
 
     <div class="collapse navbar-collapse" id="navbarsExample03">
       <ul class="navbar-nav ms-auto fs-5">
-        <li class="nav-item"> <a class="nav-link" href="../about/">About</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="../blog/">Blog</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="../proj/">Projects</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="../diary/">Diary</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../diary">Diary</a> </li>
       </ul>
     </div>
   </div>
 </nav>
-<main>
 
-  <div class="container">
-
-    <h1> <a href="https://github.com/JazonJiao/Manim.js">Manim.js</a> </h1>
-    <p>Manim.js is a JavaScript graphics library for <b><ins>ma</ins></b>th <b><ins>anim</ins></b>ations,
-      based on <a href="https://github.com/processing/p5.js/">p5.js</a> and inspired by <a href="https://www.youtube.com/3blue1brown">3Blue1Brown</a>'s <a href="https://github.com/3b1b/manim">manim project</a>.
-    </p>
-    <img src="../file/thumbnail/manimjs.png" class="img-fluid" alt="Manim.js">
-
-    <p class="mt-3">I used Manim.js to make explanatory math videos on YouTube, and <a href="https://www.youtube.com/channel/UC8bvGUlaTahF0lHhMsZFhfw ">my channel</a> now has 2,600+ subscribers.
-    </p>
-
-    <h2 class="mt-4 mb-4"> Graph Algorithm Visualizations </h2>
-
-    <div class="row">
-      <div class="col-md-4">
-        <h4>BFS</h4>
-        <p>BFS (breadth-first search) is one of the most fundamental graph search algorithms.</p>
-        <a class="btn btn-primary" href="../demo/bfs" role="button">View demo</a>
+<main class="container px-5">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <a class="card-a" href="manimjs">
+      <div class="col card px-0 shadow-lg">
+        <img src="../file/thumbnail/tx-intern.jpg" alt="Tencent Internship">
+        <div class="card-body px-3 pt-3 pb-2" style="border-bottom: 1px solid #99c;">
+          <h5>Tencent Internship</h5>
+          <div class="mt-3 mb-0 d-flex justify-content-between align-items-center">
+            <small class="text-muted">SWE backend</small>
+            <small class="text-muted">2020</small>
+          </div>
+        </div>
+        <div class="card-body px-4 pb-2">
+          Tencent Maps — Road network matching project<br/>
+        </div>
+        <div class="card-body px-4 pt-2">
+          <button type="button" class="btn px-1 py-0 btn-outline-primary">Python</button>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h4>Prim</h4>
-        <p>Prim's Algorithm finds an MST (Minimum Spanning Tree) in a weighted graph.</p>
-        <a class="btn btn-primary" href="../demo/prim" role="button">View demo</a>
+    </a>
+    <a class="card-a" href="manimjs">
+      <div class="col card px-0 shadow-lg">
       </div>
-      <div class="col-md-4">
-        <h4>Topsort</h4>
-        <p>Topological sort identifies the sequential relationship between nodes in a directed graph.</p>
-        <a class="btn btn-primary" href="../demo/topsort" role="button">View demo</a>
-      </div>
-
-    </div>
-
-    <footer class="pt-3 mt-4 text-muted border-top">
-      &copy; 2021
-    </footer>
+    </a>
   </div>
+  <footer class="pt-3 mt-4 text-muted border-top">
+    &copy; 2021 Jazon Jiao
+  </footer>
 </main>
 
 </body>
