@@ -48,8 +48,57 @@
 
 <div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
 <p><a href="../../">Archive</a> <a href="../371">← Prev</a> <a href="../373">Next →</a></p>
-<h1 id="0"></h1>
+<h1 id="0">D5P372-210129</h1>
 <div class="row d-flex" id="rdf">
+<h2>《Recsys   Research   Project   (5)》</h2> 
+ <p id="1"><span>①</span> 1.22，我开始按着 709 的 notebook 做 content   filtering。最简单的就是用线性回归，用文章和用户的特征预测 utility。类别型的特征用 One-Hot 编码，导致测试集的 size 爆炸，经常搞垮 AWS   server。709 疯狂吐槽 AWS 辣鸡，还说 econ 的人遇到这种情况可能就傻眼了，所以 lab 需要 CS 同学。
+</p>
+<p id="2"><span>②</span> 709 说他周末加班把这个做好，我当时还想天哪我好不容易找到一个可以做的事情，又要重新找课题了，结果周一（1.25）发现他并没有做 lol。线性回归、决策树的问题是，所有特征都是独立的变量（z  =  ax   +   by   +   c），特征之间没有互动（比如用点积比较相似度：z  =  x<sup>T</sup>y）。于是后来 709 还是改用矩阵分解做。
+</p>
+<p id="3"><span>③</span> 1.26，709 发给我一篇 3 年前 Susan 写的 paper（1801.07826），让我写写读后感，于是 1.27 我写了篇 500 多词的短文，从 3 个角度分析了 S2M 可以从 TTFM 借鉴的 idea：模型、数据处理、评估方法。那是我入 lab 之后最有成就感的一天，感觉开辟了很多有趣的、能出成果的方向。
+</p>
+<p id="4"><span>④</span> 1.28，我的任务是给 709 的代码添加一个模块，本来是比较简单的任务，不过中途出了 bug，我需要看他的源代码。他的代码写得比较“随性”，我读起来效率很低，我甚至都在搜“代码转文本”的 paper 了（可以作为 224n 备选 Project）。
+</p>
+<p id="5"><span>⑤</span>  想起 <a href="../320/">D5P320-200527</a>：“ SVL 测试要求里强调代码质量大于 performance ”，我更深地理解了写码习惯对团队合作的重要性；另外，142 的 Project 需要跑 JShint，让我想起了以前 3251 要跑 linter 来规范 C++ 代码的格式。
+</p>
+<p id="6"><span>⑥</span> 2.2，710 和 709 向 S2M 团队提出了线上测试方案：分为原系统、新模型 1、新模型 2，共 3 组，互相对照，当然两个新模型之间的对照可能不会很明显。讨论了可能的问题（如果出了大 bug 怎么止损）。
+</p>
+<p id="7"><span>⑦</span> 2.4 是第一次和 Susan 的 1 对 1。709 建议我更应该征求她对我总体职业规划的意见，而不是对目前项目的反馈。我不同意他的观点，认为不需要 Susan 给我职业建议；反之，她对我眼下工作的建议是对我个人成长最有用的。
+</p>
+<p id="8"><span>⑧</span>  开会前，我花 1.5 小时写了算是“一封信”，融合了我对入 lab 以来遇到的问题和可能的解决办法的思考。主要是说我现在主要在改 709 的代码，效率不高，也没有太多实际的进展，所以想开辟一个自己的项目，问问 1.27 的那些思路可不可行。里面提到的问题我是和工作了的朋友们讨论过的，是合理的；The   PhD   Grind 也提过有点类似的问题。原文如下：
+</p>
+<blockquote> 
+ <p id="9"><span>⑨</span> Hi   Susan !  I   know   your   time   is   valuable,   so   thank   you   for   taking   the   time   to   provide   individual   feedback   for   me   on   the   S2M   project. 
+</p>
+<p id="10"><span>⑩</span> After   I   did   the   visualization   tool   for   Path   Analysis   in   December,   since   January   I’ve   been   mostly   working   on   tasks   such   as  “ help   709   figure   out   why   something   is   not   working, ”  or  “ try   to   change   something   in   709’s   code   and   see   the   results. ”
+</p>
+<p id="11"><span>⑪</span> I   feel   that   it’s   not   very   efficient,   especially   when   his   code   is   a   work   in   progress,   or   when   I   need   to   understand   a   lot   of   legacy   code.   In   addition,   this   working   style   means   that   I   often   get   assigned   disparate   tasks   on   a   daily   basis,   and   I   usually   don’t   have   a   clear   picture   of   what   to   work   on   beyond   a   few   days. 
+</p>
+<p id="12"><span>⑫</span> Now   that   I   have   joined   for   nearly   two   months,   I   have   begun   to   develop   some   project   ideas   of   my   own.   At   some   point   in   the   future,   I   may   want   to   start   a   relatively   independent   project,   instead   of   letting   709   assign   tasks   to   me. 
+</p>
+<p id="13"><span>⑬</span> For   example,   a   week   ago   I   read   your   TTFM   paper,   and   wrote   about   how   its   ideas   can   be   applied   to   the   S2M   project.   I   and   709   agree   that   the   most   important   takeaway   is   to   include   time   aspects   in   the   output.   In   other   words,   predict   not   only   a   user’s   utility   with   an   item,   but   this   utility   at   a   specific   time   stamp. 
+</p>
+<p id="14"><span>⑭</span> Another   idea   is   to   use   more   advanced   deep   learning   methods   to   replace   our   current   models.   I   can   try   out   Wide&Deep   or   other   neural-network   based   methods,   and   write   a   full   report   about   the   model,   result,   and   analysis,   similar   to   doing   a   final   project   of   a   CS   course. 
+</p>
+<p id="15"><span>⑮</span> Some   of   my   friends   at   big   tech   companies   like   Facebook   agree   that   they   need   to   come   up   with   individual   projects,   and   take   full   responsibility   for   them.   For   example,   design   a   new   Facebook   feature,   and   implement,   test,   and   deploy   it. 
+</p>
+<p id="16"><span>⑯</span> Of   course,   I   would   be   happy   to   help   709   if   he   needs   a   hand   on   something,   but   I   feel   that   the   team   may   be   more   productive   overall   if   I   do   a   relatively   self-contained   project. 
+</p>
+<p id="17"><span>⑰</span> If   I   start   my   own   project,   there   are   also   some   challenges. 
+</p>
+<p id="18"><span>⑱</span> (1)   It’s   difficult   to   know   what   others   have   done   before.   I   know   709   and   Rina   have   already   done   extensive   work,   so   I   don’t   want   to   do   duplicate   tasks.   However,   I   look   at   the   documents,   but   it’s   often   difficult   to   navigate   and   understand. 
+</p>
+<p id="19"><span>⑲</span> (2)   It   might   be   difficult   to   get   your   feedback   in   group   meetings,   since   709   and   710   already   need   extensive   feedback   on   their   work. 
+</p>
+<p id="20"><span>⑳</span> Therefore,   I   would   like   to   know   your   thoughts   about   whether   I   should   propose   my   own   project,   and   if   so,   what   are   some   good   tasks   I   can   work   on   that   fit   into   the   larger   goals. 
+</p>
+</blockquote> 
+ <p id="21"><span>㉑</span> Susan 只花了 45 秒就读完了，然后认为我的提议超出了经费支持的范畴。她提到以往 GSB 会给她一些钱，让她可以支持学生进行一些自由的探索（比如延申 TTFM 等以前的课题），但现在她的经费来源只有外部了。
+</p>
+<p id="22"><span>㉒</span>  之后我把 Susan 的话转达给 709 和 710。他们给了我很大支持，说以后会尽量为我整一个让我做起来更有成就感的项目。在 2.4 之前我每天都在积极思考我应该把这个 project 往什么方向推动，那之后就没再管了，而是主要花时间思考 224n 的 project 怎么做。
+</p>
+<p id="23"><span>㉓</span> （上篇：<a href="../369/">D5P369</a>，下篇：<a href="../373/">D5P373</a>）
+</p>
 </div>
 <footer class="pt-3 mt-4 text-muted border-top">
 &copy; 2021 Jazon Jiao<br/>

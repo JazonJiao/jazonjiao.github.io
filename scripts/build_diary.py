@@ -304,8 +304,8 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
         def is_cn_punc(char):
             return char in '，。？！、：；（）《》【】…'
 
-        en_words = re.split(u"[^A-Za-z0-9_,.:+%()<>’°^/@&\[\]-]+", line)
-        zh_words = re.split(u"[A-Za-z0-9_,.:+%()<>’°^/@&\[\]-]+", line)
+        en_words = re.split(u"[^A-Za-z0-9_,.:+%()<>’°^$/@&\[\]-]+", line)
+        zh_words = re.split(u"[A-Za-z0-9_,.:+%()<>’°^$/@&\[\]-]+", line)
         if zh_words[0] == '':
             zh_words = zh_words[1:]
         res = ''
