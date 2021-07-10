@@ -402,6 +402,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 
 if __name__ == '__main__':
     generate_archive_html()
+
     generate_d5_html(72, 389)  # fixme
 
 

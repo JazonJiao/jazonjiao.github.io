@@ -22,7 +22,7 @@ if __name__ == '__main__':
             continue
         with open(in_file) as fr:
             for l in fr:
-                if '<em>' in l:
+                if '983' in l and '合作' in l:
                     print(i, l)
 
     print(max_n, dn)
