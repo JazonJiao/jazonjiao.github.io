@@ -48,8 +48,30 @@
 
 <div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
 <p><a href="../../">Archive</a> <a href="../381">← Prev</a> <a href="../383">Next →</a></p>
-<h1 id="0"></h1>
+<h1 id="0">D5P382-210311</h1>
 <div class="row d-flex" id="rdf">
+<p id="1"><span>①</span> 3.11 拿到 150 刀 Azure   credits 后，我搞了个 4   GPU（45   GB 内存）的 VM，想在 GPU 上跑 BERT-large，结果还是内存不够。于是我狂肝了 6 小时，先是写代码把训练集拆开，然后 train.py 里加 torch.nn.DataParallel，完了又得把 save_pretrained()  改成 torch.save()，还要保存 model.state_dict()（感谢作业 5 让我有了个参照）。令人崩溃的是 reload 以后还是会内存不够。
+</p>
+<p id="2"><span>②</span>  论坛上不少其他同学也遇到了相同的问题。3.14 我发现 reload 后崩溃的原因是 GPU 不会自动清内存，哪怕用 del 删除变量，哪怕 gc.collect()  然后 torch.cuda.empty_cache()  也不够。
+</p>
+<p id="3"><span>③</span>  于是我想直接写个 shell   script 不停地从 cmd 来 reload，结果又折腾了好久（中间遇到各种问题：str 没转化为 int、loss.sum()  应该是 loss.mean()  否则学习率相当于 ×  4），才以非常蛋疼的方式跑起来。（最后还是没成功）
+</p>
+<p id="4"><span>④</span>  话说在不会搞多 GPU 训练的时候，我就用 CPU 跑 BERT-large。一开始跑的是在 5 个数据集上 train，贼慢，2 小时才 eval 一次，然后我就像炒股一样，天天盯着 loss 和 F1 是涨了还是跌了…dev   F1 在训练开始 2 天后达到顶峰（68.01），此后一直飘忽不定。3.12 突然 loss 爆炸、F1 暴跌，于是我停掉了训练，跑了 5 天的模型就这样废掉了。
+</p>
+<p id="5"><span>⑤</span> Project 做到这里我已经快做吐了，不过看着离 SoTA（F1  =  69.6，EM  =  53.5）越来越近，还是很激动。需要动力的时候就看看 carykh 的 CS   221、230   Project 视频。之后我跑回翻增强的数据，即使还是在 CPU 上，但很快表现就超过了 5 个数据集上 train 的模型。
+</p>
+<p id="6"><span>⑥</span>  至 3.12 晚上，数据增强的工作和 distilbert 实验已经基本完成，剩下的就是跑 bert-large 和 ensemble 了。Ensemble 最简单的是每个 test   output 比较，不过我想把 top   K 的 score 和 pred 都加起来再比较，结果又花了我好久，无论从头开始写，还是改它的代码，都很复杂…
+</p>
+<p id="7"><span>⑦</span>  结果试了几次，ensemble 的结果都是平均了几个 model 的表现，而不是增强。后来发现我之前 test   F1 记录得有问题，评估的是 train 完以后的 model，而 ensemble 用的保存的 model，test   F1 更低。奇怪的是，保存的 model 的 dev   F1 是更高的。
+</p>
+<p id="8"><span>⑧</span>  重新计算之后，ensemble 确实带来了分数提升。3.14 晚上 21:46，我结合了两个 BERT-large，F1 突破了 70.3，这是历史性的一刻！虽然我相当于用了比原 SoTA 模型多 5 倍的参数，但作为 NLP 新手，中间有太多步骤可以出错（比如搞不出分布式训练），能做到这样已经不容易啦。
+</p>
+<p id="9"><span>⑨</span> 966 下学期变成硕士生 status 了，她吐槽这学期忙爆炸（主要是又做 TA 又做 RA），根本来不及思考人生。看她这么忙我好心疼，感叹我比她多好多倍的时间可以花在 project 上…
+</p>
+<p id="10"><span>⑩</span> 3.12 过 22 岁生日，下午生日 party 请了 564、770、729、774、776、774，中间出了一些小插曲，又是外卖送错又是把自己锁门外，不过都很欢乐。感谢 774 的点蜡烛神器、美图。
+</p>
+<p id="11"><span>⑪</span>  今年的生日 pyq 和 2019 年是一样的格式，概述了这一年的心路历程，我花了很久构思，今年年初就开始攒背景图片；我 1/3 的好友都点了赞！大学期间由于 493，我经常把年龄多记 1 岁，现在的我则不会记错，因为我总提醒自己比别人小 1 岁 XD。
+</p>
 </div>
 <footer class="pt-3 mt-4 text-muted border-top">
 &copy; 2021 Jazon Jiao<br/>

@@ -48,8 +48,34 @@
 
 <div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
 <p><a href="../../">Archive</a> <a href="../379">← Prev</a> <a href="../381">Next →</a></p>
-<h1 id="0"></h1>
+<h1 id="0">D5P380-210307</h1>
 <div class="row d-flex" id="rdf">
+<p id="1"><span>①</span> 3.4 晚上第一次参加 981 组织的 TeckTok（300+ 人参加），她的团队请到了 TuSimple 的 CTO 侯晓迪，讲得太棒了，瞬间圈粉！他提到“投入产出比”的问题，不同的路段的成本不同；卡车要应对的任务比轿车更专一（770 提过）；如何在没有信号的路段保证安全；今年计划去掉安全员，问题不在算法，而在硬件（硬件主要来自供应商合作）。
+</p>
+<p id="2"><span>②</span>  他提到“和技术栈作斗争”：如何组织公司的架构、模块化软件，以最低的成本应对新的小需求。还谈到公司基因：有的公司“以人为本”，看重公司结构、员工升职。TuSimple 是以技术为本，重工程。总的来说，他的观点实在太深了，我很多都还不能理解…
+</p>
+<p id="3"><span>③</span> 3.5 和上届 MSCS 学姐 Isa 初次见面打了网球。她在 Stanford 做过 CV、Bitcoin 方面的科研，这学期在 MSE 做 ethics 方向的 RA，4 月开始在 Google 上班。我说我本科 3 年，她评价说 Stanford 喜欢这种聪明人 hhh，还说她一届的 lyh 是 1998.5 生的。
+</p>
+<p id="4"><span>④</span> 3.3 晚上我和 966 去 Andrew   Wang（分给我们的 TA）OH 求教，不过他也没给啥实质性的建议。这当然不怪他，毕竟一位 TA 要 mentor 十几个 team…3.5 凌晨我向 479 吐槽模型一开始 train，F1 就断崖下跌，问她会不会是因为 overfit。她看了觉得不太可能，应该是 bug。之后又讨论了一些可以尝试的模型：Longformer、Graph。
+</p>
+<p id="5"><span>⑤</span>  一开始我不认为哪里出了 bug；3.6 凌晨我尝试只在 Molweni 上 fine-tune，效果很好，才让我感觉是有 bug。3:30，我终于意识到了问题所在，原来是我答案的开始 index 算错了！我以为是按 word 位置算，原来是按 char 位置算。这个 bug 并不好找，因为 evaluate 时计算准确率并没有问题。
+</p>
+<p id="6"><span>⑥</span>  这时我已经跑了十几次实验，这些实验只要涉及 FriendsQA 都废掉了…之后一开始还是不对，原来是我没有重新产出训练集的 pt 文件。注：479 说 BERT 不太擅长长文本，所以我重新产出 train   set 时，去掉了词数大于 896 的 context，dev 和 test 不动。
+</p>
+<p id="7"><span>⑦</span>  之后我和 966 分别研究了怎么在 BERT 里加入 Utterance-level   Embedding（ULE），但最后得出的结论是，我们不太可能发明什么其他模型结构或者训练方法，比那篇 paper 做得更好了。966 可以跑跑他们的代码，但我们肯定不能单纯只跑别人代码。当然，那篇 paper 因为篇幅限制，省略了超多细节，也许我们可以在 Project 里补全这些细节。
+</p>
+<p id="8"><span>⑧</span> 3.7 晚上，我们还是决定放弃 ULE 这条路。我们讨论了 RobustQA 里的思路，感觉都不太可行，其他做 RobustQA 的同学试了以后效果都反而变差了。最后决定接下来一周搞数据增强（对应 handout 里 5.3   Robustness   via   Data   Augmentation），搞好以后最后一周可以冲刺刷分。所以离 due 还有不到 12 天，我们又换了目标…
+</p>
+<p id="9"><span>⑨</span> 966 好奇为啥没人做莎士比亚话剧的 QA，不愧是英语双专业。她和我吐槽 231a 课程设置混乱，比如做附加分的人太多，导致有人抗议这是变相强制做附加分；给的 Azure   credits 太少等。
+</p>
+<p id="10"><span>⑩</span>  话说我看了 RobustQA 里“ 5.5   Few-sample   Fine-tuning ”的对应 paper，得分最高的方法是先在更大的数据上训练，再在小数据上训练。当然做 RobustQA 的人是绝不能使用另外的数据集的，就很蛋疼。
+</p>
+<p id="11"><span>⑪</span>  话说之前做实验，我发现把 5 个训练集合成起来训练，效果好于只在 FriendsQA 上训练。于是我想能不能先训练 5 个 dataset，再在此基础上训练 FriendsQA。我觉得这从梯度下降的角度是合理的，但实验出来是失败了。
+</p>
+<p id="12"><span>⑫</span> 3.10 凌晨我不困，就一夜没睡，狂肝 back-translation。这期间我一直在想答案匹配的问题，比较 word   embedding 的平均值似乎不太行；突然有一刻我突发奇想，为什么我不把 embedding 加起来比较呢？这样考虑进了匹配句子的长度。3.10 傍晚狂肝了一阵子写出来了这个方法（解决了不少 nasty   bugs），效果还不错。而且我找了一圈没发现有人做过，激动！这样的小创新让我很有成就感。
+</p>
+<p id="13"><span>⑬</span> CS   142 第 6、7 个 Project 我各写了约 20 小时。3.8 我注册了参加 Vandy 的 20 届毕业典礼。3.7 选课，770、776、774 没抢到高尔夫（PE   33），966 说 golf 和“ Social   Dance ”是 Stanford 最难抢的课。3.9 发现我迷之选不上 CS   110。
+</p>
 </div>
 <footer class="pt-3 mt-4 text-muted border-top">
 &copy; 2021 Jazon Jiao<br/>

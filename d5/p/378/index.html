@@ -48,8 +48,32 @@
 
 <div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
 <p><a href="../../">Archive</a> <a href="../377">← Prev</a> <a href="../379">Next →</a></p>
-<h1 id="0"></h1>
+<h1 id="0">D5P378-210224</h1>
 <div class="row d-flex" id="rdf">
+<p id="1"><span>①</span> 2.18  ~  22  花了 20 小时肝 CS142 的作业 5，789 帮了我一些忙。这次 project 涉及很多我没学过的新概念、新工具：  Promise、XML、Material-UI、更多 React.js，别人四五小时就能写好，而我却非常吃力。2.13  ~  22 也成了我近 2 年来学业最繁忙的一段时间之一，不过也学到了超多。
+</p>
+<p id="2"><span>②</span> 224n   Project 共 477 个学生、275 个组。我把这次 project 当成锻炼自己领导力的一次机会：思考方向、制定时间线、分配任务、执行任务、寻求外部反馈…体验着这些，我也更能站在 709 的角度思考他对我的期望了。
+</p>
+<p id="3"><span>③</span> 2.23 最高 26   °C，离谱。2.25，709 和我讲了点他读博的心路历程：第一年做过 NLP、ML   +   database，都觉得没意思，之后 gap 了 2 年回印度做科研，爱上了 CS 和经济学的交叉，之后就跟着 Susan 做了。
+</p>
+<p id="4"><span>④</span> 2.25 中午和传说中北大 CS 系年级第一的 788 学长约饭。他在 Confluent 的实习是用 Go 写前端、用 Java 写后端，大四以后没再做科研，想工作几年后回国（去年秋招还投了国内算法岗）。788 说 224w 的 TA 很缺人手，因为课程整个重新设计了。还说申 PhD 的有 3 位拿到了 Stanford   offer（晚上 lyc 学姐发 pyq 录了各种 CV   PhD）。
+</p>
+<p id="5"><span>⑤</span> 2.27 下午 770 在小群里提醒大家约 COVID 疫苗，我约了 3.2 第一针，打完以后约了 4.3 第二针。看 YouTube 的疫苗科普视频，为啥好多都踩比赞多，哎，愚昧的美国人民呐。2.28（周日）晚上，由于那周没有测 2 次 COVID，我被邮件警告说健康码立刻变红，但次日我仍然一直有绿码。
+</p>
+<p id="6"><span>⑥</span> 3.1 凌晨 1  ~  5 点，我把 FriendsQA 的 JSON 转化成了和 SQuAD 相同的格式，然后在 Azure 上跑 SQuAD 的 model。SQuAD 跑一次要 11 小时，FriendsQA 训练样本比 SQuAD 少 15 倍，理论上应该跑得快很多，但实际竟然要约 37 小时。后来发现我建错了 VM，所以没有 GPU…966 非常给力，她用自己的 GPU 跑，2 小时就跑完了。
+</p>
+<p id="7"><span>⑦</span>  然而模型表现非常让人绝望，EM 连 1% 都不到。这段时间 pyq 里也经常有同学吐槽“机器拒绝学习”、越改 baseline 越差。让我们哭笑不得的是，模型对问题的回答经常特别搞笑，成了我们的欢乐源泉。
+</p>
+<p id="8"><span>⑧</span>  另外，2 篇 FriendsQA 的 paper 里都公开了代码，但我和 966 都各种跑不了（他们传代码的时候都漏了很多文件，比如 env 配置）。Paper 里省略的很多细节也需要我们自己决定…之后我想把几个训练数据集结合起来再 train，感觉这个 Project 越做越像 RobustQA 了。
+</p>
+<p id="9"><span>⑨</span>  晚上我用 transformers 这个 python 库里的自带 QA   pipeline 重写了个 baseline，结果 EM 达到 34%。这还是在没有任何训练或 fine-tune 的情况下啊，太可怕了。这让我意识到，无论我们怎么改 baseline、怎么 train，只要一调包就被瞬间吊打，那做 default 的那些人那么辛苦干啥…
+</p>
+<p id="10"><span>⑩</span> （注：baseline 用的是 distilbert-base-cased-distilled-squad，后来用 bert-large-uncased-whole-word-masking-finetuned-squad 跑出来 F1  =  56，EM  =  39。）
+</p>
+<p id="11"><span>⑪</span> 3.2 下午我们花 1.5 小时写了 Project   Milestone（大部分是我写的）。在这个时间点，我也有些迷茫，是继续改 default 的 BiDAF 还是上 BERT。我意识到无论我们怎么给 BiDAF 加数据、改结构，都极难超越那个 34% 的 baseline 了。
+</p>
+<p id="12"><span>⑫</span>  按照科研的理论，在确定要解决什么问题后，要大致清楚用什么方法，handout 里也说各种方法都试一遍不如深挖某种方法。但方法有那么多，从哪开始呢？Project 进行到现在，我们急需把方向确定下来。我想了很多，而且似乎一直在推翻之前的想法，966 有点跟不上我的节奏。
+</p>
 </div>
 <footer class="pt-3 mt-4 text-muted border-top">
 &copy; 2021 Jazon Jiao<br/>
