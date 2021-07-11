@@ -1,0 +1,15 @@
+D5P388-210426
+1`这学期110的作业3、4、5可以找1个队友，这是这门课史上首次。我和763“被迫”组了队，4.22晚上分别做了作业3的前2题。
+1`作业3是关于多线程的，涉及fork、exec、waitpid、kill、dup2、信号处理等。由于学期少了一周，老师“心碎地”去掉了第4题（写轻量级strace），763看了说希望老师多心碎几次，笑疯我了。
+1`第3题我还没太理解的时候，她已经写完了，我就这么强行被带飞了，这还是在她work load比我重不少的情况下，然后还天天追剧，让我感到了智商的碾压…763写码风格非常随性，CPU她本能地写成GPU，各种单词拼错、语法错误让我感觉回到了腾讯（“execption”、“occured”、“waitted”）。
+1`现在再回头去看Vandy的OS课，这教的也太太太基础了吧，即使学期长达16周，覆盖内容的可能只有110的三分之一（就是说110的强度是3281的5倍）！即使这样，当时的日记里还是充满了我对学习OS的挣扎（D5P209-190424），还说我写作业的方法就是瞎试：
+<blockquote>
+Assignments deal with system commands that can only take painful trial and errors, instead of logical explorations, to get right. Especially for the final project, much of the time is spent debugging, which involves messing around with commands randomly until it somehow gets right… I need to constantly look up how the manual page of a system call, which is basically impossible to understand, and when I write code, I don’t quite know the purpose and desired results either.
+</blockquote>
+1`之前我说110是最硬核的CS课，不过我发现一个问题，就是OS不是一门科学，而是一项技术，我们不是在了解自然的规律，而是在学习如何使用一项工具。国内CS专业的叫法还是更准确一点，不用计算机科学，而是会用“技术”之类的词。
+1`246的前2次作业，我的成绩都是垫底的4分之1，而同学们的表现高的离谱，比如作业2中位数得分98%。但在我看来，现阶段的学习不在深度，而在广度，在于搭建起一个知识框架，如果以后有需要再深入学习某个领域。为了搭建这个框架，我会在日记里把所学的精华总结出来。
+3`最近回看了不少《骁话一下》，里面对各个国家兴衰的分析，对个人、公司的发展都很有启发意义。想起了2017年每天从历史里寻找灵感的时代，想起了2018年提到的文理比1比5…5.11七普结果出来以后，我阅读、思考了不少人口和生育的问题。话说韩国的新生人口是真的崩塌了，比日本还严重得多…
+2`4.23遇到了来学校打篮球的783，他说来Stanford并没有搞特别高精尖的东西，而是就搞web什么的，感觉十分“浪费”，这样的观点我还没想过呢。
+2`4.26收到2封邮件，一封问我EoLA第5章啥时候出（哎，我的Manim.js是不是永远不会填坑了），还有封是一家叫Gridspace的startup，说看了我224n的project，想让我考虑他家工作机会，770也收到了，966说他家经常给Stanford同学发这种邮件。
+3`4.28去Cupertino剪了头发，之后理发师阿红给我抹了某种发胶，瞬间就干了！晚上和778一起申了明年的宿舍。5.3，479给我付了200元稿费。
+

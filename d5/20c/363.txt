@@ -1,0 +1,16 @@
+D5P363-201219
+<h2>《Recsys Research Project (2)》</h2>
+1`12.15，我又加入了一个新project叫“Path Analysis”，这就是个纯SWE的东西，让我分析用户喜欢的模块如何随时间改变。709计划让我用2 ~ 3周通过这个项目熟悉数据，到1月再搞推荐。之后我有一段时间一直盯着庞大的代码库、没有注释的数据，效率很低，也很痛苦，如D5P208-190417：
+<blockquote>
+What has happened many, many, many times this semester is that, I would try to understand a brand-new concept, such as (3258) 2D convolution, (3250) NP-completeness, (3890) the min-max theorem, or (3281) what’s a socket. Then I’d stare at notes/books/websites for several hours or even up to 10+ hours before I could start to understand a bit what’s going on. This scenario has certainly happened in previous semesters, but much less frequently.
+</blockquote>
+1`12.22，加入lab两周的我终于开始为代码库做贡献了，写了第一个数据分析的文件，用的是和2019暑研一样的工具（pandas，csv），收到709鼓励的我十分激动。同时，组会上我也能听懂很多东西了，不需要匆忙地记笔记等着以后再理解了。
+1`12.23早上，我们第一次和Susan开会。可以预料，她的日程排得很满（要和她约开会，有时得提前几个月）；上个会没开完迟到了约10分钟，最后我们又拖了13分钟。我全程聆听，Susan显然还没有时间管我。我体会到了709是如何向Susan征求建议的。
+1`实习上手之后，我有精力重拾了开发知识的学习。12.24我开始看329发给我的CS 4287（Cloud Computing）材料，正好用到了我这两个月学到的网络和OS知识，很有成就感！刘超的网络课我已经快学完了，于是在极客时间上又买了Kubernetes的课。
+1`听着云技术的发展历程，尤其是docker取代老技术的速度之快，让我再次感受到了创新时代中，技术、发明的更迭、被淘汰的速度，想起了兴登堡空难让飞艇迅速衰落。
+1`12.30，我基本完成了Path Analysis的主要工作。本来709告诉我Rina已经写好了预处理数据的代码，让我研究一下然后自己拿来用，但我迅速发现旧代码太难理解了，于是决定自己从头写。虽然我给自己的逻辑做了不少注释，但如果别人要用我的代码，还是免不了会出各种bug。
+1`709很喜欢我做的图表，还说我可以在lab的Medium平台上写篇文章了，而实际上这个可视化我只写了一下午。
+1`12.28晚上，我和481通了1小时的电话，互相介绍了我们的项目。几个月前她也问过我申研的建议，现在我们成了“同行”，她还给我推荐了“浅梦”的微信群组和公众号，蛮有用的。481现在做enrichment，就是把其他公司的用户匹配到微软的用户数据，可以给用户增加feature（比如有的用户没填性别年龄，匹配后就能找出他们的这些数据）。
+1`其他组的工程有：分析、预测付费会员的留存率；模型可解释性；对用户评价的情感分析（NLP）等。这些都对我探索科研课题有启发。我能明显感觉到他们分工很明确，而我们项目由于只有3个人在整推荐系统，导致我们啥都要做，包括很多繁琐的数据清理和分析。
+2`481也是在一个人种很diverse的组，大组里有几个中国人，她的小组里则没有（她提到有个国内调来工作了6年的人打算回国了）。大组里每月组织一到两次技术讨论，有时和MSR的NLP组合作。
+（上篇：D5P361，下篇：D5P367）

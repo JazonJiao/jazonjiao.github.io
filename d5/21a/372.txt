@@ -1,0 +1,27 @@
+D5P372-210129
+<h2>《Recsys Research Project (5)》</h2>
+1`1.22，我开始按着709的notebook做content filtering。最简单的就是用线性回归，用文章和用户的特征预测utility。类别型的特征用One-Hot编码，导致测试集的size爆炸，经常搞垮AWS server。709疯狂吐槽AWS辣鸡，还说econ的人遇到这种情况可能就傻眼了，所以lab需要CS同学。
+1`709说他周末加班把这个做好，我当时还想天哪我好不容易找到一个可以做的事情，又要重新找课题了，结果周一（1.25）发现他并没有做lol。线性回归、决策树的问题是，所有特征都是独立的变量（z = ax + by + c），特征之间没有互动（比如用点积比较相似度：z = x<sup>T</sup>y）。于是后来709还是改用矩阵分解做。
+1`1.26，709发给我一篇3年前Susan写的paper（1801.07826），让我写写读后感，于是1.27我写了篇500多词的短文，从3个角度分析了S2M可以从TTFM借鉴的idea：模型、数据处理、评估方法。那是我入lab之后最有成就感的一天，感觉开辟了很多有趣的、能出成果的方向。
+1`1.28，我的任务是给709的代码添加一个模块，本来是比较简单的任务，不过中途出了bug，我需要看他的源代码。他的代码写得比较“随性”，我读起来效率很低，我甚至都在搜“代码转文本”的paper了（可以作为224n备选Project）。
+1`想起D5P320-200527：“SVL测试要求里强调代码质量大于performance”，我更深地理解了写码习惯对团队合作的重要性；另外，142的Project需要跑JShint，让我想起了以前3251要跑linter来规范C++代码的格式。
+1`2.2，710和709向S2M团队提出了线上测试方案：分为原系统、新模型1、新模型2，共3组，互相对照，当然两个新模型之间的对照可能不会很明显。讨论了可能的问题（如果出了大bug怎么止损）。
+2`2.4是第一次和Susan的1对1。709建议我更应该征求她对我总体职业规划的意见，而不是对目前项目的反馈。我不同意他的观点，认为不需要Susan给我职业建议；反之，她对我眼下工作的建议是对我个人成长最有用的。
+1`开会前，我花1.5小时写了算是“一封信”，融合了我对入lab以来遇到的问题和可能的解决办法的思考。主要是说我现在主要在改709的代码，效率不高，也没有太多实际的进展，所以想开辟一个自己的项目，问问1.27的那些思路可不可行。里面提到的问题我是和工作了的朋友们讨论过的，是合理的；The PhD Grind也提过有点类似的问题。原文如下：
+<blockquote>
+Hi Susan! I know your time is valuable, so thank you for taking the time to provide individual feedback for me on the S2M project.
+After I did the visualization tool for Path Analysis in December, since January I’ve been mostly working on tasks such as “help 709 figure out why something is not working,” or “try to change something in 709’s code and see the results.”
+I feel that it’s not very efficient, especially when his code is a work in progress, or when I need to understand a lot of legacy code. In addition, this working style means that I often get assigned disparate tasks on a daily basis, and I usually don’t have a clear picture of what to work on beyond a few days.
+Now that I have joined for nearly two months, I have begun to develop some project ideas of my own. At some point in the future, I may want to start a relatively independent project, instead of letting 709 assign tasks to me.
+For example, a week ago I read your TTFM paper, and wrote about how its ideas can be applied to the S2M project. I and 709 agree that the most important takeaway is to include time aspects in the output. In other words, predict not only a user’s utility with an item, but this utility at a specific time stamp.
+Another idea is to use more advanced deep learning methods to replace our current models. I can try out Wide&Deep or other neural-network based methods, and write a full report about the model, result, and analysis, similar to doing a final project of a CS course.
+Some of my friends at big tech companies like Facebook agree that they need to come up with individual projects, and take full responsibility for them. For example, design a new Facebook feature, and implement, test, and deploy it.
+Of course, I would be happy to help 709 if he needs a hand on something, but I feel that the team may be more productive overall if I do a relatively self-contained project.
+If I start my own project, there are also some challenges.
+(1) It’s difficult to know what others have done before. I know 709 and Rina have already done extensive work, so I don’t want to do duplicate tasks. However, I look at the documents, but it’s often difficult to navigate and understand.
+(2) It might be difficult to get your feedback in group meetings, since 709 and 710 already need extensive feedback on their work.
+Therefore, I would like to know your thoughts about whether I should propose my own project, and if so, what are some good tasks I can work on that fit into the larger goals.
+</blockquote>
+1`Susan只花了45秒就读完了，然后认为我的提议超出了经费支持的范畴。她提到以往GSB会给她一些钱，让她可以支持学生进行一些自由的探索（比如延申TTFM等以前的课题），但现在她的经费来源只有外部了。
+1`之后我把Susan的话转达给709和710。他们给了我很大支持，说以后会尽量为我整一个让我做起来更有成就感的项目。在2.4之前我每天都在积极思考我应该把这个project往什么方向推动，那之后就没再管了，而是主要花时间思考224n的project怎么做。
+（上篇：D5P369，下篇：D5P373）

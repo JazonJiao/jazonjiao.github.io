@@ -1,0 +1,6 @@
+D5P217-190520
+<h2>The Story of Manim.js (incomplete)</h2>
+12`Simply put, Manim.js is a project to replicate manim, which is an animation software created by the famous YouTuber 3Blue1Brown for animating mathematics concepts.  While the original manim library is written in python, I used a JavaScript framework to make animation possible.
+12`Since college, I've been fascinated by 3b1b's YouTube channel, and dreamed of making videos like these by myself.
+12`However, I had a lot of trouble installing the tools required by manim on my Windows computer, so I need to start everything from scratch. I've watched a lot of Coding Train videos and became familiar with p5.js, so I decided to base my software on p5.js.
+12`I first wrote a warm-up program, but unfamiliarity with JavaScript made me take about 5 hours to realize that division can produce floats, unlike C++.
