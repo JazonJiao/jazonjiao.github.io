@@ -3,7 +3,7 @@ h5 {
 }
 
 .card {
-    background: #d7f4ff;
+    background-image: linear-gradient(to bottom left, #d7f4ff, #b9e9ff);
 }
 
 a.card-a {  /* make entire card clickable */
