@@ -2,6 +2,10 @@ h5 {
     text-align: center;
 }
 
+img {
+    vertical-align: 0%;
+}
+
 .card {
     background-image: linear-gradient(to bottom left, #d7f4ff, #b9e9ff);
 }
