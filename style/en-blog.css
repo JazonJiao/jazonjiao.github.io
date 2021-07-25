@@ -4,6 +4,15 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
+code {
+    color: #091969;
+}
+
 h1 {
     text-align: center;
     color: #049;
@@ -21,6 +30,13 @@ blockquote {  /* quoted texts for Chinese Diary */
   color: #789;
   padding-left: 14px;
   border-left: .29em solid #ccd
+}
+
+p.subtitle {
+    padding-top: 7px;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
 }
 
 .meta_ {
