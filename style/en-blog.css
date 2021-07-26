@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Merriweather', serif;
+    font-size: 95%;
 }
 
 img {
@@ -33,6 +34,7 @@ blockquote {  /* quoted texts for Chinese Diary */
 }
 
 p.subtitle {
+    font-style: italic;
     padding-top: 7px;
     color: #999;
     font-size: 14px;
