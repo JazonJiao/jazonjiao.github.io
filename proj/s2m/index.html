@@ -66,7 +66,7 @@
     <h3 class="py-1 border-bottom">Introduction</h3>
     <p class="mt-3">
       A <span style="color: rebeccapurple">recommendation system (<strong>recsys</strong>)</span>
-      serve one purpose: help users discover the items they want.
+      serves one purpose: help users discover the items they want.
       For example, finding 20 videos that a user may be interested in,
       out of billions of videos on YouTube.
     </p><p>
@@ -109,7 +109,8 @@
       <img src="freadom.jpg" alt="Freadom" style="width: 77%"><br/><br/>
       Freadom app logo and iOS screenshot<br/><br/>
     </p><p>
-      Specifically, I needed to design algorithms for 2 different sections.
+      Specifically, I needed to design algorithms that recommend stories to users,
+      for 2 different sections:
     </p>
     <ul>
       <li class="mb-2"><strong style="color: #197919">Today For You</strong>
@@ -127,7 +128,7 @@
       For <span style="color: #197919">"Today For You"</span>, I implemented or tried
       various flavors of
       <a href="https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)">
-        matrix factorization</a>.
+        Matrix Factorization</a>.
       I tuned the algorithm with different hyperparameters, and tried applying filters to the
       training data to see if this can facilitate training.
     </p><p>
@@ -141,29 +142,35 @@
   <div class="mb-5">
     <h3 class="py-1 border-bottom">Result</h3>
     <p class="mt-3">
-      My
-    </p>
+      I ran dozens of experiments to calculate the error of my Matrix Factorization
+      algorithm under various conditions. I achieved best (lowest) error of <strong>0.342</strong>
+      on the internal test set, against the baseline of <strong>0.372</strong>.
+    </p><p><em>
+      <strong>Technical details</strong>: For each user-item pair,
+      a recommendation algorithm predicts the <span style="color: rebeccapurple">utility</span>
+      score that the user gets when interacting with this item.
+      For example, if a user clicks on a given story, the utility score for this user-item pair is 1,
+      otherwise it's 0. The error is then calculated by
+      taking the RMSE (Root Mean Squared Error) between the predicted utilities and the true values,
+      for some pairs of user-item interactions.
+    </em></p>
   </div>
 
   <div class="mb-5">
     <h3 class="py-1 border-bottom">
-      Other research topics&nbsp;
-      <a class="tl-view" style="color: #091992;" data-bs-toggle="collapse" href="#more" aria-expanded="false">
-        View / Hide
-      </a>
+      Other research topics
     </h3>
-    <p>
-      Click "<a data-bs-toggle="collapse" href="#more" aria-expanded="false">View</a>"
-      to read about other topics I explored in the research assistantship:
-      (1) evaluation metrics; (2) cold start problem; (3) data visualization.
-    </p>
-    <div class="collapse" id="more">
-    <h4 class="mt-4 py-1 border-bottom">Evaluation Metrics</h4>
+<!--    <p>-->
+<!--      Click "<a data-bs-toggle="collapse" href="#more" aria-expanded="false">View</a>"-->
+<!--      to read about other topics I explored in the research assistantship:-->
+<!--      (1) evaluation metrics; (2) cold start problem; (3) data visualization.-->
+<!--    </p>-->
+    <p class="mt-3">Other topics I explored in the research assistantship include:</p>
+    <h4 class="mt-4 py-1 border-bottom">1. Evaluation Metrics</h4>
     <div style="margin-bottom: 39px;">
       <p>
 
       </p>
-    </div>
     </div>
   </div>
 
