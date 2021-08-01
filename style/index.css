@@ -191,7 +191,7 @@ span.o47 {
   opacity: 47%;
 }
 
-.tl-view:link {
+.tl-view, .tl-view:link {
   background-image: linear-gradient(to bottom left, #b9e9ff, #99cfff);
   border: 1px solid deepskyblue;
   border-radius: .25rem;
@@ -201,6 +201,14 @@ span.o47 {
   text-align: center;
   display: inline-block;
   margin-bottom: 9px;
+}
+
+.tl-view:hover {
+  border: 1px solid royalblue;
+}
+
+.tl-desc {
+  color: #037;
 }
 
 .tl-card {

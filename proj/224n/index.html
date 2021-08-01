@@ -66,27 +66,47 @@
   </ul>
 
   <div class="mb-5">
-    <h3 class="py-1 border-bottom">Introduction</h3>
+    <h3 class="py-1 border-bottom">
+      <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/reports/final_summaries/summary072.html">
+        Summary
+      </a>
+    </h3>
     <p class="mt-3">
+      Rapid progress on Question Answering (QA) has been made in recent years.
+      However, widely used benchmarks on QA, such as SQuAD, Natural Questions and NewsQA,
+      mostly consist of passages from Wikipedia or other online sources,
+      yet this is only one category of human languages.
+    </p><p>
+      One other crucial aspect of languages comes in the form of everyday conversations,
+      and understanding them is equally important for better machine comprehension on human languages.
+    </p><p>
+      In this paper, we explore FriendsQA, a question answering dataset that contains
+      1,222 dialogues and 10,610 open-domain questions based on transcripts from the TV show
+      <em>Friends</em>. It is the first dataset that challenges span-based QA on
+      multiparty dialogue with daily topics.
+    </p><p>
+      We aim to improve model robustness and performance on FriendsQA dataset via
+      data augmentation and ensembling. We generated 4 new training datasets of well-paraphrased
+      contexts and questions through back-translation.
+    </p><p>
+      We proposed a novel method to find answers in paraphrased text through the use of the
+      sum of word embeddings. When looking for answers in the back-translated context,
+      we compared phrases by taking the sum of word embeddings before the
+      calculation of the normalized mean squared error. This method effectively compensates for
+      the disadvantages of sentences that are paraphrased well but have long length
+      compared to the original ones.
     </p>
-
+    <p>
+      We trained BERT on the augmented datasets, and then ensembled BERT-large models,
+      pushing state-of-the-art F1 / EM scores on FriendsQA from
+      69.6 / 53.5 to 72.08 / 54.62.
+    </p>
   </div>
 
   <div class="mb-5">
-    <h3 class="py-1 border-bottom">Task</h3>
-    <p class="mt-3">
-    </p>
-  </div>
-
-  <div class="mb-5">
-    <h3 class="py-1 border-bottom">Action</h3>
-    <p class="mt-3">
-    </p>
-  </div>
-
-  <div class="mb-5">
-    <h3 class="py-1 border-bottom">Result</h3>
-    <p class="mt-3">
+    <h3 class="py-1 border-bottom">Illustration</h3>
+    <p class="mt-3 subtitle">
+      <img src="image072.png" style="box-shadow: 5px 5px 19px gray;" alt="desc"><br/><br/>
     </p>
   </div>
 
