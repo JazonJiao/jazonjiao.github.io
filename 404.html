@@ -13,12 +13,21 @@
 
   <!-- Custom style for this website -->
   <link href="style/index.css" rel="stylesheet">
+
+  <style>
+    .bg_ {
+      box-shadow: 7px 7px 19px gray;
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
-<body>
-<nav class="cold-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+
+<body class="warm-theme">
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
   <div class="container-fluid mt-1 mx-2">
-    <a href="index.html">
-      <img src="file/icon/jazon-logo.png" id="jazon-logo" alt="logo"/>
+    <a href="/">
+      <img src="/file/icon/jazon-logo.png" id="jazon-logo" alt="logo"/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
             aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,17 +35,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarsExample03">
       <ul class="navbar-nav ms-auto fs-5">
-        <li class="nav-item"> <a class="nav-link" href="about/">About</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="blog/">Blog</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="proj/">Projects</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="diary/">Diary</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="/diary">Diary</a> </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<h1>Page Not Found</h1>
-<p>If you are trying to visit a Diary page, then this Diary entry is not published yet.</p>
+<div class="container" style="text-align: center;">
+  <img src="/file/img/carefully_slide.jpeg" class="img-fluid bg_" alt="carefully slide">
+</div>
+
+<div class="container my-5 px-4 col-12 col-sm-12 col-md-8 col-lg-7 mx-auto">
+  <h1>Page Not Found :-(</h1>
+  <p class="mt-4">If you are trying to visit a Diary entry, then it is not published yet.
+    <a href="/d5/p">Back to D5 archive</a>
+  </p>
+</div>
 
 </body>
 </html>

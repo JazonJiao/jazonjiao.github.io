@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@media screen and (max-width: 576px) {
+    /* decrease font size for mobile screen */
+    body {
+        font-size: 87%;
+    }
+}
+
 body {
     font-family: 'Merriweather', serif;
-    /*font-size: 96%;*/
 }
 
 img {
@@ -47,6 +53,21 @@ p.subtitle {
 
 .meta_ {
     color: #79c;
+}
+
+.anchr {
+    color: #9bf;
+    text-decoration: none;
+    float: right;
+}
+
+.bck_ {
+    color: #096909;
+    font-size: 15px;
+}
+
+.anchr:hover {
+    color: #79e;
 }
 
 .bg_ {

@@ -53,12 +53,6 @@ p {
     margin-bottom: 2.7vmin; /* between paragraphs */
 }
 
-p:target, h1:target, h3:target, h4:target {
-    /* this is to offset the anchor location; https://stackoverflow.com/questions/4086107 */
-    padding-top: 76px;
-    margin-top: -76px;
-}
-
 span {
     color: #d4c9c9;  /* color of the paragraph marker */
 }

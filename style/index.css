@@ -13,6 +13,10 @@ body.warm-theme {
   background: #ffedd9;
 }
 
+/* hmmm... try many things but still not as good as blue and orange */
+body.bright-theme {
+  background: #e4ffe9;
+}
 
 /* ========================================================== */
 /* --- extra styles for navigation bar transition effects --- */
@@ -29,8 +33,17 @@ nav.cold-theme {
 }
 
 nav.warm-theme {
-  /*background: #323;*/
   background-image: linear-gradient(#FFd9bc, #ffc999);
+  color: #333333;
+}
+
+nav.bright-theme {
+  background-image: linear-gradient(#c9f9e9, #99f9e9);
+  color: #333333;
+}
+
+nav.purple-theme {
+  background-image: linear-gradient(#c9f9e9, #99f9e9);
   color: #333333;
 }
 
@@ -178,7 +191,7 @@ nav.warm-theme {
 }
 
 /* duration (start/end dates) */
-p.dur {
+p.dur, span.dur {
   font-style: italic;
   font-size: 14px;
   color: #3979c9;
@@ -230,4 +243,10 @@ span.o47 {
 
 /* ============= */
 /* --- other --- */
+
+p:target, h1:target, h3:target, h4:target, div:target {
+    /* this is to offset the anchor location; https://stackoverflow.com/questions/4086107 */
+    padding-top: 76px;
+    margin-top: -76px;
+}
 
