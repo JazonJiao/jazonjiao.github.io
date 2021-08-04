@@ -70,11 +70,14 @@
       For example, finding 20 videos that a user may be interested in,
       out of billions of videos on YouTube.
     </p><p>
+      The recsys research community is closely tied to that of ads, search ranking,
+      information retrieval, and other fields in AI.
+    </p><p>
       There are two basic methods for recsys. In simple words:
     </p>
     <ul>
       <li class="mb-2">
-        <span style="color: darkorange"><strong>Content Filtering</strong></span>
+        <span style="color: #c97909"><strong>Content Filtering</strong></span>
         tries to match up users with items, based on user and item features such as
         <em style="color: #591909">user age</em>,
         <em style="color: #591909">user language</em>,
@@ -171,23 +174,85 @@
       (3) <strong>data visualization</strong>.
     </em></p>
     <div class="collapse" id="e1">
-<!--    <p class="mt-3">Other topics I explored in the research assistantship include:</p>-->
       <h4 class="mt-4 py-1 border-bottom">1. Evaluation Metrics</h4>
       <div style="margin-bottom: 39px;">
         <p>
-
+          As mentioned <a href="#result">above</a>, the performance of our algorithm is
+          calculated by taking RMSE between the predicted and actual utilities.
+          RMSE has a lot of limitations, so I explored alternate performance metrics.
+        </p>
+        <p>
+          Instead of predicting utilities on a continuous scale, I could frame the problem
+          as a classification problem, classifying each user-item pair as
+          "user likes it" or "user does not like it". Using binary classification opens up
+          <a href="https://en.wikipedia.org/wiki/Evaluation_of_binary_classifiers">new metrics</a>
+          such as <strong>precison/recall, cross-entropy, AUC,</strong> and so on.
+          I discussed the pros and cons of using prediction VS classification.
+        </p>
+        <p>
+          Both RMSE and classification-based metrics do not directly measure the quality
+          of our ranking. This is a problem, since a recommendation system
+          is essentially a ranking algorithm, where for each user, we want to rank all items
+          in order of his/her preference. To this end, I and my mentor proposed using
+          <strong>
+            <a href="https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Precision_at_k">
+              precision@k</a>,
+          </strong>inspired by relevant research in ads and search, and we
+          defined how to calculate it in the context of our project.
+        </p>
+        <p>
+          In the end, no metric can truly capture the quality of a recsys.
+          There are subjective things like "<strong>serendipity</strong>" (recommending outside of
+          categories that the user has liked) that is important in a real-world environment.
+        </p>
+        <p>
+          Finally, note that I did all my experiments <strong>offline</strong>, i.e.
+          without interacting with actual users; online A/B testing is outside the scope of
+          my research project.
         </p>
       </div>
       <h4 class="mt-4 py-1 border-bottom">2. Cold Start Problem</h4>
       <div style="margin-bottom: 39px;">
         <p>
-
+          When using <span style="color: #199999">Collaborative Filtering</span>,
+          the success of a recsys depends on the historical data of how users interacted with items.
+          For new users, there is no historical data yet—how do we recommend items to those new users?
+          This is the so-called <strong>cold-start problem</strong>.
+        </p>
+        <p>
+          One way to solve this is to use <span style="color: #c97909;">Content Filtering</span>
+          for new users, since (some versions of) <span style="color: #c97909">content filtering</span>
+          does not need past interaction data.
+          But at what point—after obtaining how much data for this user—do we
+          switch from <span style="color: #c97909">content filtering</span>
+          to <span style="color: #199999">collaborative filtering</span> for recommendation?
+        </p>
+        <p>
+          To answer this question, I and my mentor designed experiments to test the
+          performance of these two algorithms when given different amounts of data.
+          To my knowledge, there hasn't been previous academic research on this topic
+          using our method.
+        </p>
+        <p>
+          However, in the end, I didn't find the experiments convincing enough,
+          partly because the output format of the two algorithms were fundamentally different,
+          and it was difficult to compare their performance against each other.
+          In particular, <span style="color: #c97909">content filtering</span> is not
+          designed to produce utility scores as <span style="color: #199999">collaborative filtering</span>
+          does.
         </p>
       </div>
       <h4 class="mt-4 py-1 border-bottom">3. Data Visualization</h4>
       <div style="margin-bottom: 39px;">
         <p>
-
+          The Freadom App consists of different sections such as
+          "<span style="color: #197919">Today For You</span>",
+          "<span style="color: #777719">Trending Now</span>", and so on.
+          I used <code>matplotlib</code> to visualize how users' favorite sections changed over time,
+          starting from when they first signed up for the app:
+        </p>
+        <p class="subtitle" style="width: 49%;">
+          <img src="path-analysis.png" alt="Path Analysis"><br/><br/>
         </p>
       </div>
     </div>

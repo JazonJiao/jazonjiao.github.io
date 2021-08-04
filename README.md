@@ -1,5 +1,13 @@
 # Jazon Jiao personal website
 
+## todo
+
+Diary — each paragraph number is an <a> tag to link to its location
+
+also add last updated date
+
+## scripts
+
 Run the following to generate diary folders
 
 ```
