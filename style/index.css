@@ -168,7 +168,7 @@ nav.purple-theme {
 }
 
 .tl-item {
-  margin-top: 24px;
+  margin-top: 21px;
 }
 
 .tl-logo {
@@ -184,10 +184,10 @@ nav.purple-theme {
 
 /* header (institution name) */
 #tmln h5, h6 {
-  display: inline-flex;
+  display: flex;
   position: relative;
-  left: -50px;
-  margin-bottom: 14px;
+  top: -34px;
+  margin-bottom: -19px;
 }
 
 /* duration (start/end dates) */

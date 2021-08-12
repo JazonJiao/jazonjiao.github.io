@@ -26,3 +26,31 @@
 
 }
 
+
+/* 2021-08-04
+  styles for pyq
+*/
+
+img.pyq-logo {
+    padding: 4px;
+    margin: 0 16px;
+    width: 47px;
+    height: 47px;
+}
+
+.pyq-title {
+    display: flex;
+    justify-content: center;
+}
+
+.pyq-curyear {
+    font-size: 39px;
+}
+
+.pyq-toyear {
+    padding-top: 10px;
+}
+
+p.pyq-toyear {  /* inside <p>, not <a>, meaning this year's annual moment doesn't exist */
+    color: #999;
+}
