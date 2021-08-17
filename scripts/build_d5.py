@@ -52,9 +52,11 @@ h4 tag: Statistical Period titles in d5/index.html, like "2019 Spring"
 (2) Each paragraph has id = the paragraph's index (1-indexed), such as "7", "15", etc.
 (3) Each section header (h3) has id = "part#", such as "part1", "part6", etc.
 
+fixme: working directory and ../
+
 """
 import os, re
-from scripts.templates import *  # base directory is jazonjiao.github.io/
+from templates import *  # base directory is jazonjiao.github.io/
 
 # My Diaries are divided into statistical periods by time.
 # Each year has 3 stat periods, denoted `a`, `b`, `c`.

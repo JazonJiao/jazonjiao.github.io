@@ -35,9 +35,11 @@ number,nationality,gender,undergrad,grad
 729,🇨🇳,♀,EUR 20,stf ICME 20
 733,🇨🇳,♂,Toronto 20,stf MSE 20
 743,🇨🇳,♂,THU 18,stf CS PhD 20
+753,🇨🇳,♀,UCLA 19,stf ICME 19
 784,🇨🇳,♂,PKU 18,CMU INI 18
 797,🇨🇳,♀,Brown 20,stf ICME 20
 
+451,🇨🇳,♀,VU 20,
 456,🇨🇳,♂,VU 20,
 458,🇨🇳,♀,nyush 20,
 459,🇨🇳,♀,VU 21,
@@ -59,7 +61,6 @@ number,nationality,gender,undergrad,grad
 478,🇨🇳,♂,VU 20,
 479,🇨🇳,♀,PKU 20,hkust CS PhD 21
 480,🇨🇳,♂,VU 20,
-481,🇨🇳,♀,VU 20,
 482,🇨🇳,♂,VU 19,
 483,🇨🇳,♂,VU 20,
 487,🇨🇳,♀,BUPT 17,VU MSCS 17
