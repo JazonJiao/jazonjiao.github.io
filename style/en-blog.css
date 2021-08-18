@@ -2,9 +2,8 @@
 
 @media screen and (max-width: 576px) {
     /* decrease font size for mobile screen */
-    body {
-        font-size: 89%;
-    }
+    body { font-size: 89%; }
+    /*img { width: 100% !important; }*/
 }
 
 body {
