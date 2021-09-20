@@ -78,7 +78,8 @@ PERIODS = [
     ('20b', 339, '2020 夏', 44368, 23.7, 37.2, 22.0, 17.1),  # 28 entries
     ('20c', 364, '2020 秋', 35197, 28.8, 37.0, 19.3, 14.9),  # 25 entries
     ('21a', 389, '2021 春', 35165, 48.3, 20.7, 19.1, 11.9),  # 25 entries
-    ('21b', 395, '2021 夏', 'null', 'null', 'null', 'null', 'null')
+    ('21b', 409, '2021 夏', 39219, 24.7, 30.3, 21.8, 23.2),  # 20 entries
+    ('21c', 412, '2021 秋', 'null', 'null', 'null', 'null', 'null')
 ]
 
 
@@ -210,7 +211,8 @@ def archive_notes():
     return f"""
 <h1 style="text-align: center; margin-top: 67px; margin-bottom: 37px;">【 Notes 】</h1>
 <ul>
-<li class="cat">Friend list is <a href="./friends/">here</a>.</li>
+<li class="cat">Friend list is <a href="./friends/">here</a>. Starting Summer 2021, I use
+000 to anonymize friends under conditions I consider sensitive.</li>
 <li class="cat">Each year’s diary is divided into 3 periods of 4 months for statistical purposes: 
   Spring, Summer, Autumn. Those roughly corresponded to the Spring semester (1-4), 
   Summer break (5-8), and Fall semester (9-12) at Vanderbilt University. After graduating from Vandy 
@@ -404,7 +406,7 @@ def generate_d5_html(start_i=1, end_i=PERIODS[-1][1]):
 if __name__ == '__main__':
     generate_archive_html()
 
-    generate_d5_html(72, 389)  # fixme
+    generate_d5_html(72, 409)  # fixme
 
 
 

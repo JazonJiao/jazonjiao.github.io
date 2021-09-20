@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+  <title>Jazon Jiao · D5p392</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+        crossorigin="anonymous" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+          crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+  <link href="../../../style/index.css" rel="stylesheet">
+  <link href="../../../style/diary.css" rel="stylesheet">
+  <link href="../../../style/cn-font.css" rel="stylesheet">
+  <link rel="icon" href="../../../file/icon/brainy.ico" type="image/x-icon"/>
+</head>
+
+<body class="warm-theme">
+
+<!-- Navigation -->
+<nav class="warm-theme navbar sticky-top navbar-expand-sm navbar-light" aria-label="Third navbar example">
+  <div class="container-fluid mt-1 mx-2">
+    <a href="../../../">
+      <img src="../../../file/icon/jazon-logo.png" alt="logo" id="jazon-logo"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"> <a class="nav-link" href="../../../about">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../blog">Blog</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../proj">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="../../../diary">Diary</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4 px-3 col-12 col-sm-12 col-md-10 col-lg-9 mx-auto">
+<p><a href="../../">Archive</a> <a href="../391">← Prev</a> <a href="../393">Next →</a></p>
+<h1 id="0">D5P392-210514</h1>
+<div class="row d-flex" id="rdf">
+<p id="1"><span>①</span> CS246 的作业 2 里有两题是关于推荐系统的，一个是写矩阵分解（MF）的梯度下降公式，另一个是用矩阵乘法算推荐物品。这些对我启发非常大，就因为这次作业，246 这门课上得值了！（MF 其实写起来很简单）
+</p>
+<p id="2"><span>②</span> 4 月底搞完教程后，我的任务是用 Python 重做关于冷启动策略的一系列实验，就是比较内容、协同过滤 2 个算法，在历史数据数量不同的情况下的表现。这两种方法的输出格式有本质上的区别，如何设计实验衡量、比较他们，是个大难题，最终还是用 precision@k，这个具体怎么算也有些微妙的地方，需要和 709 讨论。
+</p>
+<p id="3"><span>③</span>  这一轮实验，所有代码都是我从头开始写的，在这个情境下这也许是更好的选择。<a href="../379/">D5P379-210227</a> 结尾提到，当时我算 ItemMeans，用 709 写的代码可能花了 8 小时都没搞对，现在我自己从头写半小时就写好了。
+</p>
+<p id="4"><span>④</span>  从头写代码的好处是，我对代码的逻辑有完全的掌控，这样（1）出了 bug 更容易 debug，（2）如果要修改代码实现新功能，也能更快上手，灵活了很多。当然，写自己版本的风险就是，我自己的代码相比原来别人写过的，可能有我注意不到的问题，或者代码的行为会有细微的、难以预测的差异，解决不好的话一样会卡进度。
+</p>
+<p id="5"><span>⑤</span>  听说过大厂工作的同学会在和其他组同事交流的时候，发现自己在做的东西正好是对方需要的。这让我想，这种情景下，有时用别人写的代码更省时间，但有时自己重写一遍反而更快，尤其是需要的东西不完全一样时。我自己写的代码，复杂起来我自己都会看晕、用起来出问题，更别说别人了。
+</p>
+<p id="6"><span>⑥</span>  实验结果跑出来，最简单的 baseline（Simple   Means）竟然得分是最好的之一，我盯着我的代码 debug 了很久，也没发现哪里有问题。当然我可以向 709 求助，不过他最近似乎挺忙的。焦虑了几天以后，我做了些简单的分析，提交了个小报告，松了口气。
+</p>
+<p id="7"><span>⑦</span> lab 工作和公司工作不同的地方在于其“探索性质”，最大的特点也许是，失败是家常便饭，经常会试了各种方法发现行不通后放弃；这需要一个宽容的、容许试错的环境。（当然这是个宏观的判断，具体到单个的 project，也有很 labor-intensive 的。）其他就是对以前多次讨论过的，对科研能力的要求，包括设计实验的能力、检索信息的能力、跟踪前沿的能力，等等。
+</p>
+<p id="8"><span>⑧</span> 5.21，我盯着我的 to-do   list，突然感到了一种剧烈的疲惫感。后来想了一想，除了时间流逝必然造成的动力下降，归根结底还是因为这个 project 看不到什么进展，我的工作也日趋重复，而且有种不知道自己在做啥的感觉。这种疲惫感使得我懒得和教授约一对一，懒得向 709 报告进度，懒得向别人求助，懒得切换方向，懒得思考现在的工作对我未来发展是否有意义。参见 <a href="../229/">D5P229-190724</a>：
+</p>
+<blockquote> 
+ <p id="9"><span>⑨</span> By   Week   10,   I’ve   already   entered   a  “ state   of   limbo ”  where   it’s   hard   to   motivate   myself   to   do   the   increasingly   dull   and   meaningless   work.   Good   thing   is   491   and   489   are   caring   less   about   me   now…
+</p>
+</blockquote> 
+ <p id="10"><span>⑩</span>  另外，科研的性质是探究问题嘛，709 经常会看着我的数据和结论，给我提一些“把这里做点小改动，看看结果怎样”的要求，而这时常是边际效应很小的事情，这也是让我不喜欢现在项目的原因之一。参见 <a href="../393/">D5P393</a>：
+</p>
+<blockquote> 
+ <p id="11"><span>⑪</span>  带 761 的 post-doc，ddl 前 3 天看了她 331b 的 paper 之后又提了一堆要求，让她直接不想再做了。
+</p>
+</blockquote> 
+ <p id="12"><span>⑫</span>  看了地里不少职场帖子都说选 project 是极端重要的事情。S2M 这个项目，我在看到数据的第一时间就做出了“数据少、难出成果”的准确判断（<a href="../361/">D5P361</a>）。当然，这次倒是无所谓，反正我的 funding 来源于这个 project，我没得选；但如果是在实际工作中，要遇到做不出成果的 project，那就完了。这段经历提升了我对 project 前景的判断力，也许这会对一年后初入职场的我非常关键吧。
+</p>
+<p id="13"><span>⑬</span> 5.26 早上，lab 开了一次 26 人的大会，9 位即将离开 lab 的同学各自做了 5 分钟的总结，我感觉自己讲得还不错，如果硬吹还是能吹出很多东西来的…毕竟其他人也遇到了不少失败的 project。我可能是做得最 CS 的之一，其他的 project 确实都偏“ causal   inference ”，大都用的是很传统的统计、经济学方法。Susan 说我们离开以后，lab 都会是我们的资源，赞！
+</p>
+<p id="14"><span>⑭</span>  前面提到我自己重写了整个代码，我一开始没告诉 709，这算是给我自己埋了个雷。709 对我这么做当然不满意了，他一直希望我在他的代码框架下写，毕竟他的功能更齐全，也验证过正确性。
+</p>
+<p id="15"><span>⑮</span>  我心里 MMP，如果你的代码不那么乱、有哪怕一点点注释和文档，我干嘛花这么大功夫自己写啊。我可是有每周汇报 2 次的压力在这，如果像 3 月底那样研究你的代码怎么用，导致啥也做不出来，那我怎么交代？真应该让另一个人也来试试看用你的代码。
+</p>
+<p id="16"><span>⑯</span>  我开始写 1 个月后他才看了我的代码，这在有些 code   review 制度或者 design   doc 制度下，是不会出现的情况。现在他接受了这个事实，说可以按照我写的框架搞下去，但要先做些更严谨的验证，哎，又得是很 tedious 的工作了。
+</p>
+<p id="17"><span>⑰</span>  前面说我的代码可能有自己没意识到的问题，还真应验了：我训练的时候没分 validation   set，哎，搞 ML 的怎么能犯这么低级的错误？还是实践经验不足啊。之前我还一直纳闷，为啥 L2 参数越大 loss 越低，然后看着 training   loss 一直下降还很自信，事实证明还是得看 val   loss…
+</p>
+<p id="18"><span>⑱</span>  之后期末周我没干活，其实到此时，这 project 已经有些做不下去了，我对 709 的印象也主要停留在了一些不愉快的事情上，尤其是 4 月那次真是太闹心了，那时他对我的心理状况关心太少，这从感性上给我留下的印象，盖过了其他正面印象的影响。6.7 开始的最后一周，我还是调整心态，709 和 710 还是给了我非常多技术、职业上的指导的，也很关心我的职业发展，要心存感激。
+</p>
+<p id="19"><span>⑲</span> 6.6 晚上我做了篇 ppt，分 9 项总结了我在 lab 做过的事，400+ 小时的实习还是整出来不少东西的！我还把自己写过比较重要的笔记、汇报，都从 GitHub 上存了下来，共近 4700 词。（话说 2019.7.26 我 4 小时就写了 2700 字…）
+</p>
+<p id="20"><span>⑳</span> 6.8 我向 Susan 做了汇报，尝试解释了我的这一波实验，不过我不知道她听没听懂，实验结果也实在不尽如人意。最后我说，无论怎么设计实验，也无法真正精准地计算我们想要的 threshold 值，每种指标都不完美；从实际应用的角度，也许靠直觉就行。Susan 也说到她在微软时的类似经历，大家为实验设计“吵了很多架”。
+</p>
+<p id="21"><span>㉑</span>  会后，709 建议我花更多时间讲 motivation，精简细节，实验结果也应该讲得更精确，学到了！6.11，我在 Athey   lab 的 RAship 悄无声息地结束了。
+</p>
+</div>
+<footer class="pt-3 mt-4 text-muted border-top">
+&copy; 2021 Jazon Jiao<br/>
+</footer>
+</div>
+</body>

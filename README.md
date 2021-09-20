@@ -11,7 +11,7 @@ also add last updated date
 Run the following to generate diary folders
 
 ```
-for i in {187..250}
+for i in {390..409}
 do
     mkdir d5/p/$i
 done
@@ -20,8 +20,8 @@ done
 Then run the following to generate diary 
 
 ```
-for i in {365..389}
+for i in {390..409}
 do
-    touch d5/21a/$i.txt
+    touch d5/21b/$i.txt
 done
 ```
