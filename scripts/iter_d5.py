@@ -22,7 +22,7 @@ if __name__ == '__main__':
             continue
         with open(in_file) as fr:
             for l in fr:
-                if '481' in l:
+                if '770' in l:
                     print(i, period, l)
 
     print(max_n, dn)
