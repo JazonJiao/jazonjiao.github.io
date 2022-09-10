@@ -43,10 +43,11 @@ def intervals(yrs=(17, 18, 19, 20, 21, 22)):
                     print("The following is not properly formatted:\n", l)
                 total_days += 1
 
-    print(f"\nTotal # days = {total_days}; \n"
+    print(f"\nTotal # days recorded = {total_days}; \n"
           f"Average sleep time = {sum(hrs) / 2 / total_days:.2f} hrs")
     for i in range(48):
-        print(f"{i / 2:.1f}   {hrs[i] / total_days * 100:.1f} %")
+        perc = hrs[i] / total_days * 100  # percentage
+        print(f"{i / 2:4.1f}   {perc:4.1f} %   {'Z' * int(perc)}")
 
 
 def avg(yrs=(17, 18, 19, 20, 21, 22), end_date=(22, 5, 22)):
@@ -93,8 +94,8 @@ def avg(yrs=(17, 18, 19, 20, 21, 22), end_date=(22, 5, 22)):
         w2.write(']\n')
 
 
-avg((17, 18, 19, 20, 21, 22), (22, 5, 22))
-# intervals([21, 22])
+# avg((17, 18, 19, 20, 21, 22), (22, 5, 22))
+intervals([22])
 # intervals()
 
 
