@@ -94,8 +94,8 @@ def avg(yrs=(17, 18, 19, 20, 21, 22), end_date=(22, 5, 22)):
         w2.write(']\n')
 
 
-# avg((17, 18, 19, 20, 21, 22), (22, 5, 22))
-intervals([22])
+avg((17, 18, 19, 20, 21, 22), (22, 12, 31))  # 2nd param is end date
+# intervals([22])
 # intervals()
 
 

@@ -1,4 +1,0 @@
-D5P103-171210
-23`Before the 3-5 Test, I once compiled a complicated instruction for the ACT reading test, with various plans for various possible passage types, how to control my time down to every minute, and detailed solutions to potential problems.
-At first I was proud with it, but when trying to implement it, I soon discovered that such a detailed instruction did nothing but interfere with my performance in simulation tests. It significantly distracted me from the passage that I really should be reading. Realizing this, I abandoned that detailed instruction text.
-13`What could I have done in retrospect? Here’s my answer: do more, think less. You can’t learn how to, say, play badminton by watching videos, although it does help. One thing to note is that the quality of being prudent and thinking through everything is beneficial in programming.
